@@ -1,12 +1,16 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { Search, Star, ArrowRight, BookOpen, Layers, Sparkles, Calendar } from "lucide-react";
+import { Search, Star, ArrowRight, BookOpen, Layers, Sparkles, Calendar, TrendingUp, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { ALL_TOOLS } from "@/data/tools";
 import { BLOG_POSTS } from "@/data/blog-posts";
 
 const CATEGORIES = Array.from(new Set(ALL_TOOLS.map((t) => t.category)));
+
+function slugify(category: string) {
+  return category.toLowerCase().replace(/\s+/g, "-");
+}
 
 export default function HomePage() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -130,15 +134,18 @@ export default function HomePage() {
       {/* ========== CATEGORY STATS STRIP (like G2 category overview) ========== */}
       <section className="relative pb-10 px-6">
         <div className="max-w-[1200px] mx-auto">
-          <div className="flex items-center gap-2 mb-6">
-            <Layers className="w-5 h-5 text-[#3B82F6]" />
-            <h2 className="text-lg font-bold text-[#F0F4F8]">Browse by Category</h2>
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center gap-2">
+              <Layers className="w-5 h-5 text-[#3B82F6]" />
+              <h2 className="text-lg font-bold text-[#F0F4F8]">Popular Categories</h2>
+            </div>
+            <span className="text-xs text-[#4A6380]">{CATEGORIES.length} categories</span>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {categoryStats.map(([cat, stats]) => (
-              <button
+              <Link
                 key={cat}
-                onClick={() => setSelectedCategory(selectedCategory === cat ? null : cat)}
+                href={`/category/${slugify(cat)}`}
                 className="bg-[#0F1D32] border border-[#1E3A5F] rounded-xl p-4 hover:border-[#2A5080] transition-all text-left group"
               >
                 <p className="text-sm font-bold text-[#F0F4F8] group-hover:text-[#3B82F6] transition-colors">
@@ -150,8 +157,81 @@ export default function HomePage() {
                     <Star className="w-3 h-3 fill-[#F59E0B]" /> {stats.avgRating}
                   </span>
                 </div>
-              </button>
+              </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========== TRENDING TOOLS (high-growth, high-review-count picks) ========== */}
+      <section className="relative pb-16 px-6">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#F59E0B]/20 to-[#FF6B35]/20 flex items-center justify-center">
+                <TrendingUp className="w-5 h-5 text-[#F59E0B]" />
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold text-[#F0F4F8]">🔥 Trending Tools</h2>
+                <p className="text-sm text-[#8BA3BE]">Most popular MarTech tools right now</p>
+              </div>
+            </div>
+            <Link
+              href={`/category/${slugify(categoryStats[0]?.[0] || "")}`}
+              className="hidden md:flex items-center gap-1 text-sm text-[#3B82F6] hover:text-[#22D3EE] transition-colors"
+            >
+              View All Tools <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {ALL_TOOLS.sort((a, b) => b.reviewCount - a.reviewCount).slice(0, 8).map((tool, idx) => {
+              const Icon = tool.icon;
+              return (
+                <Link
+                  href={`/tools/${tool.id}`}
+                  key={`trending-${tool.id}`}
+                  className="group bg-[#0F1D32] border border-[#1E3A5F] rounded-xl p-5 card-hover"
+                >
+                  <div className="flex items-start gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-lg bg-[#162440] flex items-center justify-center group-hover:scale-110 transition-transform shrink-0">
+                      <Icon className="w-5 h-5 text-[#3B82F6]" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <h3 className="font-bold text-[#F0F4F8] group-hover:text-[#3B82F6] transition-colors truncate text-sm">
+                        {tool.name}
+                      </h3>
+                      <span className="inline-block text-[10px] font-semibold uppercase tracking-wider text-[#3B82F6] bg-[#162440] px-2 py-0.5 rounded mt-1">
+                        {tool.category}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-1 shrink-0">
+                      <Star className="w-3.5 h-3.5 text-[#F59E0B] fill-[#F59E0B]" />
+                      <span className="text-xs font-bold text-[#F0F4F8]">{tool.rating}</span>
+                    </div>
+                  </div>
+                  <p className="text-xs text-[#8BA3BE] leading-relaxed line-clamp-2">
+                    {tool.description}
+                  </p>
+                  <div className="flex items-center justify-between mt-3 pt-3 border-t border-[#1E3A5F]/60">
+                    <span className="text-[10px] text-[#4A6380]">
+                      {tool.reviewCount.toLocaleString()} reviews
+                    </span>
+                    <span className="text-xs text-[#22D3EE]">{tool.pricing}</span>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+
+          {/* Mobile View All button */}
+          <div className="mt-6 text-center md:hidden">
+            <Link
+              href={`/category/${slugify(categoryStats[0]?.[0] || "")}`}
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#0F1D32] border border-[#1E3A5F] rounded-full text-sm text-[#3B82F6] hover:text-[#22D3EE] transition-colors"
+            >
+              View All Tools <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>
