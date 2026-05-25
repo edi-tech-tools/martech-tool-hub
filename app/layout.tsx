@@ -5,6 +5,7 @@ import Footer from "./sections/Footer";
 import CookieBanner from "./components/CookieBanner";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://martech-tools-hub.com"),
   title: {
     default: "MarTech Tools Hub — Marketing Technology Stack Reviews",
     template: "%s — MarTech Tools Hub",
