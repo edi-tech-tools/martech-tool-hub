@@ -30,3 +30,8 @@ patch.diff
 newtools.js
 new-tools-batch.ts
 .vercel
+
+# Build artifacts
+.next_old/
+**/__pycache__/
+*.pyc

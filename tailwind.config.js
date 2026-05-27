@@ -22,7 +22,7 @@ module.exports = {
         surface: '#16213E',
       },
       fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
+        sans: ['var(--font-dm-sans)', 'DM Sans', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
       },
     },
   },

@@ -1,8 +1,35 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import "./globals.css";
 import Sidebar from "./sections/Sidebar";
 import Footer from "./sections/Footer";
 import CookieBanner from "./components/CookieBanner";
+
+const dmSans = localFont({
+  src: [
+    {
+      path: "../public/fonts/DMSans-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/DMSans-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/DMSans-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/DMSans-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-dm-sans",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://martech-tools-hub.com"),
@@ -43,7 +70,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen antialiased">
+      <body className={`${dmSans.variable} min-h-screen antialiased font-sans`}>
         {/* Background Effects */}
         <div className="aurora-bg" />
         <div className="grid-pattern" />
