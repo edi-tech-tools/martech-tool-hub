@@ -35,3 +35,4 @@ new-tools-batch.ts
 .next_old/
 **/__pycache__/
 *.pyc
+*.py
