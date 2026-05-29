@@ -140,7 +140,7 @@ export default function HomePage() {
               <Search className="ml-5 w-5 h-5 text-[#5A6E8A] flex-shrink-0" />
               <input
                 type="search"
-                placeholder="Search tools, categories, or features..."
+                placeholder="搜索营销工具，按分类或功能..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="flex-1 py-4 px-3 bg-transparent text-[#E8F0FE] placeholder:text-[#5A6E8A] outline-none text-base"
