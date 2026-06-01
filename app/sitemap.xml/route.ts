@@ -9,6 +9,7 @@ const BLOG_SLUGS = [
   "social-media-management-tools-2026",
   "abm-platforms-2026-6sense-demandbase-terminus-comparison",
   "marketing-automation-comparison-2026-hubspot-marketo-activecampaign-brevo",
+  "marketing-automation-trends-2026",
 ];
 
 const TOOL_SLUGS = [
