@@ -9,7 +9,7 @@ interface JsonLdProps {
 
 export default function JsonLd({
   siteName = 'B2B SaaS Tool Hub',
-  siteUrl = 'https://martech-tools-hub.com',
+  siteUrl = 'https://martech-tools.net',
   description = 'Comprehensive B2B SaaS directory and tool hub for modern enterprises.',
 }: JsonLdProps) {
   useEffect(() => {

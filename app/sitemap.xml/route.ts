@@ -74,7 +74,7 @@ const TOOL_SLUGS = [
 ];
 
 export async function GET() {
-  const baseUrl = "https://martech-tools-hub.com";
+  const baseUrl = "https://martech-tools.net";
   
   const urls: string[] = [];
   

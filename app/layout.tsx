@@ -32,7 +32,7 @@ const dmSans = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://martech-tools-hub.com"),
+  metadataBase: new URL("https://martech-tools.net"),
   title: {
     default: "MarTech Tools Hub — Marketing Technology Stack Reviews",
     template: "%s — MarTech Tools Hub",

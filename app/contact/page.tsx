@@ -141,22 +141,22 @@ export default function ContactPage() {
                 <p className="text-sm text-[#8BA3BE]">
                   <strong className="text-[#F0F4F8]">Support:</strong>
                   <br />
-                  <a href="mailto:support@martech-tools-hub.com" className="text-[#3B82F6] hover:underline">
-                    support@martech-tools-hub.com
+                  <a href="mailto:support@martech-tools.net" className="text-[#3B82F6] hover:underline">
+                    support@martech-tools.net
                   </a>
                 </p>
                 <p className="text-sm text-[#8BA3BE]">
                   <strong className="text-[#F0F4F8]">General:</strong>
                   <br />
-                  <a href="mailto:info@martech-tools-hub.com" className="text-[#3B82F6] hover:underline">
-                    info@martech-tools-hub.com
+                  <a href="mailto:info@martech-tools.net" className="text-[#3B82F6] hover:underline">
+                    info@martech-tools.net
                   </a>
                 </p>
                 <p className="text-sm text-[#8BA3BE]">
                   <strong className="text-[#F0F4F8]">Press:</strong>
                   <br />
-                  <a href="mailto:info@martech-tools-hub.com" className="text-[#3B82F6] hover:underline">
-                    info@martech-tools-hub.com
+                  <a href="mailto:info@martech-tools.net" className="text-[#3B82F6] hover:underline">
+                    info@martech-tools.net
                   </a>
                 </p>
               </div>
