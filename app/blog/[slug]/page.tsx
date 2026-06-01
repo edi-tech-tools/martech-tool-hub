@@ -180,7 +180,7 @@ export default async function BlogPostPage({
   );
   const orgJsonLd = organizationSchema(
     'B2B SaaS Tool Hub',
-    'https://b2b-saas-tool-hub.com',
+    'https://martech-tools-hub.com',
     'Comprehensive B2B SaaS directory and tool hub for modern enterprises.'
   );
 
