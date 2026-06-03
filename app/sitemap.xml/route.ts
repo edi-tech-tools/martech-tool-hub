@@ -11,6 +11,7 @@ const BLOG_SLUGS = [
   "marketing-automation-comparison-2026-hubspot-marketo-activecampaign-brevo",
   "marketing-automation-trends-2026",
   "marTech-stack-consolidation-2026",
+  "cdp-vs-data-warehouse-vs-reverse-etl-2026",
 ];
 
 const TOOL_SLUGS = [
