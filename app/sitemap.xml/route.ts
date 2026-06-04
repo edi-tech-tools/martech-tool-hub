@@ -12,6 +12,7 @@ const BLOG_SLUGS = [
   "marketing-automation-trends-2026",
   "marTech-stack-consolidation-2026",
   "cdp-vs-data-warehouse-vs-reverse-etl-2026",
+  "martech-reference-sites-2026-martechtoday-g2-techcrunch",
 ];
 
 const TOOL_SLUGS = [
