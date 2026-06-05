@@ -13,6 +13,7 @@ const BLOG_SLUGS = [
   "marTech-stack-consolidation-2026",
   "cdp-vs-data-warehouse-vs-reverse-etl-2026",
   "martech-reference-sites-2026-martechtoday-g2-techcrunch",
+  "ai-agents-martech-2026-hubspot-breeze-salesforce-agentforce-adobe-genstudio",
 ];
 
 const TOOL_SLUGS = [
