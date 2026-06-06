@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — B2B SaaS Tool Hub",
+  title: "Privacy Policy — MarTech Tool Hub",
   description:
-    "Learn how B2B SaaS Tool Hub collects, uses, and protects your personal data. Our privacy policy outlines our commitment to your privacy and data security.",
+    "Learn how MarTech Tool Hub collects, uses, and protects your personal data. Our privacy policy outlines our commitment to your privacy and data security.",
 };
 
 export default function PrivacyPage() {
@@ -27,7 +27,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">1. Introduction</h2>
             <p>
-              B2B SaaS Tool Hub ("we," "our," or "us") is committed to protecting your privacy.
+              MarTech Tool Hub ("we," "our," or "us") is committed to protecting your privacy.
               This Privacy Policy explains how we collect, use, disclose, and safeguard your
               information when you visit our website martech-tools.net (the "Site"). Please read this
               policy carefully. If you do not agree with the terms, do not access the Site.

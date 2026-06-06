@@ -65,9 +65,9 @@ export default function ToolDetailPage() {
     scripts.push(s1);
 
     const org = organizationSchema(
-      'B2B SaaS Tool Hub',
+      'MarTech Tool Hub',
       'https://martech-tools.net',
-      'Comprehensive B2B SaaS directory and tool hub for modern enterprises.'
+      'Comprehensive MarTech directory and tool hub for modern enterprises.'
     );
     const s2 = document.createElement('script');
     s2.type = 'application/ld+json';

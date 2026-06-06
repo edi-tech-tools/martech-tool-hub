@@ -20,7 +20,7 @@ export async function generateMetadata({
   const post = BLOG_POSTS.find((p) => p.slug === slug);
   if (!post) return { title: "Post Not Found" };
   return {
-    title: `${post.title} — B2B SaaS Tool Hub`,
+    title: `${post.title} — MarTech Tool Hub`,
     description: post.excerpt,
   };
 }
@@ -175,13 +175,13 @@ export default async function BlogPostPage({
     post.title,
     post.author,
     post.date,
-    'B2B SaaS Tool Hub',
+    'MarTech Tool Hub',
     post.excerpt
   );
   const orgJsonLd = organizationSchema(
-    'B2B SaaS Tool Hub',
+    'MarTech Tool Hub',
     'https://martech-tools.net',
-    'Comprehensive B2B SaaS directory and tool hub for modern enterprises.'
+    'Comprehensive MarTech directory and tool hub for modern enterprises.'
   );
 
   return (

@@ -46,10 +46,10 @@ export default function Footer() {
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#3B82F6] to-[#22D3EE] flex items-center justify-center">
                 <Sparkles className="w-4 h-4 text-white" />
               </div>
-              <span className="text-lg font-bold text-[#F0F4F8]">SaaS Hub</span>
+              <span className="text-lg font-bold text-[#F0F4F8]">MarTech Hub</span>
             </Link>
             <p className="text-sm text-[#8BA3BE] leading-relaxed mb-6">
-              The most comprehensive directory of B2B SaaS tools. Discover, compare, and integrate the best software for your business.
+              The most comprehensive directory of MarTech tools. Discover, compare, and integrate the best marketing technology for your business.
             </p>
             <div className="flex items-center gap-3">
               <a href="#" className="w-9 h-9 rounded-lg bg-[#0F1D32] border border-[#1E3A5F] flex items-center justify-center text-[#8BA3BE] hover:text-[#3B82F6] hover:border-[#2A5080] transition-all">
@@ -89,7 +89,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-[#1E3A5F] flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-[#4A6380]">
-            &copy; {new Date().getFullYear()} B2B SaaS Tool Hub. All rights reserved.
+            &copy; {new Date().getFullYear()} MarTech Tool Hub. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="text-sm text-[#4A6380] hover:text-[#8BA3BE] transition-colors">
