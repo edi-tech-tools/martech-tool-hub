@@ -1388,3 +1388,5 @@ Alternatives: Hotjar (stronger SMB fit, lighter on AI), FullStory (deeper techni
     alternatives: ["Lucky Orange", "Hotjar", "Microsoft Clarity"],
   },
 ];
+
+export const TOOL_MAP = new Map(ALL_TOOLS.map((t) => [t.id, t]));
