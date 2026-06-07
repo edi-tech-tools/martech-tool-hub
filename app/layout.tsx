@@ -71,24 +71,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dmSans.variable} min-h-screen antialiased font-sans`}>
-        {/* Background Effects */}
         <div className="aurora-bg" />
         <div className="grid-pattern" />
 
         <div className="relative z-10 flex min-h-screen">
-          {/* Fixed Left Sidebar */}
           <Sidebar />
 
-          {/* Right Main Content Area */}
           <div className="flex-1 flex flex-col ml-64">
             <main className="flex-1">{children}</main>
 
-            {/* Footer */}
             <Footer />
           </div>
         </div>
 
-        {/* Cookie Consent Banner */}
         <CookieBanner />
       </body>
     </html>

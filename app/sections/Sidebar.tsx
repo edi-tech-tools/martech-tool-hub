@@ -24,14 +24,12 @@ export default function Sidebar() {
     new Set()
   );
 
-  // Filter categories based on search
   const filteredCategories = useMemo(() => {
     if (!searchQuery.trim()) return CATEGORIES;
     const q = searchQuery.toLowerCase();
     return CATEGORIES.filter((cat) => cat.toLowerCase().includes(q));
   }, [searchQuery]);
 
-  // Tools matching search
   const matchingTools = useMemo(() => {
     if (!searchQuery.trim()) return [];
     const q = searchQuery.toLowerCase();
@@ -43,7 +41,6 @@ export default function Sidebar() {
     );
   }, [searchQuery]);
 
-  // Recent articles (latest 5)
   const recentArticles = useMemo(
     () =>
       [...BLOG_POSTS]
@@ -75,7 +72,6 @@ export default function Sidebar() {
 
   return (
     <aside className="fixed left-0 top-0 bottom-0 w-64 z-50 flex flex-col bg-[#0A1628]/95 backdrop-blur-xl border-r border-[#1E3A5F]/50">
-      {/* Logo */}
       <div className="px-5 pt-6 pb-4 border-b border-[#1E3A5F]/30">
         <Link href="/" className="flex items-center gap-2.5 group">
           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#E94560] to-[#FF6B81] flex items-center justify-center shadow-glow-sm">
@@ -87,7 +83,6 @@ export default function Sidebar() {
         </Link>
       </div>
 
-      {/* Search */}
       <div className="px-4 pt-4 pb-3">
         <div className="relative">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#4A6380]" />
@@ -101,9 +96,7 @@ export default function Sidebar() {
         </div>
       </div>
 
-      {/* Scrollable Content */}
       <div className="flex-1 overflow-y-auto overflow-x-hidden px-4 pb-4 scrollbar-thin">
-        {/* Search Results */}
         {searchQuery.trim() && (
           <div className="mb-4">
             <p className="text-xs font-semibold uppercase tracking-wider text-[#4A6380] mb-2">
@@ -131,7 +124,6 @@ export default function Sidebar() {
           </div>
         )}
 
-        {/* Categories Section */}
         <div className="mb-4">
           <div className="flex items-center gap-2 mb-2">
             <Layers className="w-4 h-4 text-[#E94560]" />
@@ -140,7 +132,6 @@ export default function Sidebar() {
             </h3>
           </div>
           <div className="space-y-0.5">
-            {/* "All Tools" link */}
             {!searchQuery.trim() && (
               <Link
                 href="/"
@@ -215,7 +206,6 @@ export default function Sidebar() {
           </div>
         </div>
 
-        {/* Recent Articles */}
         <div className="mb-4">
           <div className="flex items-center gap-2 mb-2">
             <BookOpen className="w-4 h-4 text-[#E94560]" />
@@ -249,7 +239,6 @@ export default function Sidebar() {
         </div>
       </div>
 
-      {/* Bottom: Copyright */}
       <div className="px-5 py-4 border-t border-[#1E3A5F]/30">
         <p className="text-[10px] text-[#4A6380] leading-relaxed">
           &copy; {new Date().getFullYear()} MarTech Tools Hub.

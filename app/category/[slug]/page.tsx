@@ -4,20 +4,16 @@ import { Star, ArrowRight, BookOpen, Layers, ChevronRight } from "lucide-react";
 import { ALL_TOOLS } from "@/data/tools";
 import { BLOG_POSTS } from "@/data/blog-posts";
 
-// All unique categories
 const ALL_CATEGORIES = Array.from(new Set(ALL_TOOLS.map((t) => t.category)));
 
-// Slugify
 function slugify(category: string) {
   return category.toLowerCase().replace(/\s+/g, "-");
 }
 
-// Deslugify
 function deslugify(slug: string): string | undefined {
   return ALL_CATEGORIES.find((c) => slugify(c) === slug);
 }
 
-// Category descriptions
 const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   "Marketing Automation": "Marketing automation platforms help businesses create, execute, and analyze multi-channel campaigns across email, social, and web. Compare the best marketing automation tools for your MarTech stack.",
   "CRM and Sales": "Customer Relationship Management (CRM) and sales software help teams manage leads, track deals, and automate sales processes. Find the right platform to accelerate your revenue operations.",
@@ -35,7 +31,6 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   "CRO and Testing": "Conversion Rate Optimization (CRO) and testing platforms enable data-driven experimentation through A/B testing, multivariate testing, personalization, and behavioral analytics.",
 };
 
-// Count tools per category for stats
 const CATEGORY_STATS = ALL_CATEGORIES.reduce(
   (acc, cat) => {
     const tools = ALL_TOOLS.filter((t) => t.category === cat);
@@ -111,7 +106,6 @@ export default function CategoryPage({
   return (
     <div className="relative pt-16 pb-20 px-6">
       <div className="max-w-[1200px] mx-auto">
-        {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-sm text-[#4A6380] mb-8">
           <Link href="/" className="hover:text-[#3B82F6] transition-colors">
             Home
@@ -120,7 +114,6 @@ export default function CategoryPage({
           <span className="text-[#8BA3BE]">{category} Tools</span>
         </nav>
 
-        {/* Header */}
         <header className="mb-10">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-12 h-12 rounded-xl bg-[#162440] flex items-center justify-center">
@@ -144,7 +137,6 @@ export default function CategoryPage({
           </p>
         </header>
 
-        {/* Quick Links */}
         <div className="flex flex-wrap gap-3 mb-10">
           <Link
             href={`/best/${params.slug}`}
@@ -154,7 +146,6 @@ export default function CategoryPage({
           </Link>
         </div>
 
-        {/* Tools Grid */}
         <section>
           <h2 className="text-2xl font-bold text-[#F0F4F8] mb-6">
             All {category} Tools
@@ -202,7 +193,6 @@ export default function CategoryPage({
           </div>
         </section>
 
-        {/* Related Blog Posts */}
         {relatedPosts.length > 0 && (
           <section className="mt-16">
             <div className="flex items-center gap-2 mb-6">

@@ -11,8 +11,6 @@ import { ALL_TOOLS } from "@/data/tools";
 import { BLOG_POSTS } from "@/data/blog-posts";
 
 // ============================================================
-// 模板B：杂志对比式首页 — MarTech Tools Hub 适配版
-// 主色：Dodger Blue #1E90FF
 // ============================================================
 
 const ACCENT_COLOR = "#1E90FF";
@@ -33,7 +31,6 @@ export default function HomePage() {
     });
   }, [ALL_TOOLS]);
 
-  // 分类浏览
   const categoryCards = useMemo(() => {
     const descs: Record<string, string> = {
       "CRM": "Streamline customer relationships and boost sales",
@@ -55,13 +52,11 @@ export default function HomePage() {
       .slice(0, 8);
   }, [ALL_TOOLS]);
 
-  // 最新评测
   const latestReviews = useMemo(
     () => [...BLOG_POSTS].sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 4),
     [BLOG_POSTS]
   );
 
-  // 购买指南
   const buyingGuides = useMemo(() => {
     return categoryCards.slice(0, 3).map(c => ({
       title: `How to Choose ${c.name} Software in 2026`,
@@ -71,7 +66,6 @@ export default function HomePage() {
     }));
   }, [categoryCards]);
 
-  // 统计数据
   const stats = useMemo(() => ({
     totalTools: ALL_TOOLS.length,
     totalCategories: new Set(ALL_TOOLS.map(t => t.category)).size,
@@ -79,7 +73,6 @@ export default function HomePage() {
     avgRating: (ALL_TOOLS.reduce((sum, t) => sum + t.rating, 0) / ALL_TOOLS.length).toFixed(1),
   }), [ALL_TOOLS]);
 
-  // 搜索建议
   const searchSuggestions = useMemo(() => {
     if (searchQuery.length < 2) return [];
     return ALL_TOOLS.filter(t =>
@@ -111,7 +104,6 @@ export default function HomePage() {
             In-depth comparisons, unbiased reviews, and buying guides — we help you make
             confident marketing technology decisions backed by real data.
           </p>
-          {/* 搜索 */}
           <div className="max-w-xl mx-auto relative">
             <div className="flex items-center bg-[#0F1830] border border-[#1A2A50] rounded-xl px-5 py-3.5">
               <Search className="w-5 h-5 text-gray-500 mr-3" />
