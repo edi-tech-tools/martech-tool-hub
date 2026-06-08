@@ -1,364 +1,172 @@
 "use client";
 
-import { useState, useMemo } from "react";
-import {
-  Search, ArrowRight, Star, TrendingUp, BarChart3, BookOpen,
-  CheckCircle2, HelpCircle, ChevronRight, Award, Users, Layers,
-  Zap, Sparkles, Calendar, Clock, ArrowUpRight, MessageSquare
-} from "lucide-react";
-import Link from "next/link";
-import { ALL_TOOLS } from "@/data/tools";
-import { BLOG_POSTS } from "@/data/blog-posts";
-
-// ============================================================
-// ============================================================
-
-const ACCENT_COLOR = "#1E90FF";
-const ACCENT_HOVER = "#1873CC";
+import { MotionProvider, m } from '@/lib/motion';
+import { Reveal, StaggerReveal } from '@/components/motion/reveal';
+import { LiquidGlass } from '@/components/motion/liquid-glass';
+import { GradientMesh } from '@/components/motion/gradient-mesh';
+import { Magnetic } from '@/components/motion/magnetic';
+import { useMemo } from 'react';
+import Link from 'next/link';
+import { ALL_TOOLS } from '@/data/tools';
+import { BLOG_POSTS } from '@/data/blog-posts';
 
 export default function HomePage() {
-  const [searchQuery, setSearchQuery] = useState("");
-
-  // VS对比配对
-  const vsComparisons = useMemo(() => {
-    const cats = [...new Set(ALL_TOOLS.map(t => t.category))].slice(0, 3);
-    return cats.map(cat => {
-      const tools = ALL_TOOLS
-        .filter(t => t.category === cat)
-        .sort((a, b) => b.rating - a.rating)
-        .slice(0, 2);
-      return { category: cat, toolA: tools[0], toolB: tools[1] };
-    });
-  }, [ALL_TOOLS]);
-
-  const categoryCards = useMemo(() => {
-    const descs: Record<string, string> = {
-      "CRM": "Streamline customer relationships and boost sales",
-      "Marketing": "Automate campaigns and grow your audience",
-      "Communication": "Keep your team connected and aligned",
-      "Analytics": "Turn data into actionable insights",
-      "SEO": "Optimize your search presence and traffic",
-      "Email": "Reach customers with targeted campaigns",
-    };
-    const m = new Map<string, { count: number; avgRating: number }>();
+  const cats = useMemo(() => {
+    const m = new Map<string, { count: number }>();
     for (const t of ALL_TOOLS) {
-      if (!m.has(t.category)) m.set(t.category, { count: 0, avgRating: 0 });
-      const s = m.get(t.category)!;
-      s.count++; s.avgRating += t.rating;
+      if (!m.has(t.category)) m.set(t.category, { count: 0 });
+      m.get(t.category)!.count++;
     }
-    return [...m.entries()]
-      .map(([name, d]) => ({ name, count: d.count, avgRating: Math.round((d.avgRating / d.count) * 10) / 10, description: descs[name] || `Top ${name.toLowerCase()} tools` }))
-      .sort((a, b) => b.count - a.count)
-      .slice(0, 8);
-  }, [ALL_TOOLS]);
+    return [...m.entries()].sort((a, b) => b[1].count - a[1].count);
+  }, []);
 
-  const latestReviews = useMemo(
-    () => [...BLOG_POSTS].sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 4),
-    [BLOG_POSTS]
+  const topPicks = useMemo(() => [...ALL_TOOLS].sort((a, b) => b.rating - a.rating).slice(0, 6), []);
+
+  const posts = useMemo(
+    () => [...BLOG_POSTS].sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 3),
+    []
   );
 
-  const buyingGuides = useMemo(() => {
-    return categoryCards.slice(0, 3).map(c => ({
-      title: `How to Choose ${c.name} Software in 2026`,
-      excerpt: `A practical guide to evaluating ${c.name.toLowerCase()} tools for your team size, budget, and use case.`,
-      readTime: "8 min read",
-      icon: c.name === "CRM" ? TrendingUp : c.name === "Marketing" ? Zap : Layers,
-    }));
-  }, [categoryCards]);
-
-  const stats = useMemo(() => ({
-    totalTools: ALL_TOOLS.length,
-    totalCategories: new Set(ALL_TOOLS.map(t => t.category)).size,
-    totalReviews: ALL_TOOLS.reduce((sum, t) => sum + (t.reviewCount || 0), 0),
-    avgRating: (ALL_TOOLS.reduce((sum, t) => sum + t.rating, 0) / ALL_TOOLS.length).toFixed(1),
-  }), [ALL_TOOLS]);
-
-  const searchSuggestions = useMemo(() => {
-    if (searchQuery.length < 2) return [];
-    return ALL_TOOLS.filter(t =>
-      t.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      t.category.toLowerCase().includes(searchQuery.toLowerCase())
-    ).slice(0, 5);
-  }, [searchQuery, ALL_TOOLS]);
-
   return (
-    <div className="min-h-screen bg-[#0A0E1A]">
-      {/* ======== HERO ======== */}
-      <section className="relative pt-32 pb-16 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0A0E1A] via-[#0A1225] to-[#0A0E1A]" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full opacity-[0.08] blur-[100px]"
-          style={{ background: `radial-gradient(circle, ${ACCENT_COLOR}, transparent)` }} />
-        <div className="relative max-w-6xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm bg-[#0F1830] border border-[#1A2A50] mb-6">
-            <Sparkles className="w-4 h-4" style={{ color: ACCENT_COLOR }} />
-            <span className="text-gray-300">Expert reviews &amp; data-driven comparisons</span>
-          </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
-            Find the Perfect{" "}
-            <span className="text-transparent bg-clip-text"
-              style={{ backgroundImage: `linear-gradient(135deg, ${ACCENT_COLOR}, #00BFFF)` }}>
-              MarTech Stack
-            </span>
-          </h1>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-10">
-            In-depth comparisons, unbiased reviews, and buying guides — we help you make
-            confident marketing technology decisions backed by real data.
-          </p>
-          <div className="max-w-xl mx-auto relative">
-            <div className="flex items-center bg-[#0F1830] border border-[#1A2A50] rounded-xl px-5 py-3.5">
-              <Search className="w-5 h-5 text-gray-500 mr-3" />
-              <input
-                type="text"
-                placeholder={`Search ${stats.totalTools}+ tools across ${stats.totalCategories} categories...`}
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="bg-transparent text-white placeholder-gray-500 outline-none flex-1 text-base"
-              />
-            </div>
-            {searchSuggestions.length > 0 && (
-              <div className="absolute top-full mt-2 left-0 right-0 bg-[#0F1830] border border-[#1A2A50] rounded-xl z-50 overflow-hidden">
-                {searchSuggestions.map(tool => (
-                  <Link key={tool.id} href={`/tools/${tool.id}`}
-                    className="flex items-center gap-3 px-5 py-3 hover:bg-[#152040] transition-colors text-left"
-                  >
-                    <div className="w-8 h-8 rounded-lg bg-[#152040] flex items-center justify-center">
-                      <Layers className="w-4 h-4" style={{ color: ACCENT_COLOR }} />
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-white text-sm font-medium">{tool.name}</p>
-                      <p className="text-gray-500 text-xs">{tool.category}</p>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Star className="w-3.5 h-3.5 text-yellow-500 fill-yellow-500" />
-                      <span className="text-gray-300 text-sm">{tool.rating}</span>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
+    <MotionProvider>
+      <div className="relative min-h-screen">
+        <div className="fixed inset-0 -z-10">
+          <div className="absolute inset-0 bg-[#09090b]" />
+          <GradientMesh colors={['#00bcd4', '#a78bfa', '#f472b6']} intensity={0.05} />
         </div>
-      </section>
 
-      {/* ======== 数据面板 ======== */}
-      <section className="px-6 py-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              { icon: BarChart3, label: "Tools Reviewed", value: stats.totalTools },
-              { icon: Layers, label: "Categories", value: stats.totalCategories },
-              { icon: Users, label: "User Reviews", value: stats.totalReviews > 10000 ? `${(stats.totalReviews / 1000).toFixed(0)}K+` : stats.totalReviews },
-              { icon: Award, label: "Avg Rating", value: `★ ${stats.avgRating}` },
-            ].map((item, i) => (
-              <div key={i} className="bg-[#0A1225] border border-[#152040] rounded-xl p-5 text-center">
-                <item.icon className="w-5 h-5 mx-auto mb-2" style={{ color: ACCENT_COLOR }} />
-                <p className="text-2xl font-bold text-white">{item.value}</p>
-                <p className="text-xs text-gray-500 mt-1">{item.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ======== VS对比区 ======== */}
-      <section className="px-6 py-12">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-center justify-between mb-8">
-            <div>
-              <h2 className="text-2xl font-bold text-white">Head-to-Head Comparisons</h2>
-              <p className="text-gray-500 text-sm mt-1">We pit the top tools against each other</p>
-            </div>
-            <Link href="/comparisons" className="text-sm flex items-center gap-1 hover:underline" style={{ color: ACCENT_COLOR }}>
-              View all <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {vsComparisons.map((pair, i) => (
-              pair.toolA && pair.toolB ? (
-                <div key={i} className="bg-[#0A1225] border border-[#152040] rounded-xl p-5 hover:border-[#1A3A60] transition-all">
-                  <p className="text-xs text-gray-500 uppercase tracking-wider mb-4">{pair.category}</p>
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-lg bg-[#0F1830] flex items-center justify-center text-lg font-bold text-[${ACCENT_COLOR}]">
-                      {pair.toolA.name.charAt(0)}
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-white font-semibold text-sm">{pair.toolA.name}</p>
-                      <div className="flex items-center gap-1">
-                        <Star className="w-3 h-3 text-yellow-500 fill-yellow-500" />
-                        <span className="text-gray-300 text-xs">{pair.toolA.rating}</span>
-                      </div>
-                    </div>
-                    <Link href={`/tools/${pair.toolA.id}`}
-                      className="text-xs px-3 py-1.5 rounded-lg border transition-colors"
-                      style={{ borderColor: ACCENT_COLOR, color: ACCENT_COLOR }}>
-                      Review
-                    </Link>
-                  </div>
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="flex-1 h-px bg-[#1A2A50]" />
-                    <span className="text-xs font-bold text-gray-500">VS</span>
-                    <div className="flex-1 h-px bg-[#1A2A50]" />
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-[#0F1830] flex items-center justify-center text-lg font-bold text-[${ACCENT_COLOR}]">
-                      {pair.toolB.name.charAt(0)}
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-white font-semibold text-sm">{pair.toolB.name}</p>
-                      <div className="flex items-center gap-1">
-                        <Star className="w-3 h-3 text-yellow-500 fill-yellow-500" />
-                        <span className="text-gray-300 text-xs">{pair.toolB.rating}</span>
-                      </div>
-                    </div>
-                    <Link href={`/tools/${pair.toolB.id}`}
-                      className="text-xs px-3 py-1.5 rounded-lg border transition-colors"
-                      style={{ borderColor: ACCENT_COLOR, color: ACCENT_COLOR }}>
-                      Review
-                    </Link>
-                  </div>
-                  <Link href={`/comparison/${pair.toolA.id}-vs-${pair.toolB.id}`}
-                    className="mt-4 w-full text-xs py-2 rounded-lg flex items-center justify-center gap-1 transition-colors"
-                    style={{ backgroundColor: `${ACCENT_COLOR}15`, color: ACCENT_COLOR }}>
-                    Which is right for you? <HelpCircle className="w-3 h-3" />
-                  </Link>
-                </div>
-              ) : null
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ======== 分类浏览 ======== */}
-      <section className="px-6 py-12">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-white mb-2">Browse by Category</h2>
-          <p className="text-gray-500 text-sm mb-8">Explore tools organized by your marketing needs</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {categoryCards.map(cat => (
-              <Link key={cat.name} href={`/category/${cat.name.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`}
-                className="group bg-[#0A1225] border border-[#152040] rounded-xl p-5 hover:border-[#1A3A60] transition-all"
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <div className="w-9 h-9 rounded-lg flex items-center justify-center"
-                    style={{ backgroundColor: `${ACCENT_COLOR}15` }}>
-                    <Layers className="w-4 h-4" style={{ color: ACCENT_COLOR }} />
-                  </div>
-                  <span className="text-xs px-2 py-0.5 rounded-full bg-[#0F1830] text-gray-400">{cat.count} tools</span>
-                </div>
-                <h3 className="text-white font-semibold text-sm mb-1">{cat.name}</h3>
-                <p className="text-gray-500 text-xs leading-relaxed">{cat.description}</p>
-                <div className="flex items-center gap-1 mt-2">
-                  <Star className="w-3 h-3 text-yellow-500 fill-yellow-500" />
-                  <span className="text-gray-400 text-xs">{cat.avgRating} avg rating</span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ======== 最新评测 ======== */}
-      <section className="px-6 py-12">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-center justify-between mb-8">
-            <div>
-              <h2 className="text-2xl font-bold text-white">Latest Reviews &amp; Analysis</h2>
-              <p className="text-gray-500 text-sm mt-1">In-depth, unbiased, and up-to-date</p>
-            </div>
-            <Link href="/blog" className="text-sm flex items-center gap-1 hover:underline" style={{ color: ACCENT_COLOR }}>
-              View all <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {latestReviews[0] && (
-              <Link href={`/blog/${latestReviews[0].slug}`}
-                className="md:col-span-1 bg-[#0A1225] border border-[#152040] rounded-xl p-6 hover:border-[#1A3A60] transition-all group"
-              >
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-xs px-2.5 py-1 rounded-full"
-                    style={{ backgroundColor: `${ACCENT_COLOR}15`, color: ACCENT_COLOR }}>
-                    {latestReviews[0].category || "Featured"}
-                  </span>
-                  <span className="text-xs text-gray-500 flex items-center gap-1">
-                    <Clock className="w-3 h-3" /> {latestReviews[0].readTime || "5 min"}
-                  </span>
-                </div>
-                <h3 className="text-lg font-bold text-white mb-3 group-hover:underline">{latestReviews[0].title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-3">{latestReviews[0].excerpt}</p>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <div className="w-7 h-7 rounded-full bg-[#0F1830] flex items-center justify-center text-xs text-gray-300">
-                      {latestReviews[0].author?.charAt(0) || "E"}
-                    </div>
-                    <span className="text-xs text-gray-500">{latestReviews[0].author || "Editor"} · {latestReviews[0].date}</span>
-                  </div>
-                  <span className="text-xs flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: ACCENT_COLOR }}>
-                    Read more <ArrowUpRight className="w-3 h-3" />
-                  </span>
-                </div>
-              </Link>
-            )}
-            <div className="flex flex-col gap-4">
-              {latestReviews.slice(1, 4).map((post, i) => (
-                <Link key={post.slug || i} href={`/blog/${post.slug}`}
-                  className="flex gap-4 bg-[#0A1225] border border-[#152040] rounded-xl p-4 hover:border-[#1A3A60] transition-all group"
-                >
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#0F1830] text-gray-400">{post.category || "Article"}</span>
-                      <span className="text-[10px] text-gray-600">{post.readTime || "5 min"}</span>
-                    </div>
-                    <h4 className="text-sm font-semibold text-white group-hover:underline line-clamp-2">{post.title}</h4>
-                    <p className="text-xs text-gray-500 mt-1">{post.date}</p>
-                  </div>
-                  <ArrowRight className="w-4 h-4 text-gray-600 self-center flex-shrink-0" />
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ======== 购买指南 ======== */}
-      <section className="px-6 py-12">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-white mb-2">Buying Guides</h2>
-          <p className="text-gray-500 text-sm mb-8">Step-by-step guides to choosing the right software</p>
-          <div className="grid md:grid-cols-3 gap-6">
-            {buyingGuides.map((guide, i) => (
-              <div key={i} className="bg-[#0A1225] border border-[#152040] rounded-xl p-6 hover:border-[#1A3A60] transition-all group cursor-pointer">
-                <guide.icon className="w-8 h-8 mb-4" style={{ color: ACCENT_COLOR }} />
-                <h3 className="text-white font-semibold mb-2 group-hover:underline">{guide.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-4">{guide.excerpt}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-gray-500">{guide.readTime}</span>
-                  <span className="text-xs flex items-center gap-1" style={{ color: ACCENT_COLOR }}>
-                    Read guide <ChevronRight className="w-3 h-3" />
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ======== CTA ======== */}
-      <section className="px-6 py-16">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-[#0A1225] to-[#0F1830] border border-[#1A2A50] rounded-2xl p-10 md:p-14">
-            <CheckCircle2 className="w-10 h-10 mx-auto mb-4" style={{ color: ACCENT_COLOR }} />
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">Ready to build your MarTech stack?</h2>
-            <p className="text-gray-400 max-w-xl mx-auto mb-8">
-              Browse our curated collection of {stats.totalTools}+ marketing tools across {stats.totalCategories} categories.
+        {/* ═══ HERO ═══ */}
+        <section className="pt-28 pb-12 text-center px-6">
+          <Reveal y={12} blur>
+            <p className="text-[10px] font-mono tracking-[0.3em] text-[#708094] mb-5 uppercase">
+              {ALL_TOOLS.length} marketing tools reviewed
             </p>
-            <Link href="/all-tools"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl text-white font-semibold transition-all hover:scale-105"
-              style={{ backgroundColor: ACCENT_COLOR }}>
-              Browse All Tools <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
+          </Reveal>
+
+          <Reveal delay={0.1} y={16} blur>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-dm-sans)] font-bold text-[#e6eefc] mb-4 tracking-tight leading-[1.05]">
+              Build Your Ideal<br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00bcd4] to-[#a78bfa]">Marketing Stack</span>
+            </h1>
+          </Reveal>
+
+          <Reveal delay={0.3} y={12}>
+            <p className="text-base text-[#9bb1d0] max-w-lg mx-auto leading-relaxed">
+              Compare {ALL_TOOLS.length} marketing technology tools across {cats.length} categories. Side-by-side reviews, pricing, and expert insights.
+            </p>
+          </Reveal>
+
+          <Reveal delay={0.5} y={12}>
+            <div className="flex justify-center gap-3 mt-8">
+              <Magnetic>
+                <Link
+                  href="/tools"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#00bcd4]/10 border border-[#00bcd4]/30 text-sm font-medium text-[#00bcd4] hover:bg-[#00bcd4]/20 transition-all"
+                >
+                  Browse Tools
+                </Link>
+              </Magnetic>
+              <Magnetic>
+                <Link
+                  href="/blog"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08] text-sm font-medium text-[#e6eefc] hover:bg-white/[0.08] transition-all"
+                >
+                  Latest Reviews
+                </Link>
+              </Magnetic>
+            </div>
+          </Reveal>
+        </section>
+
+        {/* ═══ CATEGORIES ═══ */}
+        <section className="pb-16 px-6 max-w-5xl mx-auto">
+          <Reveal y={12}>
+            <p className="text-[10px] font-mono tracking-[0.25em] text-[#708094] mb-6 uppercase text-center">
+              Categories
+            </p>
+          </Reveal>
+
+          <StaggerReveal className="grid md:grid-cols-2 lg:grid-cols-3 gap-3" stagger={0.06}>
+            {cats.map(([name, d]) => (
+              <Reveal key={name} y={20}>
+                <Link href={`/category/${name.toLowerCase().replace(/\s+/g, '-')}`}>
+                  <LiquidGlass intensity="standard" tint="#00bcd4" glow tilt tiltIntensity={5}
+                    className="rounded-xl border border-white/[0.06] hover:border-white/[0.14] transition-colors block"
+                  >
+                    <div className="p-5">
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-2 h-2 rounded-full bg-[#00bcd4]" style={{ boxShadow: '0 0 12px #00bcd460' }} />
+                        <h3 className="text-sm font-semibold text-[#e6eefc]">{name}</h3>
+                      </div>
+                      <p className="text-xs text-[#9bb1d0]">{d.count} tools</p>
+                    </div>
+                  </LiquidGlass>
+                </Link>
+              </Reveal>
+            ))}
+          </StaggerReveal>
+        </section>
+
+        {/* ═══ TOP PICKS ═══ */}
+        <section className="pb-16 px-6 max-w-5xl mx-auto">
+          <Reveal y={12}>
+            <p className="text-[10px] font-mono tracking-[0.25em] text-[#708094] mb-6 uppercase text-center">
+              Top Rated Tools
+            </p>
+          </Reveal>
+
+          <StaggerReveal className="grid md:grid-cols-2 lg:grid-cols-3 gap-3" stagger={0.06}>
+            {topPicks.map((t) => (
+              <Reveal key={t.id} y={20}>
+                <Link href={`/tools/${t.id}`}>
+                  <LiquidGlass intensity="subtle" tint="#a78bfa" glow={false} tilt tiltIntensity={4}
+                    className="rounded-xl border border-white/[0.06] hover:border-white/[0.14] transition-colors block"
+                  >
+                    <div className="p-5">
+                      <div className="flex items-center justify-between gap-2 mb-2">
+                        <h3 className="text-sm font-semibold text-[#e6eefc] truncate">{t.name}</h3>
+                        <span className="text-xs text-[#fbbf24] flex-shrink-0">★ {t.rating}</span>
+                      </div>
+                      <p className="text-xs text-[#9bb1d0] line-clamp-2">{t.description}</p>
+                      <div className="text-[10px] text-[#708094] mt-2 font-mono">{t.category}</div>
+                    </div>
+                  </LiquidGlass>
+                </Link>
+              </Reveal>
+            ))}
+          </StaggerReveal>
+        </section>
+
+        {/* ═══ BLOG ═══ */}
+        <section className="pb-24 px-6 max-w-5xl mx-auto">
+          <Reveal y={12}>
+            <p className="text-[10px] font-mono tracking-[0.25em] text-[#708094] mb-6 uppercase text-center">
+              Latest Reviews
+            </p>
+          </Reveal>
+
+          <StaggerReveal className="grid md:grid-cols-3 gap-3" stagger={0.06}>
+            {posts.map((p) => (
+              <Reveal key={p.slug} y={20}>
+                <Link href={`/blog/${p.slug}`}>
+                  <LiquidGlass intensity="subtle" tint="#f472b6" glow={false} tilt={false}
+                    className="rounded-xl border border-white/[0.06] hover:border-white/[0.14] transition-colors block h-full"
+                  >
+                    <div className="p-5 flex flex-col h-full">
+                      <div className="text-[10px] font-mono tracking-wider uppercase text-[#708094] mb-2">{p.category || 'Review'}</div>
+                      <h3 className="text-sm font-semibold text-[#e6eefc] mb-2 line-clamp-2 leading-snug">{p.title}</h3>
+                      <p className="text-xs text-[#9bb1d0] flex-grow line-clamp-2">{p.excerpt}</p>
+                      <div className="text-[10px] text-[#52525b] mt-3 pt-2 border-t border-white/[0.06]">
+                        {p.readTime} min read
+                      </div>
+                    </div>
+                  </LiquidGlass>
+                </Link>
+              </Reveal>
+            ))}
+          </StaggerReveal>
+        </section>
+      </div>
+    </MotionProvider>
   );
 }
