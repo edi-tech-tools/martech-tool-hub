@@ -44,7 +44,7 @@ export default function Footer() {
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#3B82F6] to-[#22D3EE] flex items-center justify-center">
                 <Sparkles className="w-4 h-4 text-white" />
               </div>
-              <span className="text-lg font-bold text-[#F0F4F8]">MarTech Hub</span>
+              <span className="text-lg font-bold text-[#F0F4F8]">MarTech Tool Hub</span>
             </Link>
             <p className="text-sm text-[#8BA3BE] leading-relaxed mb-6">
               The most comprehensive directory of MarTech tools. Discover, compare, and integrate the best marketing technology for your business.

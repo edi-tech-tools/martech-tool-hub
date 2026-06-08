@@ -39,7 +39,7 @@ export default function Header() {
             <TrendingUp className="w-4 h-4 text-white" />
           </div>
           <span className="text-lg font-bold text-[#F0F4F8] group-hover:text-[#3B82F6] transition-colors">
-            Martech Tools Hub
+            MarTech Tool Hub
           </span>
         </Link>
 

@@ -9,146 +9,130 @@ const FAQ_SCHEMA = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What is B2B SaaS?",
+      name: "What is MarTech (Marketing Technology)?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "B2B SaaS (Business-to-Business Software as a Service) refers to cloud-based software solutions that businesses subscribe to and use to support their operations. Unlike traditional software that requires on-premise installation, B2B SaaS is hosted by the provider and accessed via a web browser. Examples include Salesforce (CRM), HubSpot (Marketing), Slack (Communication), and Asana (Project Management).",
+        text: "MarTech, short for Marketing Technology, refers to the software platforms, tools, and technologies that marketers use to plan, execute, measure, and optimize their marketing campaigns and strategies. The MarTech landscape includes everything from email marketing platforms and CRM systems to analytics tools, content management systems, advertising platforms, and AI-powered personalization engines. As of 2026, there are over 14,000 MarTech solutions across more than 50 categories.",
       },
     },
     {
       "@type": "Question",
-      name: "How do you choose the right SaaS tool for your business?",
+      name: "What are the main categories in a marketing technology stack?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Choosing the right SaaS tool involves defining your requirements, budgeting, evaluating features, reading verified user reviews from platforms like G2 and Capterra, considering integration capabilities, testing with free trials or demos, and assessing vendor support and scalability. Always prioritize tools that solve your specific pain points rather than getting distracted by feature bloat.",
+        text: "A modern marketing technology stack typically includes: CRM (Customer Relationship Management), Email Marketing platforms, Marketing Automation, Analytics and BI tools, SEO platforms, Social Media Management tools, Content Management Systems (CMS), Advertising and Programmatic platforms, Customer Data Platforms (CDP), Digital Asset Management (DAM), ABM (Account-Based Marketing) platforms, and increasingly AI-powered tools for content generation, personalization, and predictive analytics. Most businesses use 10-30+ tools in their MarTech stack depending on size and industry.",
       },
     },
     {
       "@type": "Question",
-      name: "What's the difference between B2B and B2C SaaS?",
+      name: "How do I build an effective MarTech stack?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "B2B SaaS targets business customers and focuses on features like team collaboration, admin controls, security compliance, and ROI tracking. B2C SaaS targets individual consumers and prioritizes user experience, ease of use, and personal productivity. B2B products typically have higher price points, longer sales cycles, and require onboarding support, while B2C products are often self-serve with lower monthly fees.",
+        text: "Building an effective MarTech stack starts with defining your marketing goals and mapping them to required capabilities. Start with foundational tools (CRM, email marketing, analytics), then add specialized tools as needs grow. Key principles: prioritize integrations between tools to avoid data silos, start with all-in-one platforms if you are a small team, scale with best-of-breed as you grow, audit your stack quarterly to remove unused tools, and ensure your team has the skills to actually use each tool you adopt. The goal is a coherent stack, not the largest one.",
       },
     },
     {
       "@type": "Question",
-      name: "How much should a small business spend on SaaS?",
+      name: "What is the difference between Marketing Automation, CRM, and CDP?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A common benchmark is that small businesses spend 3–10% of their annual revenue on SaaS subscriptions. For a company with $500K in revenue, that translates to roughly $15K–$50K per year. However, this varies by industry — tech startups often spend more, while traditional service businesses spend less. The key is to track SaaS usage regularly and eliminate underutilized subscriptions.",
+        text: "CRM (Customer Relationship Management) manages your existing customer interactions, pipeline, and sales data. Marketing Automation focuses on executing, automating, and measuring marketing campaigns across channels like email, social, and ads. CDP (Customer Data Platform) unifies customer data from multiple sources into a single, persistent customer profile for segmentation and activation. In practice: CRM manages relationships, Marketing Automation manages campaigns, and CDP manages unified customer data. Many modern platforms blur these lines, but understanding the core distinction helps avoid overbuying.",
       },
     },
     {
       "@type": "Question",
-      name: "What are the most popular B2B SaaS categories?",
+      name: "What are the best email marketing tools for 2026?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The most popular B2B SaaS categories include CRM (Customer Relationship Management), Marketing Automation, Project Management, Human Resources (HRIS), Accounting & Finance, Customer Support (Help Desk), Communication & Collaboration, Analytics & Business Intelligence, Cybersecurity, and DevOps tools. Each category has dozens of competing platforms with varying feature sets and pricing models.",
+        text: "Top email marketing tools in 2026 include Mailchimp (best for small businesses and ease of use), HubSpot (best for integrated CRM plus email), ActiveCampaign (best for automation capabilities), ConvertKit (best for creators and publishers), Brevo/Sendinblue (best for transactional emails), and Klaviyo (best for e-commerce). For enterprise, Salesforce Marketing Cloud and Oracle Eloqua remain dominant. The right choice depends on your list size, automation needs, budget, and integration requirements with your existing stack.",
       },
     },
     {
       "@type": "Question",
-      name: "What is SaaS churn and why does it matter?",
+      name: "How do I choose the right SEO tools for my business?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "SaaS churn refers to the percentage of customers who cancel their subscriptions over a given period. It's a critical metric because acquiring new customers costs 5–7x more than retaining existing ones. High churn indicates product-market fit issues, poor customer experience, or competitive pressures. Top SaaS companies aim for monthly churn rates below 3–5%.",
+        text: "Choosing the right SEO tool depends on your specific needs. For comprehensive SEO platforms, Ahrefs, Semrush, and Moz are the top contenders. Ahrefs excels at backlink analysis and keyword research, Semrush is strongest for competitive analysis and PPC integration, and Moz offers solid beginner-friendly features. For technical SEO, Screaming Frog and Sitebulb are essential. For local SEO, BrightLocal and Whitespark lead the market. Start with one comprehensive tool (Ahrefs or Semrush) and add specialized tools as your SEO program matures.",
       },
     },
     {
       "@type": "Question",
-      name: "How do B2B SaaS pricing models work?",
+      name: "How do social media management tools compare?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "B2B SaaS pricing models vary widely. Common models include per-user per-month pricing (the most common), tiered plans (Basic/Pro/Enterprise), usage-based pricing (pay per API call or storage), flat-rate pricing, and freemium with paid upgrades. Many vendors also offer annual discounts of 15–25% compared to monthly billing. Enterprise plans often include custom pricing.",
+        text: "Social media management tools vary by features and target audience. Hootsuite is the most established with broad platform support. Buffer is simplest for small teams focused on scheduling. Sprout Social offers the best social listening and analytics. Later is strongest for visual content and Instagram. Agorapulse excels at community management and reporting. Sendible is great for agencies managing multiple clients. Key factors to compare: supported platforms, scheduling capabilities, analytics depth, social listening, team collaboration, and price per user.",
       },
     },
     {
       "@type": "Question",
-      name: "What is a B2B SaaS marketplace?",
+      name: "What is ABM (Account-Based Marketing) and who needs it?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A B2B SaaS marketplace is a platform where businesses can discover, compare, and purchase software tools. Examples include G2, Capterra, TrustRadius, and GetApp. These marketplaces aggregate user reviews, feature comparisons, and pricing information to help buyers make informed decisions. Some also facilitate direct purchases or free trials.",
+        text: "Account-Based Marketing (ABM) is a B2B strategy where marketing and sales teams coordinate to target specific high-value accounts with personalized campaigns, rather than casting a wide net. ABM platforms like Demandbase, 6sense, Terminus, and Madison Logic help identify target accounts, orchestrate personalized multi-channel campaigns, and measure account-level engagement. ABM is ideal for B2B companies with high average contract values ($50K+), long sales cycles, and a clear Ideal Customer Profile.",
       },
     },
     {
       "@type": "Question",
-      name: "How important are integrations when choosing SaaS tools?",
+      name: "What marketing analytics tools should I consider?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Integrations are extremely important. A SaaS tool that doesn't integrate with your existing tech stack can create data silos and manual workarounds. Look for tools that offer native integrations with popular platforms (like Slack, Salesforce, Google Workspace, or Microsoft 365), support APIs and webhooks for custom connections, and have a marketplace of third-party integrations.",
+        text: "Marketing analytics tools range from all-in-one platforms to specialized solutions. Google Analytics 4 remains the standard for web analytics. Adobe Analytics offers enterprise-grade capabilities. Mixpanel and Amplitude are best for product analytics. HubSpot and Salesforce provide integrated marketing analytics with their CRM platforms. For attribution modeling, Northbeam and Rockerbox lead the category. For dashboards, Looker (Google), Tableau, and Power BI are top choices. Most teams use 2-3 analytics tools that work together for a complete picture.",
       },
     },
     {
       "@type": "Question",
-      name: "What should I look for in a SaaS contract?",
+      name: "What content marketing tools are recommended?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Key items to review in a SaaS contract include the service level agreement (SLA) guaranteeing uptime (typically 99.9%+), data ownership and portability clauses, security compliance certifications (SOC 2, ISO 27001), termination and refund policies, auto-renewal terms, pricing escalation limits, and data processing agreements for GDPR compliance. Always have legal counsel review enterprise contracts.",
+        text: "Content marketing tools span creation, management, and distribution. For content planning and strategy, CoSchedule and Airtable are popular. For content creation, Canva (design), Jasper and Copy.ai (AI writing), and Grammarly (editing) are widely used. For CMS, WordPress, Contentful, and Webflow lead. For content distribution, tools like BuzzSumo, Quuu, and Outbrain help. For content analytics, Google Search Console, Ahrefs, and ContentKing provide SEO performance data. The key is building a workflow that connects planning, creation, publishing, and measurement.",
       },
     },
     {
       "@type": "Question",
-      name: "How does SaaS onboarding work for teams?",
+      name: "What are influencer marketing platforms and how do they work?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "SaaS onboarding typically involves account setup, user provisioning, data migration or import, training sessions (live or recorded), and integration configuration. The best SaaS providers offer dedicated onboarding specialists for enterprise plans, knowledge bases with tutorials, interactive walkthroughs within the product, and templates or starter kits to accelerate time-to-value.",
+        text: "Influencer marketing platforms help brands discover, vet, manage, and measure influencer partnerships. Top platforms include Aspire, Upfluence, CreatorIQ, Grin, and LTK (formerly rewardStyle). These platforms provide databases of influencers across Instagram, TikTok, YouTube, and other channels, with analytics on audience demographics, engagement rates, and past campaign performance. They also facilitate campaign management, content approvals, payment processing, and ROI measurement.",
       },
     },
     {
       "@type": "Question",
-      name: "What is the difference between free trial and freemium?",
+      name: "What is Digital Asset Management (DAM) and why does it matter?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A free trial gives you full access to premium features for a limited time (typically 7–30 days), after which you must subscribe. Freemium offers a permanently free version with limited features, designed to upsell you to paid plans when you need more functionality. Free trials are better for evaluating full capabilities, while freemium is good for long-term testing at no cost.",
+        text: "Digital Asset Management (DAM) is a system that stores, organizes, and manages digital assets like images, videos, documents, and brand files in a centralized, searchable repository. DAM tools like Bynder, Widen, Canto, Brandfolder, and Cloudinary help marketing teams maintain brand consistency, reduce time searching for assets, control versioning, manage rights and permissions, and streamline content distribution across channels. For any team producing significant volumes of marketing content, a DAM is essential infrastructure.",
       },
     },
     {
       "@type": "Question",
-      name: "How do B2B SaaS companies handle data security?",
+      name: "How much should a business budget for MarTech tools?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Reputable B2B SaaS companies implement encryption at rest and in transit, SOC 2 Type II audits, ISO 27001 certification, GDPR compliance, regular penetration testing, multi-factor authentication (MFA), role-based access controls (RBAC), and data backup & disaster recovery procedures. Always verify a vendor's security posture before committing to their platform.",
+        text: "MarTech budgets vary by company size and industry. Small businesses typically spend 2-8% of revenue on marketing technology. Mid-market companies ($10M-$100M revenue) often spend $50K-$500K annually on MarTech. Enterprise organizations can spend $500K-$5M+ per year. A typical breakdown: 30% on foundational tools (CRM, CMS, Email), 25% on advertising and analytics, 20% on marketing automation and CDP, 15% on content and SEO tools, and 10% on specialized tools. Always include implementation, training, and integration costs in your budget.",
       },
     },
     {
       "@type": "Question",
-      name: "What is the average length of a B2B SaaS sales cycle?",
+      name: "How is AI transforming marketing technology?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The B2B SaaS sales cycle varies by deal size and complexity. Self-serve products under $100/month may close in minutes. Mid-market deals ($1K–$10K/year) typically take 2–4 weeks. Enterprise deals ($50K+/year) can take 3–12 months, involving multiple stakeholders, demo sessions, security reviews, and legal negotiations.",
+        text: "AI is revolutionizing MarTech across every category. Key applications include: AI-powered content generation (Jasper, Copy.ai, ChatGPT for marketing), predictive analytics and lead scoring (6sense, Salesforce Einstein), personalization engines (Dynamic Yield, Adobe Target), chatbots and conversational AI (Intercom, Drift, Zendesk AI), automated ad optimization (Google Performance Max, Meta Advantage+), sentiment analysis, SEO content optimization (SurferSEO, Frase), and generative AI for images and video. By 2026, AI features are becoming table stakes in most MarTech categories.",
       },
     },
     {
       "@type": "Question",
-      name: "Should we build or buy SaaS tools?",
+      name: "Open-source vs commercial MarTech tools: which is better?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Unless your core business differentiation depends on custom software, buying is almost always better than building. Building a CRM, analytics platform, or help desk from scratch costs 10–100x more than subscribing to a proven SaaS solution, and ongoing maintenance is a significant burden. Buy off-the-shelf SaaS and invest your engineering resources in your core product.",
+        text: "The choice between open-source and commercial MarTech depends on your team technical capabilities. Open-source tools (like Mautic for marketing automation, Matomo for analytics, WordPress for CMS, SuiteCRM for CRM) offer lower upfront costs and full customization, but require technical expertise for setup and maintenance. Commercial tools provide polished UX, customer support, regular updates, and out-of-box integrations at a recurring cost. For most marketing teams without dedicated engineering support, commercial tools deliver faster time-to-value. Hybrid approaches are increasingly common.",
       },
     },
     {
       "@type": "Question",
-      name: "What is SaaS sprawl and how to avoid it?",
+      name: "What are the biggest trends in MarTech for 2026?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "SaaS sprawl is the uncontrolled proliferation of software subscriptions across an organization, leading to wasted spending, security risks, and integration headaches. The average company uses 130+ SaaS tools. To prevent sprawl, implement a SaaS management policy, conduct quarterly audits, use a SaaS management platform, designate approval workflows for new tool purchases, and consolidate overlapping tools.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do B2B SaaS reviews and ratings work?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "B2B SaaS reviews are typically collected by third-party platforms like G2, Capterra, and TrustRadius. Users submit ratings (usually 1–5 stars) and written feedback. These platforms verify reviewers, moderate content for authenticity, and aggregate scores to produce overall ratings. Reviews cover criteria like ease of use, customer support, value for money, and feature set. Always read recent reviews and look for patterns rather than outliers.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the future of B2B SaaS?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The future of B2B SaaS is being shaped by AI-powered features (copilots, automation, predictive analytics), vertical SaaS (industry-specific solutions), product-led growth (PLG) strategies, usage-based and consumption pricing models, and increased focus on interoperability through open APIs. The global B2B SaaS market is projected to exceed $900 billion by 2030, driven by digital transformation across all industries.",
+        text: "Key MarTech trends in 2026 include: AI copilots embedded in every major platform (HubSpot Breeze, Salesforce Agentforce, Adobe GenStudio), consolidation of best-of-breed stacks into integrated platforms, the rise of composable MarTech architectures, privacy-first analytics and cookieless targeting solutions, real-time CDP and data activation becoming standard, no-code automation tools empowering non-technical marketers, and vertical-specific MarTech solutions outpacing horizontal ones.",
       },
     },
   ],
@@ -156,101 +140,91 @@ const FAQ_SCHEMA = {
 
 const FAQ_ITEMS = [
   {
-    question: "What is B2B SaaS?",
+    question: "What is MarTech (Marketing Technology)?",
     answer:
-      "B2B SaaS (Business-to-Business Software as a Service) refers to cloud-based software solutions that businesses subscribe to and use to support their operations. Unlike traditional software that requires on-premise installation, B2B SaaS is hosted by the provider and accessed via a web browser. Examples include Salesforce (CRM), HubSpot (Marketing), Slack (Communication), and Asana (Project Management).",
+      "MarTech, short for Marketing Technology, refers to the software platforms, tools, and technologies that marketers use to plan, execute, measure, and optimize their marketing campaigns and strategies. The MarTech landscape includes everything from email marketing platforms and CRM systems to analytics tools, content management systems, advertising platforms, and AI-powered personalization engines. As of 2026, there are over 14,000 MarTech solutions across more than 50 categories.",
   },
   {
-    question: "How do you choose the right SaaS tool for your business?",
+    question: "What are the main categories in a marketing technology stack?",
     answer:
-      "Choosing the right SaaS tool involves defining your requirements, budgeting, evaluating features, reading verified user reviews from platforms like G2 and Capterra, considering integration capabilities, testing with free trials or demos, and assessing vendor support and scalability. Always prioritize tools that solve your specific pain points rather than getting distracted by feature bloat.",
+      "A modern marketing technology stack typically includes: CRM (Customer Relationship Management), Email Marketing platforms, Marketing Automation, Analytics and BI tools, SEO platforms, Social Media Management tools, Content Management Systems (CMS), Advertising and Programmatic platforms, Customer Data Platforms (CDP), Digital Asset Management (DAM), ABM (Account-Based Marketing) platforms, and increasingly AI-powered tools for content generation, personalization, and predictive analytics. Most businesses use 10-30+ tools in their MarTech stack depending on size and industry.",
   },
   {
-    question: "What's the difference between B2B and B2C SaaS?",
+    question: "How do I build an effective MarTech stack?",
     answer:
-      "B2B SaaS targets business customers and focuses on features like team collaboration, admin controls, security compliance, and ROI tracking. B2C SaaS targets individual consumers and prioritizes user experience, ease of use, and personal productivity. B2B products typically have higher price points, longer sales cycles, and require onboarding support, while B2C products are often self-serve with lower monthly fees.",
+      "Building an effective MarTech stack starts with defining your marketing goals and mapping them to required capabilities. Start with foundational tools (CRM, email marketing, analytics), then add specialized tools as needs grow. Key principles: prioritize integrations between tools to avoid data silos, start with all-in-one platforms if you are a small team, scale with best-of-breed as you grow, audit your stack quarterly to remove unused tools, and ensure your team has the skills to actually use each tool you adopt. The goal is a coherent stack, not the largest one.",
   },
   {
-    question: "How much should a small business spend on SaaS?",
+    question: "What is the difference between Marketing Automation, CRM, and CDP?",
     answer:
-      "A common benchmark is that small businesses spend 3–10% of their annual revenue on SaaS subscriptions. For a company with $500K in revenue, that translates to roughly $15K–$50K per year. However, this varies by industry — tech startups often spend more, while traditional service businesses spend less. The key is to track SaaS usage regularly and eliminate underutilized subscriptions.",
+      "CRM (Customer Relationship Management) manages your existing customer interactions, pipeline, and sales data. Marketing Automation focuses on executing, automating, and measuring marketing campaigns across channels like email, social, and ads. CDP (Customer Data Platform) unifies customer data from multiple sources into a single, persistent customer profile for segmentation and activation. In practice: CRM manages relationships, Marketing Automation manages campaigns, and CDP manages unified customer data. Many modern platforms blur these lines, but understanding the core distinction helps avoid overbuying.",
   },
   {
-    question: "What are the most popular B2B SaaS categories?",
+    question: "What are the best email marketing tools for 2026?",
     answer:
-      "The most popular B2B SaaS categories include CRM (Customer Relationship Management), Marketing Automation, Project Management, Human Resources (HRIS), Accounting & Finance, Customer Support (Help Desk), Communication & Collaboration, Analytics & Business Intelligence, Cybersecurity, and DevOps tools. Each category has dozens of competing platforms with varying feature sets and pricing models.",
+      "Top email marketing tools in 2026 include Mailchimp (best for small businesses and ease of use), HubSpot (best for integrated CRM plus email), ActiveCampaign (best for automation capabilities), ConvertKit (best for creators and publishers), Brevo/Sendinblue (best for transactional emails), and Klaviyo (best for e-commerce). For enterprise, Salesforce Marketing Cloud and Oracle Eloqua remain dominant. The right choice depends on your list size, automation needs, budget, and integration requirements with your existing stack.",
   },
   {
-    question: "What is SaaS churn and why does it matter?",
+    question: "How do I choose the right SEO tools for my business?",
     answer:
-      "SaaS churn refers to the percentage of customers who cancel their subscriptions over a given period. It's a critical metric because acquiring new customers costs 5–7x more than retaining existing ones. High churn indicates product-market fit issues, poor customer experience, or competitive pressures. Top SaaS companies aim for monthly churn rates below 3–5%.",
+      "Choosing the right SEO tool depends on your specific needs. For comprehensive SEO platforms, Ahrefs, Semrush, and Moz are the top contenders. Ahrefs excels at backlink analysis and keyword research, Semrush is strongest for competitive analysis and PPC integration, and Moz offers solid beginner-friendly features. For technical SEO, Screaming Frog and Sitebulb are essential. For local SEO, BrightLocal and Whitespark lead the market. Start with one comprehensive tool (Ahrefs or Semrush) and add specialized tools as your SEO program matures.",
   },
   {
-    question: "How do B2B SaaS pricing models work?",
+    question: "How do social media management tools compare?",
     answer:
-      "B2B SaaS pricing models vary widely. Common models include per-user per-month pricing (the most common), tiered plans (Basic/Pro/Enterprise), usage-based pricing (pay per API call or storage), flat-rate pricing, and freemium with paid upgrades. Many vendors also offer annual discounts of 15–25% compared to monthly billing. Enterprise plans often include custom pricing.",
+      "Social media management tools vary by features and target audience. Hootsuite is the most established with broad platform support. Buffer is simplest for small teams focused on scheduling. Sprout Social offers the best social listening and analytics. Later is strongest for visual content and Instagram. Agorapulse excels at community management and reporting. Sendible is great for agencies managing multiple clients. Key factors to compare: supported platforms, scheduling capabilities, analytics depth, social listening, team collaboration, and price per user.",
   },
   {
-    question: "What is a B2B SaaS marketplace?",
+    question: "What is ABM (Account-Based Marketing) and who needs it?",
     answer:
-      "A B2B SaaS marketplace is a platform where businesses can discover, compare, and purchase software tools. Examples include G2, Capterra, TrustRadius, and GetApp. These marketplaces aggregate user reviews, feature comparisons, and pricing information to help buyers make informed decisions. Some also facilitate direct purchases or free trials.",
+      "Account-Based Marketing (ABM) is a B2B strategy where marketing and sales teams coordinate to target specific high-value accounts with personalized campaigns, rather than casting a wide net. ABM platforms like Demandbase, 6sense, Terminus, and Madison Logic help identify target accounts, orchestrate personalized multi-channel campaigns, and measure account-level engagement. ABM is ideal for B2B companies with high average contract values ($50K+), long sales cycles, and a clear Ideal Customer Profile.",
   },
   {
-    question: "How important are integrations when choosing SaaS tools?",
+    question: "What marketing analytics tools should I consider?",
     answer:
-      "Integrations are extremely important. A SaaS tool that doesn't integrate with your existing tech stack can create data silos and manual workarounds. Look for tools that offer native integrations with popular platforms (like Slack, Salesforce, Google Workspace, or Microsoft 365), support APIs and webhooks for custom connections, and have a marketplace of third-party integrations.",
+      "Marketing analytics tools range from all-in-one platforms to specialized solutions. Google Analytics 4 remains the standard for web analytics. Adobe Analytics offers enterprise-grade capabilities. Mixpanel and Amplitude are best for product analytics. HubSpot and Salesforce provide integrated marketing analytics with their CRM platforms. For attribution modeling, Northbeam and Rockerbox lead the category. For dashboards, Looker (Google), Tableau, and Power BI are top choices. Most teams use 2-3 analytics tools that work together for a complete picture.",
   },
   {
-    question: "What should I look for in a SaaS contract?",
+    question: "What content marketing tools are recommended?",
     answer:
-      "Key items to review in a SaaS contract include the service level agreement (SLA) guaranteeing uptime (typically 99.9%+), data ownership and portability clauses, security compliance certifications (SOC 2, ISO 27001), termination and refund policies, auto-renewal terms, pricing escalation limits, and data processing agreements for GDPR compliance. Always have legal counsel review enterprise contracts.",
+      "Content marketing tools span creation, management, and distribution. For content planning and strategy, CoSchedule and Airtable are popular. For content creation, Canva (design), Jasper and Copy.ai (AI writing), and Grammarly (editing) are widely used. For CMS, WordPress, Contentful, and Webflow lead. For content distribution, tools like BuzzSumo, Quuu, and Outbrain help. For content analytics, Google Search Console, Ahrefs, and ContentKing provide SEO performance data. The key is building a workflow that connects planning, creation, publishing, and measurement.",
   },
   {
-    question: "How does SaaS onboarding work for teams?",
+    question: "What are influencer marketing platforms and how do they work?",
     answer:
-      "SaaS onboarding typically involves account setup, user provisioning, data migration or import, training sessions (live or recorded), and integration configuration. The best SaaS providers offer dedicated onboarding specialists for enterprise plans, knowledge bases with tutorials, interactive walkthroughs within the product, and templates or starter kits to accelerate time-to-value.",
+      "Influencer marketing platforms help brands discover, vet, manage, and measure influencer partnerships. Top platforms include Aspire, Upfluence, CreatorIQ, Grin, and LTK (formerly rewardStyle). These platforms provide databases of influencers across Instagram, TikTok, YouTube, and other channels, with analytics on audience demographics, engagement rates, and past campaign performance. They also facilitate campaign management, content approvals, payment processing, and ROI measurement.",
   },
   {
-    question: "What is the difference between free trial and freemium?",
+    question: "What is Digital Asset Management (DAM) and why does it matter?",
     answer:
-      "A free trial gives you full access to premium features for a limited time (typically 7–30 days), after which you must subscribe. Freemium offers a permanently free version with limited features, designed to upsell you to paid plans when you need more functionality. Free trials are better for evaluating full capabilities, while freemium is good for long-term testing at no cost.",
+      "Digital Asset Management (DAM) is a system that stores, organizes, and manages digital assets like images, videos, documents, and brand files in a centralized, searchable repository. DAM tools like Bynder, Widen, Canto, Brandfolder, and Cloudinary help marketing teams maintain brand consistency, reduce time searching for assets, control versioning, manage rights and permissions, and streamline content distribution across channels. For any team producing significant volumes of marketing content, a DAM is essential infrastructure.",
   },
   {
-    question: "How do B2B SaaS companies handle data security?",
+    question: "How much should a business budget for MarTech tools?",
     answer:
-      "Reputable B2B SaaS companies implement encryption at rest and in transit, SOC 2 Type II audits, ISO 27001 certification, GDPR compliance, regular penetration testing, multi-factor authentication (MFA), role-based access controls (RBAC), and data backup & disaster recovery procedures. Always verify a vendor's security posture before committing to their platform.",
+      "MarTech budgets vary by company size and industry. Small businesses typically spend 2-8% of revenue on marketing technology. Mid-market companies ($10M-$100M revenue) often spend $50K-$500K annually on MarTech. Enterprise organizations can spend $500K-$5M+ per year. A typical breakdown: 30% on foundational tools (CRM, CMS, Email), 25% on advertising and analytics, 20% on marketing automation and CDP, 15% on content and SEO tools, and 10% on specialized tools. Always include implementation, training, and integration costs in your budget.",
   },
   {
-    question: "What is the average length of a B2B SaaS sales cycle?",
+    question: "How is AI transforming marketing technology?",
     answer:
-      "The B2B SaaS sales cycle varies by deal size and complexity. Self-serve products under $100/month may close in minutes. Mid-market deals ($1K–$10K/year) typically take 2–4 weeks. Enterprise deals ($50K+/year) can take 3–12 months, involving multiple stakeholders, demo sessions, security reviews, and legal negotiations.",
+      "AI is revolutionizing MarTech across every category. Key applications include: AI-powered content generation (Jasper, Copy.ai, ChatGPT for marketing), predictive analytics and lead scoring (6sense, Salesforce Einstein), personalization engines (Dynamic Yield, Adobe Target), chatbots and conversational AI (Intercom, Drift, Zendesk AI), automated ad optimization (Google Performance Max, Meta Advantage+), sentiment analysis, SEO content optimization (SurferSEO, Frase), and generative AI for images and video. By 2026, AI features are becoming table stakes in most MarTech categories.",
   },
   {
-    question: "Should we build or buy SaaS tools?",
+    question: "Open-source vs commercial MarTech tools: which is better?",
     answer:
-      "Unless your core business differentiation depends on custom software, buying is almost always better than building. Building a CRM, analytics platform, or help desk from scratch costs 10–100x more than subscribing to a proven SaaS solution, and ongoing maintenance is a significant burden. Buy off-the-shelf SaaS and invest your engineering resources in your core product.",
+      "The choice between open-source and commercial MarTech depends on your team technical capabilities. Open-source tools (like Mautic for marketing automation, Matomo for analytics, WordPress for CMS, SuiteCRM for CRM) offer lower upfront costs and full customization, but require technical expertise for setup and maintenance. Commercial tools provide polished UX, customer support, regular updates, and out-of-box integrations at a recurring cost. For most marketing teams without dedicated engineering support, commercial tools deliver faster time-to-value. Hybrid approaches are increasingly common.",
   },
   {
-    question: "What is SaaS sprawl and how to avoid it?",
+    question: "What are the biggest trends in MarTech for 2026?",
     answer:
-      "SaaS sprawl is the uncontrolled proliferation of software subscriptions across an organization, leading to wasted spending, security risks, and integration headaches. The average company uses 130+ SaaS tools. To prevent sprawl, implement a SaaS management policy, conduct quarterly audits, use a SaaS management platform, designate approval workflows for new tool purchases, and consolidate overlapping tools.",
-  },
-  {
-    question: "How do B2B SaaS reviews and ratings work?",
-    answer:
-      "B2B SaaS reviews are typically collected by third-party platforms like G2, Capterra, and TrustRadius. Users submit ratings (usually 1–5 stars) and written feedback. These platforms verify reviewers, moderate content for authenticity, and aggregate scores to produce overall ratings. Reviews cover criteria like ease of use, customer support, value for money, and feature set. Always read recent reviews and look for patterns rather than outliers.",
-  },
-  {
-    question: "What is the future of B2B SaaS?",
-    answer:
-      "The future of B2B SaaS is being shaped by AI-powered features (copilots, automation, predictive analytics), vertical SaaS (industry-specific solutions), product-led growth (PLG) strategies, usage-based and consumption pricing models, and increased focus on interoperability through open APIs. The global B2B SaaS market is projected to exceed $900 billion by 2030, driven by digital transformation across all industries.",
+      "Key MarTech trends in 2026 include: AI copilots embedded in every major platform (HubSpot Breeze, Salesforce Agentforce, Adobe GenStudio), consolidation of best-of-breed stacks into integrated platforms, the rise of composable MarTech architectures, privacy-first analytics and cookieless targeting solutions, real-time CDP and data activation becoming standard, no-code automation tools empowering non-technical marketers, and vertical-specific MarTech solutions outpacing horizontal ones.",
   },
 ];
 
 export default function FAQPage() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState(null);
 
-  const toggleFAQ = (index: number) => {
+  const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
@@ -271,8 +245,8 @@ export default function FAQPage() {
               Frequently Asked Questions
             </h1>
             <p className="text-lg text-[#8BA3BE] max-w-xl mx-auto leading-relaxed">
-              Everything you need to know about B2B SaaS — from choosing the right
-              tools to understanding pricing, security, and industry trends.
+              Everything you need to know about MarTech — from building your stack
+              to choosing the right tools and understanding industry trends.
             </p>
           </div>
 
@@ -318,7 +292,7 @@ export default function FAQPage() {
               >
                 Contact our team
               </a>{" "}
-              and we&apos;ll get back to you within 24 hours.
+              and we will get back to you within 24 hours.
             </p>
           </div>
         </div>

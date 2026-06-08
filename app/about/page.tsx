@@ -63,7 +63,7 @@ export default function AboutPage() {
             </p>
             <p>
               We catalog and compare MarTech tools across 15+ categories,
-              including CRM, Marketing, DevOps, Security, HR, Finance, and more.
+              including CRM, Email Marketing, Marketing Automation, SEO, Social Media, Analytics, and more.
               Each tool page includes verified pricing tiers, feature lists, pros
               and cons synthesized from user reviews, and practical use case
               recommendations.

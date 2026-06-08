@@ -109,7 +109,7 @@ export default function FeaturedTools() {
         >
           <div>
             <h2 className="text-2xl md:text-[2rem] font-bold text-[#F0F4F8] tracking-tight">
-              Featured SaaS Solutions
+              Featured MarTech Solutions
             </h2>
             <p className="text-[#8BA3BE] mt-1 text-base">
               Hand-picked tools highly rated by enterprise users.

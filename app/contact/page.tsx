@@ -166,7 +166,7 @@ export default function ContactPage() {
               <p className="text-sm text-[#8BA3BE] leading-relaxed">
                 300 SE 2nd St, Suite 600
                 <br />
-                San Francisco, CA 94104
+                Austin, TX 78701
                 <br />
                 United States
               </p>
