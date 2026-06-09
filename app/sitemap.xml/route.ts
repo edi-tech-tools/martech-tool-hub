@@ -15,6 +15,7 @@ const BLOG_SLUGS = [
     "martech-reference-sites-2026-martechtoday-g2-techcrunch",
     "ai-agents-martech-2026-hubspot-breeze-salesforce-agentforce-adobe-genstudio",
     "marketing-automation-2026-hubspot-marketo-activecampaign",
+    "content-marketing-tools-2026-canva-adobe-express-visme",
 ] as const;
 
 const TOOL_SLUGS = [
