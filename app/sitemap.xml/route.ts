@@ -17,6 +17,7 @@ const BLOG_SLUGS = [
     "ai-agents-martech-2026-hubspot-breeze-salesforce-agentforce-adobe-genstudio",
     "marketing-automation-2026-hubspot-marketo-activecampaign",
     "content-marketing-tools-2026-canva-adobe-express-visme",
+    "dam-tools-2026-brandfolder-vs-bynder-vs-widen-vs-adobe-aem",
 ] as const;
 
 const TOOL_SLUGS = [
