@@ -1,84 +1,72 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Affiliate Disclosure — Martech Tools Hub",
+  title: "Affiliate Disclosure — Clever Co.",
   description:
-    "Martech Tools Hub's affiliate disclosure policy. Learn how we may earn commissions through partner links on our site.",
+    "Clever Co.'s affiliate disclosure policy. We believe in complete transparency about how our studio operates.",
 };
 
 export default function DisclosurePage() {
   return (
-    <div className="relative pt-32 pb-20 px-6">
+    <div className="relative min-h-screen bg-[#120a0c] pt-28 pb-20 px-6">
+      <div className="fixed inset-0 -z-10 overflow-hidden">
+        <div className="absolute top-[10%] left-[-5%] w-[30%] h-[30%] rounded-full bg-[#a0304e]/[0.03] blur-[100px]" />
+      </div>
+
       <div className="max-w-[800px] mx-auto">
         <div className="text-center mb-12">
-          <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#3B82F6] bg-[#162440] px-3 py-1.5 rounded-md mb-4">
-            Legal
-          </span>
-          <h1 className="text-3xl md:text-4xl font-extrabold text-[#F0F4F8] tracking-tight mb-3">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[rgba(180,60,80,0.2)] bg-[rgba(160,48,78,0.08)] mb-6">
+            <span className="text-[10px] font-mono tracking-[0.15em] text-[#d4607a] uppercase">Legal</span>
+          </div>
+          <h1 className="text-3xl md:text-4xl font-bold text-[#f5e8ea] tracking-tight mb-3">
             Affiliate Disclosure
           </h1>
-          <p className="text-[#8BA3BE] text-sm">
-            Last updated: May 21, 2026
+          <p className="text-sm text-[#a08088]">
+            Last updated: May 2026
           </p>
         </div>
 
-        <div className="space-y-6 text-[#8BA3BE] leading-relaxed">
+        <div className="space-y-6 text-sm text-[#a08088] leading-relaxed">
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">Transparency First</h2>
+            <h2 className="text-lg font-bold text-[#f5e8ea] mb-3">Transparency First</h2>
             <p>
-              Martech Tools Hub is committed to transparency. This Affiliate Disclosure
+              Clever Co. is committed to complete transparency. This Affiliate Disclosure
               explains how we may earn compensation through links on our website.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">Affiliate Links</h2>
+            <h2 className="text-lg font-bold text-[#f5e8ea] mb-3">Affiliate Links</h2>
             <p>
-              Some of the links on Martech Tools Hub are affiliate links. This means that
-              if you click on a link and make a purchase or sign up for a service, we may
-              receive a commission at no additional cost to you.
+              Some of the links on this site are affiliate links. If you click on a link and
+              make a purchase or sign up for a service, we may receive a commission at no
+              additional cost to you.
             </p>
             <p className="mt-3">
-              These commissions help us maintain and improve our platform, including the
-              research and content creation required to provide accurate, up-to-date tool
-              comparisons.
+              These commissions help fund our independent research and the time our analysts
+              spend producing data-driven reviews.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">No Impact on Rankings</h2>
+            <h2 className="text-lg font-bold text-[#f5e8ea] mb-3">No Impact on Analysis</h2>
             <p>
-              Our tool listings, ratings, and recommendations are never influenced by
-              affiliate relationships. We evaluate tools based on publicly available
-              information, user reviews, and feature comparisons — not sponsorship dollars.
-              If a tool is featured on our site, it is because we believe it provides
-              genuine value to our users, regardless of any affiliate relationship.
+              Our tool reviews, ratings, and recommendations are never influenced by
+              affiliate relationships. We evaluate tools based on publicly available data,
+              feature analysis, and verified user feedback — not commercial arrangements.
+              If a tool appears on this site, it is because it represents a legitimate
+              option in its category.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">Partners</h2>
-            <p>
-              We may participate in affiliate programs including but not limited to:
-            </p>
-            <ul className="list-disc pl-6 mt-2 space-y-1">
-              <li>Amazon Associates</li>
-              <li>PartnerStack</li>
-              <li>Impact Radius</li>
-              <li>Individual SaaS vendor referral programs</li>
-            </ul>
-            <p className="mt-3">
-              This list may change over time as we add or remove affiliate partnerships.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">Questions</h2>
+            <h2 className="text-lg font-bold text-[#f5e8ea] mb-3">Questions</h2>
             <p>
               If you have any questions about our affiliate relationships or this
               disclosure, please contact us at{" "}
-              <a href="mailto:info@martech-tools.net" className="text-[#3B82F6] hover:underline">
-                info@martech-tools.net
+              <a href="mailto:hello@cleverco-analytics.com" className="text-[#d4607a] hover:underline">
+                hello@cleverco-analytics.com
               </a>
               .
             </p>

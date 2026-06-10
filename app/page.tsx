@@ -1,14 +1,10 @@
 "use client";
 
-import { MotionProvider, m } from '@/lib/motion';
-import { Reveal, StaggerReveal } from '@/components/motion/reveal';
-import { LiquidGlass } from '@/components/motion/liquid-glass';
-import { GradientMesh } from '@/components/motion/gradient-mesh';
-import { Magnetic } from '@/components/motion/magnetic';
-import { useMemo } from 'react';
-import Link from 'next/link';
-import { ALL_TOOLS } from '@/data/tools';
-import { BLOG_POSTS } from '@/data/blog-posts';
+import { useMemo } from "react";
+import Link from "next/link";
+import { ALL_TOOLS } from "@/data/tools";
+import { BLOG_POSTS } from "@/data/blog-posts";
+import { ArrowRight, BarChart3, Database, TrendingUp, PieChart, Sparkles, Target, Users } from "lucide-react";
 
 export default function HomePage() {
   const cats = useMemo(() => {
@@ -28,145 +24,163 @@ export default function HomePage() {
   );
 
   return (
-    <MotionProvider>
-      <div className="relative min-h-screen">
-        <div className="fixed inset-0 -z-10">
-          <div className="absolute inset-0 bg-[#09090b]" />
-          <GradientMesh colors={['#00bcd4', '#a78bfa', '#f472b6']} intensity={0.05} />
+    <div className="relative min-h-screen bg-[#120a0c]">
+      {/* Decorative background */}
+      <div className="fixed inset-0 -z-10 overflow-hidden">
+        <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] rounded-full bg-[#a0304e]/[0.03] blur-[120px]" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-[#6b1d30]/[0.04] blur-[100px]" />
+      </div>
+
+      {/* ═══ HERO ═══ */}
+      <section className="pt-28 pb-16 text-center px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[rgba(180,60,80,0.2)] bg-[rgba(160,48,78,0.08)] mb-6">
+            <BarChart3 className="w-3.5 h-3.5 text-[#d4607a]" />
+            <span className="text-[10px] font-mono tracking-[0.15em] text-[#d4607a] uppercase">
+              Business Intelligence · Leeds, UK
+            </span>
+          </div>
+
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-dm-sans)] font-bold text-[#f5e8ea] mb-5 tracking-tight leading-[1.05]">
+            MarTech Intelligence,<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d4607a] via-[#c9a84c] to-[#d4607a]">
+              Data-Led &amp; Unbiased
+            </span>
+          </h1>
+
+          <p className="text-base text-[#a08088] max-w-2xl mx-auto leading-relaxed mb-8">
+            We analyse {ALL_TOOLS.length} marketing technology tools through a Business Intelligence lens —
+            hard data, real benchmarks, and actionable insights from our Leeds studio.
+          </p>
+
+          <div className="flex justify-center gap-4">
+            <Link
+              href="/tools"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#a0304e] text-sm font-medium text-[#f5e8ea] hover:bg-[#b8385a] transition-all shadow-lg shadow-[#a0304e]/20"
+            >
+              Browse Tools
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/about"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-[rgba(180,60,80,0.25)] text-sm font-medium text-[#d4b8bd] hover:bg-[rgba(180,60,80,0.1)] transition-all"
+            >
+              Meet the Studio
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ STATS BAR ═══ */}
+      <section className="pb-16 px-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[rgba(180,60,80,0.1)] rounded-2xl overflow-hidden border border-[rgba(180,60,80,0.1)]">
+          {[
+            { label: "Tools Reviewed", value: ALL_TOOLS.length, icon: Database },
+            { label: "Categories", value: cats.length, icon: PieChart },
+            { label: "Analysts", value: 4, icon: Users },
+            { label: "Data Points", value: "2,400+", icon: TrendingUp },
+          ].map((stat) => {
+            const Icon = stat.icon;
+            return (
+              <div key={stat.label} className="bg-[#1a1013] p-6 text-center">
+                <Icon className="w-5 h-5 text-[#d4607a] mx-auto mb-2" />
+                <div className="text-xl md:text-2xl font-bold text-[#f5e8ea]">{stat.value}</div>
+                <div className="text-[10px] font-mono tracking-wider uppercase text-[#a08088] mt-1">{stat.label}</div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* ═══ CATEGORIES ═══ */}
+      <section className="pb-16 px-6 max-w-5xl mx-auto">
+        <div className="flex items-center gap-3 mb-8">
+          <div className="w-1 h-6 bg-[#a0304e] rounded-full" />
+          <p className="text-[10px] font-mono tracking-[0.25em] text-[#a08088] uppercase">
+            Categories
+          </p>
         </div>
 
-        {/* ═══ HERO ═══ */}
-        <section className="pt-28 pb-12 text-center px-6">
-          <Reveal y={12} blur>
-            <p className="text-[10px] font-mono tracking-[0.3em] text-[#708094] mb-5 uppercase">
-              {ALL_TOOLS.length} marketing tools reviewed
-            </p>
-          </Reveal>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+          {cats.map(([name, d]) => (
+            <Link key={name} href={`/category/${name.toLowerCase().replace(/\s+/g, '-')}`}>
+              <div className="rounded-xl border border-[rgba(180,60,80,0.12)] bg-[#1a1013] p-5 hover:border-[rgba(180,60,80,0.3)] hover:bg-[rgba(160,48,78,0.06)] transition-all group">
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-2 h-2 rounded-full bg-[#d4607a]" style={{ boxShadow: '0 0 12px #d4607a40' }} />
+                  <h3 className="text-sm font-semibold text-[#f5e8ea] group-hover:text-[#d4607a] transition-colors">{name}</h3>
+                </div>
+                <p className="text-xs text-[#a08088]">{d.count} tools</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
 
-          <Reveal delay={0.1} y={16} blur>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-dm-sans)] font-bold text-[#e6eefc] mb-4 tracking-tight leading-[1.05]">
-              Build Your Ideal<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00bcd4] to-[#a78bfa]">Marketing Stack</span>
-            </h1>
-          </Reveal>
+      {/* ═══ TOP PICKS ═══ */}
+      <section className="pb-16 px-6 max-w-5xl mx-auto">
+        <div className="flex items-center gap-3 mb-8">
+          <div className="w-1 h-6 bg-[#c9a84c] rounded-full" />
+          <p className="text-[10px] font-mono tracking-[0.25em] text-[#a08088] uppercase">
+            Top Rated
+          </p>
+        </div>
 
-          <Reveal delay={0.3} y={12}>
-            <p className="text-base text-[#9bb1d0] max-w-lg mx-auto leading-relaxed">
-              Compare {ALL_TOOLS.length} marketing technology tools across {cats.length} categories. Side-by-side reviews, pricing, and expert insights.
-            </p>
-          </Reveal>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+          {topPicks.map((t) => (
+            <Link key={t.id} href={`/tools/${t.id}`}>
+              <div className="rounded-xl border border-[rgba(180,60,80,0.12)] bg-[#1a1013] p-5 hover:border-[rgba(180,60,80,0.3)] transition-all group h-full">
+                <div className="flex items-center justify-between gap-2 mb-2">
+                  <h3 className="text-sm font-semibold text-[#f5e8ea] truncate group-hover:text-[#c9a84c] transition-colors">{t.name}</h3>
+                  <span className="text-xs text-[#c9a84c] flex-shrink-0">★ {t.rating}</span>
+                </div>
+                <p className="text-xs text-[#a08088] line-clamp-2">{t.description}</p>
+                <div className="text-[10px] text-[#695058] mt-3 font-mono">{t.category}</div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
 
-          <Reveal delay={0.5} y={12}>
-            <div className="flex justify-center gap-3 mt-8">
-              <Magnetic>
-                <Link
-                  href="/tools"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#00bcd4]/10 border border-[#00bcd4]/30 text-sm font-medium text-[#00bcd4] hover:bg-[#00bcd4]/20 transition-all"
-                >
-                  Browse Tools
-                </Link>
-              </Magnetic>
-              <Magnetic>
-                <Link
-                  href="/blog"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08] text-sm font-medium text-[#e6eefc] hover:bg-white/[0.08] transition-all"
-                >
-                  Latest Reviews
-                </Link>
-              </Magnetic>
-            </div>
-          </Reveal>
-        </section>
+      {/* ═══ INSIGHTS (BLOG) ═══ */}
+      <section className="pb-24 px-6 max-w-5xl mx-auto">
+        <div className="flex items-center gap-3 mb-8">
+          <div className="w-1 h-6 bg-[#d4607a] rounded-full" />
+          <p className="text-[10px] font-mono tracking-[0.25em] text-[#a08088] uppercase">
+            Latest Insights
+          </p>
+        </div>
 
-        {/* ═══ CATEGORIES ═══ */}
-        <section className="pb-16 px-6 max-w-5xl mx-auto">
-          <Reveal y={12}>
-            <p className="text-[10px] font-mono tracking-[0.25em] text-[#708094] mb-6 uppercase text-center">
-              Categories
-            </p>
-          </Reveal>
+        <div className="grid md:grid-cols-3 gap-4">
+          {posts.map((p) => (
+            <Link key={p.slug} href={`/blog/${p.slug}`}>
+              <div className="rounded-xl border border-[rgba(180,60,80,0.12)] bg-[#1a1013] hover:border-[rgba(180,60,80,0.3)] transition-all h-full flex flex-col">
+                <div className="p-5 flex flex-col h-full">
+                  <div className="text-[10px] font-mono tracking-wider uppercase text-[#a08088] mb-2">
+                    {p.category || 'Analysis'}
+                  </div>
+                  <h3 className="text-sm font-semibold text-[#f5e8ea] mb-2 line-clamp-2 leading-snug hover:text-[#d4607a] transition-colors">
+                    {p.title}
+                  </h3>
+                  <p className="text-xs text-[#a08088] flex-grow line-clamp-2">{p.excerpt}</p>
+                  <div className="flex items-center justify-between mt-3 pt-3 border-t border-[rgba(180,60,80,0.08)]">
+                    <span className="text-[10px] text-[#695058]">{p.author}</span>
+                    <span className="text-[10px] text-[#695058]">{p.readTime} min read</span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
 
-          <StaggerReveal className="grid md:grid-cols-2 lg:grid-cols-3 gap-3" stagger={0.06}>
-            {cats.map(([name, d]) => (
-              <Reveal key={name} y={20}>
-                <Link href={`/category/${name.toLowerCase().replace(/\s+/g, '-')}`}>
-                  <LiquidGlass intensity="standard" tint="#00bcd4" glow tilt tiltIntensity={5}
-                    className="rounded-xl border border-white/[0.06] hover:border-white/[0.14] transition-colors block"
-                  >
-                    <div className="p-5">
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className="w-2 h-2 rounded-full bg-[#00bcd4]" style={{ boxShadow: '0 0 12px #00bcd460' }} />
-                        <h3 className="text-sm font-semibold text-[#e6eefc]">{name}</h3>
-                      </div>
-                      <p className="text-xs text-[#9bb1d0]">{d.count} tools</p>
-                    </div>
-                  </LiquidGlass>
-                </Link>
-              </Reveal>
-            ))}
-          </StaggerReveal>
-        </section>
-
-        {/* ═══ TOP PICKS ═══ */}
-        <section className="pb-16 px-6 max-w-5xl mx-auto">
-          <Reveal y={12}>
-            <p className="text-[10px] font-mono tracking-[0.25em] text-[#708094] mb-6 uppercase text-center">
-              Top Rated Tools
-            </p>
-          </Reveal>
-
-          <StaggerReveal className="grid md:grid-cols-2 lg:grid-cols-3 gap-3" stagger={0.06}>
-            {topPicks.map((t) => (
-              <Reveal key={t.id} y={20}>
-                <Link href={`/tools/${t.id}`}>
-                  <LiquidGlass intensity="subtle" tint="#a78bfa" glow={false} tilt tiltIntensity={4}
-                    className="rounded-xl border border-white/[0.06] hover:border-white/[0.14] transition-colors block"
-                  >
-                    <div className="p-5">
-                      <div className="flex items-center justify-between gap-2 mb-2">
-                        <h3 className="text-sm font-semibold text-[#e6eefc] truncate">{t.name}</h3>
-                        <span className="text-xs text-[#fbbf24] flex-shrink-0">★ {t.rating}</span>
-                      </div>
-                      <p className="text-xs text-[#9bb1d0] line-clamp-2">{t.description}</p>
-                      <div className="text-[10px] text-[#708094] mt-2 font-mono">{t.category}</div>
-                    </div>
-                  </LiquidGlass>
-                </Link>
-              </Reveal>
-            ))}
-          </StaggerReveal>
-        </section>
-
-        {/* ═══ BLOG ═══ */}
-        <section className="pb-24 px-6 max-w-5xl mx-auto">
-          <Reveal y={12}>
-            <p className="text-[10px] font-mono tracking-[0.25em] text-[#708094] mb-6 uppercase text-center">
-              Latest Reviews
-            </p>
-          </Reveal>
-
-          <StaggerReveal className="grid md:grid-cols-3 gap-3" stagger={0.06}>
-            {posts.map((p) => (
-              <Reveal key={p.slug} y={20}>
-                <Link href={`/blog/${p.slug}`}>
-                  <LiquidGlass intensity="subtle" tint="#f472b6" glow={false} tilt={false}
-                    className="rounded-xl border border-white/[0.06] hover:border-white/[0.14] transition-colors block h-full"
-                  >
-                    <div className="p-5 flex flex-col h-full">
-                      <div className="text-[10px] font-mono tracking-wider uppercase text-[#708094] mb-2">{p.category || 'Review'}</div>
-                      <h3 className="text-sm font-semibold text-[#e6eefc] mb-2 line-clamp-2 leading-snug">{p.title}</h3>
-                      <p className="text-xs text-[#9bb1d0] flex-grow line-clamp-2">{p.excerpt}</p>
-                      <div className="text-[10px] text-[#52525b] mt-3 pt-2 border-t border-white/[0.06]">
-                        {p.readTime} min read
-                      </div>
-                    </div>
-                  </LiquidGlass>
-                </Link>
-              </Reveal>
-            ))}
-          </StaggerReveal>
-        </section>
-      </div>
-    </MotionProvider>
+        <div className="text-center mt-8">
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-2 text-xs font-medium text-[#d4607a] hover:text-[#f5e8ea] transition-colors"
+          >
+            View All Insights <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
+        </div>
+      </section>
+    </div>
   );
 }

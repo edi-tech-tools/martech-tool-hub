@@ -1,154 +1,199 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { FileText, Target, TrendingUp, Search } from "lucide-react";
+import { BarChart3, MapPin, Linkedin, Twitter, Globe, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About — MarTech Tool Hub",
+  title: "Our Studio — Clever Co.",
   description:
-    "MarTech Tool Hub is an independent directory of marketing technology. We curate and compare MarTech products to help businesses make informed decisions.",
+    "Clever Co. is a Business Intelligence studio based in Leeds, UK. We analyse marketing technology through a data-driven lens to help teams build smarter stacks.",
 };
 
-const VALUES = [
+const TEAM = [
   {
-    icon: Search,
-    title: "Independent Curation",
-    desc: "We research and catalog tools based on publicly available information, user reviews from major platforms, and product documentation — not sponsorship dollars.",
+    name: "Henry Nielsen",
+    role: "CEO & Lead Analyst",
+    bio: "Founder of Clever Co. with 15+ years in marketing analytics and BI. Previously led data strategy at a FTSE 250 company. Henry ensures every review is rooted in rigorous data analysis, not vendor influence.",
+    initials: "HN",
   },
   {
-    icon: TrendingUp,
-    title: "Data-Driven Comparisons",
-    desc: "Every tool page includes feature comparisons, pricing breakdowns, and pros and cons synthesized from verified user feedback across multiple review platforms.",
+    name: "Mia Garcia",
+    role: "CTO & Data Architect",
+    bio: "Mia architects our data pipelines and analytics infrastructure. With a background in data engineering and a passion for making complex data accessible, she ensures our benchmarks are reproducible and trustworthy.",
+    initials: "MG",
   },
   {
-    icon: Target,
-    title: "Practical Guidance",
-    desc: "Our use case recommendations are based on real-world scenarios. We help match tools to specific business needs and team sizes.",
+    name: "Addison Peters",
+    role: "Full-Stack Engineer",
+    bio: "Addison builds the tools and platforms that power our research — from automated data collection to interactive comparison dashboards. He brings technical depth to every analysis we publish.",
+    initials: "AP",
   },
   {
-    icon: FileText,
-    title: "Transparent Methodology",
-    desc: "We clearly indicate when information comes from public sources, vendor documentation, or aggregated review data. Our goal is transparency, not pretense.",
+    name: "Claude Scherer",
+    role: "Product Manager",
+    bio: "Claude translates data into narratives that matter. He manages our editorial calendar, coordinates research priorities, and ensures every insight we publish answers a real question marketers face.",
+    initials: "CS",
   },
 ];
 
 export default function AboutPage() {
   return (
-    <div className="relative pt-32 pb-20 px-6">
-      <div className="max-w-[800px] mx-auto">
-        <div className="text-center mb-16">
-          <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#3B82F6] bg-[#162440] px-3 py-1.5 rounded-md mb-4">
-            About
-          </span>
-          <h1 className="text-3xl md:text-5xl font-extrabold text-[#F0F4F8] tracking-tight mb-6">
-            Your Guide to Better{" "}
-            <span className="text-gradient">Software Decisions</span>
-          </h1>
-          <p className="text-lg text-[#8BA3BE] leading-relaxed max-w-2xl mx-auto">
-            MarTech Tool Hub is an independent directory that helps businesses
-            discover, compare, and evaluate marketing technology. We aggregate
-            information from publicly available sources to give you a clear
-            picture of what each tool offers.
-          </p>
-        </div>
+    <div className="relative min-h-screen bg-[#120a0c]">
+      {/* Decorative background */}
+      <div className="fixed inset-0 -z-10 overflow-hidden">
+        <div className="absolute top-[10%] left-[-5%] w-[40%] h-[40%] rounded-full bg-[#a0304e]/[0.03] blur-[100px]" />
+        <div className="absolute bottom-[20%] right-[-5%] w-[35%] h-[35%] rounded-full bg-[#6b1d30]/[0.04] blur-[80px]" />
+      </div>
 
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold text-[#F0F4F8] mb-6">What We Do</h2>
-          <div className="space-y-4 text-[#8BA3BE] leading-relaxed">
-            <p>
-              MarTech Tool Hub was created to solve a common problem: finding
-              reliable, up-to-date information about marketing technology is
-              harder than it should be. Review sites are often biased by
-              sponsorship, pricing is hidden behind sales calls, and feature
-              comparisons quickly go out of date.
-            </p>
-            <p>
-              We catalog and compare MarTech tools across 15+ categories,
-              including CRM, Email Marketing, Marketing Automation, SEO, Social Media, Analytics, and more.
-              Each tool page includes verified pricing tiers, feature lists, pros
-              and cons synthesized from user reviews, and practical use case
-              recommendations.
-            </p>
-            <p>
-              Our data is compiled from vendor documentation, official pricing
-              pages, and aggregated user reviews from platforms like G2,
-              Capterra, and TrustRadius. We do not claim to have tested every
-              tool personally — instead, we synthesize the best available public
-              information to help you make an informed choice.
+      <div className="pt-28 pb-20 px-6">
+        <div className="max-w-[900px] mx-auto">
+          {/* ═══ HERO ═══ */}
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[rgba(180,60,80,0.2)] bg-[rgba(160,48,78,0.08)] mb-6">
+              <MapPin className="w-3.5 h-3.5 text-[#d4607a]" />
+              <span className="text-[10px] font-mono tracking-[0.15em] text-[#d4607a] uppercase">
+                Leeds, United Kingdom
+              </span>
+            </div>
+            <h1 className="text-3xl md:text-5xl font-bold text-[#f5e8ea] tracking-tight mb-5 leading-[1.1]">
+              MarTech Intelligence,<br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d4607a] to-[#c9a84c]">
+                Built on Data
+              </span>
+            </h1>
+            <p className="text-base text-[#a08088] max-w-2xl mx-auto leading-relaxed">
+              Clever Co. is a Business Intelligence studio based in Leeds, UK. We don&apos;t just
+              list marketing tools — we analyse them. Every review on this site is grounded in
+              data: pricing benchmarks, feature comparisons, integration analysis, and
+              real-world performance metrics drawn from public sources and our own research.
             </p>
           </div>
-        </div>
 
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold text-[#F0F4F8] mb-8 text-center">
-            How We Evaluate Tools
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {VALUES.map((value) => {
-              const Icon = value.icon;
-              return (
+          {/* ═══ STUDIO STORY ═══ */}
+          <div className="mb-20">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-1 h-6 bg-[#a0304e] rounded-full" />
+              <h2 className="text-lg font-bold text-[#f5e8ea] tracking-tight">Our Story</h2>
+            </div>
+
+            <div className="space-y-5 text-sm text-[#a08088] leading-relaxed">
+              <p>
+                Clever Co. was founded in 2023 by Henry Nielsen, a data analyst who had spent
+                over a decade watching marketing teams make technology decisions based on vendor
+                hype rather than hard evidence. The problem wasn&apos;t a lack of tools — it was a
+                lack of objective, data-driven analysis about which tools actually deliver.
+              </p>
+              <p>
+                Based in Leeds — one of the UK&apos;s fastest-growing tech hubs outside London —
+                we built Clever Co. around a simple premise: apply Business Intelligence
+                methodologies to MarTech evaluation. Instead of subjective star ratings and
+                sponsored placements, we dig into the data that matters: feature parity,
+                total cost of ownership, integration depth, API quality, and verified user
+                outcomes from across the industry.
+              </p>
+              <p>
+                Our team of four brings together expertise in data engineering, analytics,
+                full-stack development, and product management. We don&apos;t accept payment for
+                listings or reviews. Every tool in our directory is included because it
+                represents a legitimate option in its category, evaluated through the same
+                rigorous framework.
+              </p>
+              <p>
+                Today, we maintain the most data-rich independent MarTech directory available —
+                covering {">"}80 tools across 15+ categories, with pricing, feature
+                comparisons, integration maps, and analyst notes on every page. Our insights
+                are read by marketing ops teams, CMOs, and technology buyers across the UK
+                and Europe.
+              </p>
+            </div>
+          </div>
+
+          {/* ═══ TEAM ═══ */}
+          <div className="mb-20">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-1 h-6 bg-[#c9a84c] rounded-full" />
+              <h2 className="text-lg font-bold text-[#f5e8ea] tracking-tight">The Team</h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {TEAM.map((member) => (
                 <div
-                  key={value.title}
-                  className="bg-[#0F1D32] border border-[#1E3A5F] rounded-xl p-6 card-hover"
+                  key={member.name}
+                  className="rounded-xl border border-[rgba(180,60,80,0.12)] bg-[#1a1013] p-6 hover:border-[rgba(180,60,80,0.25)] transition-all"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-[#162440] flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-[#3B82F6]" />
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-[#a0304e]/20 border border-[rgba(180,60,80,0.2)] flex items-center justify-center flex-shrink-0">
+                      <span className="text-sm font-bold text-[#d4607a]">{member.initials}</span>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-sm font-semibold text-[#f5e8ea]">{member.name}</h3>
+                      <p className="text-[10px] font-mono tracking-wider uppercase text-[#d4607a] mt-0.5">{member.role}</p>
+                    </div>
                   </div>
-                  <h3 className="text-lg font-bold text-[#F0F4F8] mb-2">{value.title}</h3>
-                  <p className="text-sm text-[#8BA3BE] leading-relaxed">{value.desc}</p>
+                  <p className="text-xs text-[#a08088] leading-relaxed mt-4">
+                    {member.bio}
+                  </p>
                 </div>
-              );
-            })}
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold text-[#F0F4F8] mb-6">Data Sources</h2>
-          <div className="space-y-4 text-[#8BA3BE] leading-relaxed">
-            <p>
-              Information on this site is compiled from the following sources:
-            </p>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>
-                <strong className="text-[#F0F4F8]">Vendor official websites and documentation</strong> — pricing, features, and product descriptions
-              </li>
-              <li>
-                <strong className="text-[#F0F4F8]">Aggregated user reviews</strong> — publicly available ratings and feedback from platforms like G2, Capterra, and TrustRadius
-              </li>
-              <li>
-                <strong className="text-[#F0F4F8]">Industry publications and analyst reports</strong> — market trends and comparative analysis
-              </li>
-            </ul>
-            <p className="text-sm mt-4">
-              We strive to keep all information current, but pricing and features
-              change frequently. Please verify details directly with the vendor
-              before making purchasing decisions. Links to official websites are
-              provided on every tool page.
-            </p>
+          {/* ═══ METHODOLOGY ═══ */}
+          <div className="mb-20">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-1 h-6 bg-[#d4607a] rounded-full" />
+              <h2 className="text-lg font-bold text-[#f5e8ea] tracking-tight">How We Analyse</h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {[
+                {
+                  title: "Data Collection",
+                  desc: "We aggregate pricing, feature lists, and specifications from official vendor documentation, verified user reviews, and industry benchmarks.",
+                },
+                {
+                  title: "Comparative Analysis",
+                  desc: "Tools are evaluated against consistent criteria within their category. We map features, integration ecosystems, and total cost of ownership side by side.",
+                },
+                {
+                  title: "Independent Publishing",
+                  desc: "No sponsored content, no paid placements, no vendor influence. Our reviews are funded entirely by our own research time and published without editorial interference.",
+                },
+              ].map((item) => (
+                <div
+                  key={item.title}
+                  className="rounded-xl border border-[rgba(180,60,80,0.12)] bg-[#1a1013] p-5"
+                >
+                  <h3 className="text-sm font-semibold text-[#f5e8ea] mb-2">{item.title}</h3>
+                  <p className="text-xs text-[#a08088] leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* CTA */}
-        <div className="text-center bg-[#0F1D32] border border-[#1E3A5F] rounded-xl p-10">
-          <h2 className="text-2xl font-bold text-[#F0F4F8] mb-4">
-            Have feedback or a suggestion?
-          </h2>
-          <p className="text-[#8BA3BE] mb-6 max-w-lg mx-auto">
-            We are always improving. If you notice outdated information or have
-            suggestions for tools we should add, let us know.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="px-6 py-3 bg-[#3B82F6] hover:bg-[#2563EB] text-white font-medium rounded-lg transition-colors"
-            >
-              Contact Us
-            </Link>
-            <a
-              href="mailto:info@martech-tools.net"
-              className="px-6 py-3 border border-[#1E3A5F] hover:border-[#2A5080] text-[#8BA3BE] hover:text-[#F0F4F8] font-medium rounded-lg transition-all"
-            >
-              info@martech-tools.net
-            </a>
+          {/* ═══ CTA ═══ */}
+          <div className="text-center rounded-2xl border border-[rgba(180,60,80,0.15)] bg-[#1a1013] p-10">
+            <BarChart3 className="w-8 h-8 text-[#d4607a] mx-auto mb-4" />
+            <h2 className="text-xl font-bold text-[#f5e8ea] mb-3">
+              Have a data question?
+            </h2>
+            <p className="text-sm text-[#a08088] max-w-md mx-auto mb-6">
+              Whether you&apos;re evaluating tools for a stack refresh or want to suggest a
+              tool we should analyse, we&apos;d love to hear from you.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="px-6 py-3 bg-[#a0304e] hover:bg-[#b8385a] text-[#f5e8ea] text-sm font-medium rounded-xl transition-colors"
+              >
+                Get in Touch
+              </Link>
+              <a
+                href="mailto:hello@cleverco-analytics.com"
+                className="px-6 py-3 border border-[rgba(180,60,80,0.25)] hover:border-[rgba(180,60,80,0.4)] text-[#a08088] hover:text-[#d4b8bd] text-sm font-medium rounded-xl transition-all"
+              >
+                hello@cleverco-analytics.com
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -4,29 +4,36 @@
 
 @layer base {
   :root {
-    --bg-cosmic: #09090b;
-    --bg-card: #111115;
-    --border-cosmic: rgba(255, 255, 255, 0.06);
-    --border-hover: rgba(255, 255, 255, 0.14);
-    --text-bright: #e6eefc;
-    --text-main: #9bb1d0;
-    --text-dim: #708094;
-    --accent-cyan: #00bcd4;
-    --accent-purple: #a78bfa;
-    --accent-pink: #f472b6;
+    --bg-deep: #120a0c;
+    --bg-card: #1a1013;
+    --border-wine: rgba(180, 60, 80, 0.15);
+    --border-hover: rgba(180, 60, 80, 0.35);
+    --text-bright: #f5e8ea;
+    --text-main: #d4b8bd;
+    --text-dim: #a08088;
+    --accent-wine: #a0304e;
+    --accent-burgundy: #6b1d30;
+    --accent-gold: #c9a84c;
+    --accent-rose: #d4607a;
   }
 
   body {
-    background: var(--bg-cosmic);
+    background: var(--bg-deep);
     color: var(--text-main);
     -webkit-font-smoothing: antialiased;
   }
 
-  * { border-color: var(--border-cosmic); }
+  * { border-color: var(--border-wine); }
 }
 
 @layer components {
-  .card-liquid {
-    @apply rounded-2xl border border-white/[0.06] bg-[#111115] hover:border-white/[0.14] transition-colors;
+  .card-wine {
+    @apply rounded-2xl border border-[rgba(180,60,80,0.15)] bg-[#1a1013] hover:border-[rgba(180,60,80,0.35)] transition-colors;
+  }
+  .btn-ghost {
+    @apply px-6 py-3 rounded-xl border border-[rgba(180,60,80,0.3)] text-sm font-medium text-[#d4b8bd] hover:bg-[rgba(180,60,80,0.12)] transition-all;
+  }
+  .btn-primary {
+    @apply px-6 py-3 rounded-xl bg-[#a0304e] text-sm font-medium text-[#f5e8ea] hover:bg-[#b8385a] transition-all;
   }
 }

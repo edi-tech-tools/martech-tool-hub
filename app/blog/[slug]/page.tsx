@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BLOG_POSTS } from "@/data/blog-posts";
-import { Calendar, Clock, User, ArrowLeft, Tag, Star, ArrowRight, ExternalLink } from "lucide-react";
-import { blogPostSchema, organizationSchema } from "@/lib/schema";
+import { Calendar, Clock, User, ArrowLeft, Tag, ArrowRight } from "lucide-react";
 
 export async function generateStaticParams() {
   return BLOG_POSTS.map((post) => ({
@@ -20,7 +19,7 @@ export async function generateMetadata({
   const post = BLOG_POSTS.find((p) => p.slug === slug);
   if (!post) return { title: "Post Not Found" };
   return {
-    title: `${post.title} — MarTech Tool Hub`,
+    title: `${post.title} — Clever Co. Insights`,
     description: post.excerpt,
   };
 }
@@ -36,7 +35,7 @@ function renderContent(content: string) {
 
     if (trimmed.startsWith("## ")) {
       elements.push(
-        <h2 key={i} className="text-xl md:text-2xl font-bold text-[#F0F4F8] mt-10 mb-4 tracking-tight">
+        <h2 key={i} className="text-xl md:text-2xl font-bold text-[#f5e8ea] mt-10 mb-4 tracking-tight">
           {trimmed.replace(/^##\s+/, "")}
         </h2>
       );
@@ -45,38 +44,118 @@ function renderContent(content: string) {
     }
     if (trimmed.startsWith("### ")) {
       elements.push(
-        <h3 key={i} className="text-lg font-bold text-[#F0F4F8] mt-8 mb-3">
+        <h3 key={i} className="text-lg font-bold text-[#f5e8ea] mt-8 mb-3">
           {trimmed.replace(/^###\s+/, "")}
         </h3>
       );
       i++;
       continue;
     }
-
-    if (trimmed.startsWith("|")) {
-      const tableRows: string[] = [];
-      while (i < lines.length && lines[i].trim().startsWith("|")) {
-        tableRows.push(lines[i].trim());
-        i++;
-      }
-      elements.push(renderTable(tableRows, `table-${i}`));
-      continue;
-    }
-
-    if (trimmed === "---") {
-      elements.push(<hr key={i} className="border-[#1E3A5F] my-8" />);
+    if (trimmed.startsWith("---")) {
+      elements.push(<hr key={i} className="my-8 border-[rgba(180,60,80,0.15)]" />);
       i++;
       continue;
     }
+    if (trimmed.startsWith("**") && trimmed.endsWith("**") && trimmed.length > 6) {
+      elements.push(
+        <p key={i} className="text-sm font-semibold text-[#d4b8bd] mt-6 mb-2">
+          {trimmed.replace(/^\*\*/, "").replace(/\*\*$/, "")}
+        </p>
+      );
+      i++;
+      continue;
+    }
+    if (trimmed.startsWith("*") && trimmed.includes("**")) {
+      const parts = trimmed.split(/\*\*(.*?)\*\*/g);
+      elements.push(
+        <ul key={i} className="list-disc pl-5 space-y-1.5 my-4">
+          <li className="text-sm text-[#a08088] leading-relaxed">
+            {parts.map((part, idx) =>
+              part.startsWith("*") ? null :
+              idx % 2 === 1 ? <strong key={idx} className="text-[#d4b8bd]">{part}</strong> : part
+            )}
+          </li>
+        </ul>
+      );
+      i++;
+      continue;
+    }
+    if (trimmed.startsWith("- ")) {
+      const items: React.ReactNode[] = [];
+      while (i < lines.length && lines[i].trim().startsWith("- ")) {
+        const li = lines[i].trim().replace(/^- /, "");
+        const parts = li.split(/\*\*(.*?)\*\*/g);
+        items.push(
+          <li key={i} className="text-sm text-[#a08088] leading-relaxed">
+            {parts.map((part, idx) =>
+              idx % 2 === 1 ? <strong key={idx} className="text-[#d4b8bd]">{part}</strong> : part
+            )}
+          </li>
+        );
+        i++;
+      }
+      elements.push(
+        <ul key={`ul-${i}`} className="list-disc pl-5 space-y-1.5 my-4">
+          {items}
+        </ul>
+      );
+      continue;
+    }
+    if (trimmed.startsWith("|")) {
+      const rows: string[][] = [];
+      while (i < lines.length && lines[i].trim().startsWith("|")) {
+        rows.push(lines[i].trim().split("|").filter(Boolean).map((c) => c.trim()));
+        i++;
+      }
+      if (rows.length > 0) {
+        const hasDivider = rows.some((r) => r.every((c) => c.startsWith("---")));
+        const dataRows = rows.filter((r) => !r.every((c) => c.startsWith("---")));
 
+        if (dataRows.length > 0) {
+          const headerRow = dataRows[0];
+          const bodyRows = dataRows.slice(1);
+
+          elements.push(
+            <div key={`table-${i}`} className="overflow-x-auto my-6">
+              <table className="w-full text-sm border-collapse">
+                <thead>
+                  <tr className="border-b border-[rgba(180,60,80,0.2)]">
+                    {headerRow.map((h, hidx) => (
+                      <th key={hidx} className="text-left py-3 px-3 text-[#f5e8ea] font-semibold text-xs uppercase tracking-wider first:pl-0 last:pr-0">
+                        {h}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {bodyRows.map((row, ridx) => (
+                    <tr key={ridx} className="border-b border-[rgba(180,60,80,0.06)]">
+                      {row.map((cell, cidx) => (
+                        <td key={cidx} className="py-2.5 px-3 text-[#a08088] text-xs first:pl-0 last:pr-0">
+                          {cidx === 0 ? <span className="text-[#d4b8bd] font-medium">{cell}</span> : cell}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          );
+        }
+      }
+      continue;
+    }
     if (trimmed === "") {
       i++;
       continue;
     }
 
+    const parts = trimmed.split(/\*\*(.*?)\*\*/g);
     elements.push(
-      <p key={i} className="text-[#8BA3BE] leading-relaxed mb-4 text-base">
-        {formatInline(trimmed)}
+      <p key={i} className="text-sm text-[#a08088] leading-relaxed my-3">
+        {parts.map((part, idx) =>
+          idx % 2 === 1 ? <strong key={idx} className="text-[#d4b8bd]">{part}</strong> : part
+        )}
       </p>
     );
     i++;
@@ -85,65 +164,11 @@ function renderContent(content: string) {
   return elements;
 }
 
-function renderTable(rows: string[], key: string) {
-  const parsed = rows.map((row) =>
-    row
-      .replace(/^\||\|$/g, "")
-      .split("|")
-      .map((cell) => cell.trim())
-  );
-
-  const headerRow = parsed[0];
-  const dataRows = parsed.slice(2);
-
-  return (
-    <div key={key} className="overflow-x-auto mb-6">
-      <table className="w-full text-sm border-collapse">
-        <thead>
-          <tr className="bg-[#162440]">
-            {headerRow.map((h, idx) => (
-              <th
-                key={idx}
-                className="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-[#3B82F6] border-b border-[#1E3A5F]"
-              >
-                {h}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {dataRows.map((row, rIdx) => (
-            <tr key={rIdx} className="border-b border-[#1E3A5F]/50 hover:bg-[#162440]/50 transition-colors">
-              {row.map((cell, cIdx) => (
-                <td key={cIdx} className="px-4 py-3 text-[#8BA3BE]">
-                  {cell}
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-}
-
-function formatInline(text: string): React.ReactNode {
-  const parts = text.split(/(\*\*[^*]+\*\*)/g);
-  return parts.map((part, idx) => {
-    if (part.startsWith("**") && part.endsWith("**")) {
-      return (
-        <strong key={idx} className="font-bold text-[#F0F4F8]">
-          {part.slice(2, -2)}
-        </strong>
-      );
-    }
-    return part;
-  });
-}
-
-function getRelatedPosts(currentSlug: string, category: string) {
+function getRelatedPosts(currentSlug: string) {
+  const current = BLOG_POSTS.find((p) => p.slug === currentSlug);
+  if (!current) return [];
   return BLOG_POSTS.filter(
-    (p) => p.slug !== currentSlug && p.category === category
+    (p) => p.slug !== currentSlug && p.category === current.category
   ).slice(0, 3);
 }
 
@@ -154,209 +179,116 @@ export default async function BlogPostPage({
 }) {
   const { slug } = await params;
   const post = BLOG_POSTS.find((p) => p.slug === slug);
+  if (!post) notFound();
 
-  if (!post) {
-    notFound();
-  }
-
-  const contentElements = renderContent(post.content);
-  const relatedPosts = getRelatedPosts(slug, post.category);
-
-  const blogJsonLd = blogPostSchema(
-    post.title,
-    post.author,
-    post.date,
-    'MarTech Tool Hub',
-    post.excerpt
-  );
-  const orgJsonLd = organizationSchema(
-    'MarTech Tool Hub',
-    'https://martech-tools.net',
-    'Comprehensive MarTech directory and tool hub for modern enterprises.'
-  );
+  const relatedPosts = getRelatedPosts(slug);
 
   return (
-    <div className="relative pt-32 pb-20">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
-      />
-      <div className="max-w-[1200px] mx-auto px-6">
-        <Link
-          href="/blog"
-          className="inline-flex items-center gap-2 text-sm text-[#8BA3BE] hover:text-[#3B82F6] transition-colors mb-8"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          Back to Blog
-        </Link>
-
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-10">
-          <article>
-            <header className="mb-10">
-              <div className="flex flex-wrap items-center gap-3 mb-4">
-                <span className="text-xs font-semibold uppercase tracking-wider text-[#3B82F6] bg-[#162440] px-3 py-1.5 rounded-md">
-                  {post.category}
-                </span>
-                <div className="flex items-center gap-2 text-xs text-[#4A6380]">
-                  <User className="w-3.5 h-3.5" />
-                  {post.author}
-                </div>
-                <div className="flex items-center gap-2 text-xs text-[#4A6380]">
-                  <Calendar className="w-3.5 h-3.5" />
-                  {new Date(post.date).toLocaleDateString("en-US", {
-                    month: "long",
-                    day: "numeric",
-                    year: "numeric",
-                  })}
-                </div>
-                <div className="flex items-center gap-1.5 text-xs text-[#4A6380]">
-                  <Clock className="w-3.5 h-3.5" />
-                  {post.readTime} min read
-                </div>
-              </div>
-
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#F0F4F8] tracking-tight leading-[1.1] mb-4">
-                {post.title}
-              </h1>
-
-              <p className="text-lg text-[#8BA3BE] leading-relaxed max-w-3xl">
-                {post.excerpt}
-              </p>
-
-              {post.tags && post.tags.length > 0 && (
-                <div className="flex flex-wrap gap-2 mt-6">
-                  {post.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="flex items-center gap-1.5 px-3 py-1 bg-[#0F1D32] border border-[#1E3A5F] rounded-full text-xs text-[#4A6380]"
-                    >
-                      <Tag className="w-3 h-3" />
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              )}
-            </header>
-
-            <div className="prose-custom max-w-none">
-              {contentElements}
-            </div>
-
-            <div className="mt-12 pt-8 border-t border-[#1E3A5F]">
-              <div className="bg-[#0F1D32] border border-[#1E3A5F] rounded-xl p-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#3B82F6] to-[#22D3EE] flex items-center justify-center text-white font-bold text-lg">
-                    {post.author.charAt(0)}
-                  </div>
-                  <div>
-                    <p className="font-bold text-[#F0F4F8]">{post.author}</p>
-                    <p className="text-sm text-[#8BA3BE]">{post.authorRole}</p>
-                    <p className="text-xs text-[#4A6380] mt-2">
-                      Martech-tool-hub independently researches and verifies all product data. Ratings sourced from G2, Capterra, and other trusted review platforms.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {relatedPosts.length > 0 && (
-              <div className="mt-12 lg:hidden">
-                <h3 className="text-lg font-bold text-[#F0F4F8] mb-4">Related Articles</h3>
-                <div className="grid gap-4">
-                  {relatedPosts.map((rp) => (
-                    <Link
-                      key={rp.slug}
-                      href={`/blog/${rp.slug}`}
-                      className="block bg-[#0F1D32] border border-[#1E3A5F] rounded-xl p-4 hover:border-[#2A5080] transition-all"
-                    >
-                      <h4 className="font-bold text-[#F0F4F8] hover:text-[#3B82F6] transition-colors text-sm">
-                        {rp.title}
-                      </h4>
-                      <p className="text-xs text-[#4A6380] mt-1">
-                        {rp.readTime} min read · {new Date(rp.date).toLocaleDateString("en-US", {
-                          month: "short",
-                          day: "numeric",
-                          year: "numeric",
-                        })}
-                      </p>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
-          </article>
-
-          <aside className="hidden lg:block">
-            <div className="sticky top-24 space-y-6">
-              <div className="bg-[#0F1D32] border border-[#1E3A5F] rounded-xl p-5">
-                <h3 className="text-sm font-bold text-[#F0F4F8] mb-3 uppercase tracking-wider">
-                  In This Article
-                </h3>
-                <nav className="space-y-2">
-                  {post.content
-                    .split("\n")
-                    .filter((l) => l.trim().startsWith("## "))
-                    .slice(0, 8)
-                    .map((heading, idx) => (
-                      <a
-                        key={idx}
-                        href={`#`}
-                        className="block text-xs text-[#8BA3BE] hover:text-[#3B82F6] transition-colors"
-                      >
-                        {heading.replace(/^##\s+/, "")}
-                      </a>
-                    ))}
-                </nav>
-              </div>
-
-              {relatedPosts.length > 0 && (
-                <div className="bg-[#0F1D32] border border-[#1E3A5F] rounded-xl p-5">
-                  <h3 className="text-sm font-bold text-[#F0F4F8] mb-3 uppercase tracking-wider">
-                    Related Articles
-                  </h3>
-                  <div className="space-y-3">
-                    {relatedPosts.map((rp) => (
-                      <Link
-                        key={rp.slug}
-                        href={`/blog/${rp.slug}`}
-                        className="block group"
-                      >
-                        <h4 className="text-sm font-bold text-[#8BA3BE] group-hover:text-[#3B82F6] transition-colors leading-snug">
-                          {rp.title}
-                        </h4>
-                        <p className="text-xs text-[#4A6380] mt-1">
-                          {rp.readTime} min read
-                        </p>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* CTA */}
-              <div className="bg-gradient-to-br from-[#162440] to-[#0F1D32] border border-[#1E3A5F] rounded-xl p-5 text-center">
-                <div className="w-10 h-10 rounded-full bg-[#3B82F6]/20 flex items-center justify-center mx-auto mb-3">
-                  <Star className="w-5 h-5 text-[#3B82F6]" />
-                </div>
-                <h3 className="text-sm font-bold text-[#F0F4F8] mb-2">Find the Right Tool</h3>
-                <p className="text-xs text-[#8BA3BE] mb-4">
-                  Browse 79+ enterprise software reviews
-                </p>
-                <Link
-                  href="/"
-                  className="inline-flex items-center gap-1 px-4 py-2 bg-[#3B82F6] hover:bg-[#2563EB] text-white text-xs font-bold rounded-lg transition-colors"
-                >
-                  Browse Tools <ArrowRight className="w-3 h-3" />
-                </Link>
-              </div>
-            </div>
-          </aside>
-        </div>
+    <div className="relative min-h-screen bg-[#120a0c]">
+      <div className="fixed inset-0 -z-10 overflow-hidden">
+        <div className="absolute top-[10%] right-[-5%] w-[35%] h-[35%] rounded-full bg-[#a0304e]/[0.03] blur-[100px]" />
       </div>
+
+      <article className="pt-28 pb-20 px-6">
+        {/* Back link */}
+        <div className="max-w-[800px] mx-auto mb-8">
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-1.5 text-xs text-[#a08088] hover:text-[#d4b8bd] transition-colors"
+          >
+            <ArrowLeft className="w-3.5 h-3.5" />
+            Back to Insights
+          </Link>
+        </div>
+
+        {/* Header */}
+        <div className="max-w-[800px] mx-auto mb-12">
+          <div className="flex items-center gap-3 text-[10px] text-[#695058] font-mono uppercase tracking-wider mb-4">
+            <span className="text-[#d4607a] bg-[rgba(160,48,78,0.12)] px-2.5 py-1 rounded-md">
+              {post.category}
+            </span>
+            <span className="flex items-center gap-1">
+              <Clock className="w-3 h-3" />
+              {post.readTime} min read
+            </span>
+          </div>
+
+          <h1 className="text-3xl md:text-4xl font-bold text-[#f5e8ea] tracking-tight leading-[1.1] mb-6">
+            {post.title}
+          </h1>
+
+          <p className="text-sm text-[#a08088] leading-relaxed mb-8">
+            {post.excerpt}
+          </p>
+
+          <div className="flex items-center gap-4 pb-8 border-b border-[rgba(180,60,80,0.12)]">
+            <div className="flex items-center gap-3">
+              <div className="w-9 h-9 rounded-full bg-[#a0304e]/20 border border-[rgba(180,60,80,0.2)] flex items-center justify-center">
+                <User className="w-4 h-4 text-[#d4607a]" />
+              </div>
+              <div>
+                <div className="text-sm font-medium text-[#f5e8ea]">{post.author}</div>
+                <div className="text-[10px] text-[#a08088]">{post.authorRole}</div>
+              </div>
+            </div>
+            <div className="flex items-center gap-2 text-xs text-[#695058]">
+              <Calendar className="w-3.5 h-3.5" />
+              {new Date(post.date).toLocaleDateString("en-US", {
+                month: "long",
+                day: "numeric",
+                year: "numeric",
+              })}
+            </div>
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="max-w-[800px] mx-auto mb-16">
+          <div className="prose-custom">
+            {renderContent(post.content)}
+          </div>
+        </div>
+
+        {/* Tags */}
+        {post.tags && post.tags.length > 0 && (
+          <div className="max-w-[800px] mx-auto mb-16 pb-8 border-b border-[rgba(180,60,80,0.12)]">
+            <div className="flex items-center gap-2 flex-wrap">
+              <Tag className="w-3.5 h-3.5 text-[#a08088]" />
+              {post.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-[10px] text-[#a08088] bg-[rgba(160,48,78,0.08)] border border-[rgba(180,60,80,0.15)] px-2.5 py-1 rounded-md"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Related Posts */}
+        {relatedPosts.length > 0 && (
+          <div className="max-w-[800px] mx-auto">
+            <h3 className="text-base font-bold text-[#f5e8ea] mb-6">Related Insights</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {relatedPosts.map((rp) => (
+                <Link key={rp.slug} href={`/blog/${rp.slug}`} className="group">
+                  <div className="rounded-xl border border-[rgba(180,60,80,0.12)] bg-[#1a1013] p-5 hover:border-[rgba(180,60,80,0.3)] transition-all h-full">
+                    <div className="text-[10px] font-mono uppercase tracking-wider text-[#a08088] mb-2">{rp.category}</div>
+                    <h4 className="text-sm font-semibold text-[#f5e8ea] mb-2 line-clamp-2 group-hover:text-[#d4607a] transition-colors">
+                      {rp.title}
+                    </h4>
+                    <div className="flex items-center justify-between mt-3">
+                      <span className="text-[10px] text-[#695058]">{rp.readTime} min read</span>
+                      <ArrowRight className="w-3.5 h-3.5 text-[#d4607a] opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+      </article>
     </div>
   );
 }

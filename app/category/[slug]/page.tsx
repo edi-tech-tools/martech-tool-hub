@@ -104,26 +104,30 @@ export default function CategoryPage({
     `Compare top ${category.toLowerCase()} tools for your marketing technology stack.`;
 
   return (
-    <div className="relative pt-16 pb-20 px-6">
-      <div className="max-w-[1200px] mx-auto">
-        <nav className="flex items-center gap-2 text-sm text-[#4A6380] mb-8">
-          <Link href="/" className="hover:text-[#3B82F6] transition-colors">
+<div className="relative min-h-screen bg-[#120a0c] pt-32 pb-20 px-6">
+      <div className="fixed inset-0 -z-10 overflow-hidden">
+        <div className="absolute top-[10%] left-[-5%] w-[35%] h-[35%] rounded-full bg-[#a0304e]/[0.03] blur-[100px]" />
+        <div className="absolute bottom-[20%] right-[-5%] w-[30%] h-[30%] rounded-full bg-[#6b1d30]/[0.04] blur-[80px]" />
+      </div>
+      <div className="max-w-[1100px] mx-auto">
+        <nav className="flex items-center gap-2 text-sm text-[#695058] mb-8">
+          <Link href="/" className="hover:text-[#d4607a] transition-colors">
             Home
           </Link>
           <ChevronRight className="w-3.5 h-3.5" />
-          <span className="text-[#8BA3BE]">{category} Tools</span>
+          <span className="text-[#a08088]">{category} Tools</span>
         </nav>
 
         <header className="mb-10">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-12 h-12 rounded-xl bg-[#162440] flex items-center justify-center">
-              <Layers className="w-6 h-6 text-[#3B82F6]" />
+            <div className="w-12 h-12 rounded-xl bg-[rgba(160,48,78,0.12)] flex items-center justify-center">
+              <Layers className="w-6 h-6 text-[#d4607a]" />
             </div>
             <div>
-              <h1 className="text-4xl md:text-5xl font-extrabold text-[#F0F4F8] tracking-tight">
+              <h1 className="text-4xl md:text-5xl font-extrabold text-[#f5e8ea] tracking-tight">
                 Best {category} Tools
               </h1>
-              <p className="text-[#8BA3BE] mt-1 text-base">
+              <p className="text-[#a08088] mt-1 text-base">
                 {stats.count} tool{stats.count !== 1 ? "s" : ""} ·{" "}
                 <span className="inline-flex items-center gap-1">
                   <Star className="w-3.5 h-3.5 text-[#F59E0B] fill-[#F59E0B]" />{" "}
@@ -132,7 +136,7 @@ export default function CategoryPage({
               </p>
             </div>
           </div>
-          <p className="text-[#8BA3BE] leading-relaxed max-w-3xl text-base">
+          <p className="text-[#a08088] leading-relaxed max-w-3xl text-base">
             {description}
           </p>
         </header>
@@ -147,7 +151,7 @@ export default function CategoryPage({
         </div>
 
         <section>
-          <h2 className="text-2xl font-bold text-[#F0F4F8] mb-6">
+          <h2 className="text-2xl font-bold text-[#f5e8ea] mb-6">
             All {category} Tools
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -157,33 +161,33 @@ export default function CategoryPage({
                 <Link
                   href={`/tools/${tool.id}`}
                   key={tool.id}
-                  className="group bg-[#0F1D32] border border-[#1E3A5F] rounded-xl p-6 card-hover"
+                  className="group bg-[#1a1013] border border-[rgba(180,60,80,0.15)] rounded-xl p-6 card-hover"
                 >
                   <div className="flex items-start gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-lg bg-[#162440] flex items-center justify-center group-hover:scale-110 transition-transform shrink-0">
-                      <Icon className="w-6 h-6 text-[#3B82F6]" />
+                    <div className="w-12 h-12 rounded-lg bg-[rgba(160,48,78,0.12)] flex items-center justify-center group-hover:scale-110 transition-transform shrink-0">
+                      <Icon className="w-6 h-6 text-[#d4607a]" />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <h3 className="font-bold text-[#F0F4F8] group-hover:text-[#3B82F6] transition-colors truncate">
+                      <h3 className="font-bold text-[#f5e8ea] group-hover:text-[#d4607a] transition-colors truncate">
                         {tool.name}
                       </h3>
                       <div className="flex items-center gap-1 mt-1">
                         <Star className="w-3.5 h-3.5 text-[#F59E0B] fill-[#F59E0B]" />
-                        <span className="text-xs font-bold text-[#F0F4F8]">
+                        <span className="text-xs font-bold text-[#f5e8ea]">
                           {tool.rating}
                         </span>
-                        <span className="text-xs text-[#4A6380]">
+                        <span className="text-xs text-[#695058]">
                           ({tool.reviewCount.toLocaleString()} reviews)
                         </span>
                       </div>
                     </div>
                   </div>
-                  <p className="text-sm text-[#8BA3BE] leading-relaxed line-clamp-2 mb-4">
+                  <p className="text-sm text-[#a08088] leading-relaxed line-clamp-2 mb-4">
                     {tool.description}
                   </p>
-                  <div className="flex items-center justify-between pt-4 border-t border-[#1E3A5F]">
-                    <span className="text-xs text-[#4A6380]">{tool.pricing}</span>
-                    <span className="text-sm text-[#3B82F6] font-semibold group-hover:text-[#22D3EE] transition-colors flex items-center">
+                  <div className="flex items-center justify-between pt-4 border-t border-[rgba(180,60,80,0.15)]">
+                    <span className="text-xs text-[#695058]">{tool.pricing}</span>
+                    <span className="text-sm text-[#d4607a] font-semibold group-hover:text-[#d4607a] transition-colors flex items-center">
                       View Details <ArrowRight className="ml-1 w-4 h-4" />
                     </span>
                   </div>
@@ -197,7 +201,7 @@ export default function CategoryPage({
           <section className="mt-16">
             <div className="flex items-center gap-2 mb-6">
               <BookOpen className="w-5 h-5 text-[#F59E0B]" />
-              <h2 className="text-xl font-bold text-[#F0F4F8]">
+              <h2 className="text-xl font-bold text-[#f5e8ea]">
                 Related Guides
               </h2>
             </div>
@@ -206,15 +210,15 @@ export default function CategoryPage({
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="group bg-[#0F1D32] border border-[#1E3A5F] rounded-xl p-5 card-hover"
+                  className="group bg-[#1a1013] border border-[rgba(180,60,80,0.15)] rounded-xl p-5 card-hover"
                 >
-                  <span className="inline-block text-[10px] font-semibold uppercase tracking-wider text-[#3B82F6] bg-[#162440] px-2 py-0.5 rounded mb-3">
+                  <span className="inline-block text-[10px] font-semibold uppercase tracking-wider text-[#d4607a] bg-[rgba(160,48,78,0.12)] px-2 py-0.5 rounded mb-3">
                     {post.category}
                   </span>
-                  <h3 className="font-bold text-[#F0F4F8] group-hover:text-[#3B82F6] transition-colors leading-snug line-clamp-2 mb-2">
+                  <h3 className="font-bold text-[#f5e8ea] group-hover:text-[#d4607a] transition-colors leading-snug line-clamp-2 mb-2">
                     {post.title}
                   </h3>
-                  <p className="text-xs text-[#8BA3BE] line-clamp-2">
+                  <p className="text-xs text-[#a08088] line-clamp-2">
                     {post.excerpt}
                   </p>
                 </Link>

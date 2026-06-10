@@ -235,16 +235,19 @@ export default function FAQPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
       />
 
-      <div className="relative pt-32 pb-20 px-6">
+      <div className="relative min-h-screen bg-[#120a0c] pt-32 pb-20 px-6">
+        <div className="fixed inset-0 -z-10 overflow-hidden">
+          <div className="absolute top-[10%] right-[-5%] w-[30%] h-[30%] rounded-full bg-[#a0304e]/[0.03] blur-[100px]" />
+        </div>
         <div className="max-w-[800px] mx-auto">
           <div className="text-center mb-12">
-            <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#3B82F6] bg-[#162440] px-3 py-1.5 rounded-md mb-4">
-              FAQ
-            </span>
-            <h1 className="text-3xl md:text-5xl font-extrabold text-[#F0F4F8] tracking-tight mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[rgba(180,60,80,0.2)] bg-[rgba(160,48,78,0.08)] mb-6">
+              <span className="text-[10px] font-mono tracking-[0.15em] text-[#d4607a] uppercase">FAQ</span>
+            </div>
+            <h1 className="text-3xl md:text-5xl font-bold text-[#f5e8ea] tracking-tight mb-6">
               Frequently Asked Questions
             </h1>
-            <p className="text-lg text-[#8BA3BE] max-w-xl mx-auto leading-relaxed">
+            <p className="text-base text-[#a08088] max-w-xl mx-auto leading-relaxed">
               Everything you need to know about MarTech — from building your stack
               to choosing the right tools and understanding industry trends.
             </p>
@@ -254,18 +257,18 @@ export default function FAQPage() {
             {FAQ_ITEMS.map((item, index) => (
               <div
                 key={index}
-                className="bg-[#0F1D32] border border-[#1E3A5F] rounded-xl overflow-hidden transition-all duration-200"
+                className="rounded-xl border border-[rgba(180,60,80,0.12)] bg-[#1a1013] overflow-hidden transition-all duration-200"
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex items-center justify-between p-5 text-left hover:bg-[#162440] transition-colors"
+                  className="w-full flex items-center justify-between p-5 text-left hover:bg-[rgba(160,48,78,0.06)] transition-colors"
                   aria-expanded={openIndex === index}
                 >
-                  <span className="text-[#F0F4F8] font-medium pr-4">
+                  <span className="text-[#f5e8ea] font-medium pr-4 text-sm">
                     {item.question}
                   </span>
                   <ChevronDown
-                    className={`w-5 h-5 text-[#3B82F6] flex-shrink-0 transition-transform duration-200 ${
+                    className={`w-5 h-5 text-[#d4607a] flex-shrink-0 transition-transform duration-200 ${
                       openIndex === index ? "rotate-180" : ""
                     }`}
                   />
@@ -275,7 +278,7 @@ export default function FAQPage() {
                     openIndex === index ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
-                  <div className="px-5 pb-5 text-[#8BA3BE] leading-relaxed text-sm border-t border-[#1E3A5F] pt-4">
+                  <div className="px-5 pb-5 text-[#a08088] leading-relaxed text-sm border-t border-[rgba(180,60,80,0.08)] pt-4">
                     {item.answer}
                   </div>
                 </div>
@@ -284,15 +287,15 @@ export default function FAQPage() {
           </div>
 
           <div className="mt-12 text-center">
-            <p className="text-[#8BA3BE] text-sm">
+            <p className="text-[#a08088] text-sm">
               Still have questions?{" "}
               <a
                 href="/contact"
-                className="text-[#3B82F6] hover:underline font-medium"
+                className="text-[#d4607a] hover:underline font-medium"
               >
-                Contact our team
+                Contact our studio
               </a>{" "}
-              and we will get back to you within 24 hours.
+              and we will get back to you within 48 hours.
             </p>
           </div>
         </div>

@@ -1,32 +1,35 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — MarTech Tool Hub",
+  title: "Privacy Policy — Clever Co.",
   description:
-    "Learn how MarTech Tool Hub collects, uses, and protects your personal data. Our privacy policy outlines our commitment to your privacy and data security.",
+    "Learn how Clever Co. collects, uses, and protects your personal data. Our privacy policy outlines our commitment to your privacy and data security.",
 };
 
 export default function PrivacyPage() {
   return (
-    <div className="relative pt-32 pb-20 px-6">
+    <div className="relative min-h-screen bg-[#120a0c] pt-28 pb-20 px-6">
+      <div className="fixed inset-0 -z-10 overflow-hidden">
+        <div className="absolute top-[10%] left-[-5%] w-[30%] h-[30%] rounded-full bg-[#a0304e]/[0.03] blur-[100px]" />
+      </div>
       <div className="max-w-[800px] mx-auto">
         <div className="text-center mb-12">
-          <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#3B82F6] bg-[#162440] px-3 py-1.5 rounded-md mb-4">
-            Legal
-          </span>
-          <h1 className="text-3xl md:text-4xl font-extrabold text-[#F0F4F8] tracking-tight mb-3">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[rgba(180,60,80,0.2)] bg-[rgba(160,48,78,0.08)] mb-6">
+            <span className="text-[10px] font-mono tracking-[0.15em] text-[#d4607a] uppercase">Legal</span>
+          </div>
+          <h1 className="text-3xl md:text-4xl font-bold text-[#f5e8ea] tracking-tight mb-3">
             Privacy Policy
           </h1>
-          <p className="text-[#8BA3BE] text-sm">
-            Last updated: May 13, 2026
+          <p className="text-sm text-[#a08088]">
+            Last updated: May 2026
           </p>
         </div>
 
-        <div className="space-y-8 text-[#8BA3BE] leading-relaxed">
+        <div className="space-y-8 text-sm text-[#a08088] leading-relaxed">
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">1. Introduction</h2>
+            <h2 className="text-lg font-bold text-[#f5e8ea] mb-3">1. Introduction</h2>
             <p>
-              MarTech Tool Hub ("we," "our," or "us") is committed to protecting your privacy.
+              Clever Co. ("we," "our," or "us") is committed to protecting your privacy.
               This Privacy Policy explains how we collect, use, disclose, and safeguard your
               information when you visit our website martech-tools.net (the "Site"). Please read this
               policy carefully. If you do not agree with the terms, do not access the Site.
@@ -34,21 +37,21 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">2. Information We Collect</h2>
-            <h3 className="text-lg font-semibold text-[#F0F4F8] mb-2">Personal Data</h3>
+            <h2 className="text-xl font-bold text-[#f5e8ea] mb-3">2. Information We Collect</h2>
+            <h3 className="text-lg font-semibold text-[#f5e8ea] mb-2">Personal Data</h3>
             <p className="mb-3">
               We may collect personally identifiable information such as your name, email address,
               company name, and job title when you voluntarily submit it through our contact forms,
               newsletter signups, or tool submission requests.
             </p>
-            <h3 className="text-lg font-semibold text-[#F0F4F8] mb-2">Automatically Collected Data</h3>
+            <h3 className="text-lg font-semibold text-[#f5e8ea] mb-2">Automatically Collected Data</h3>
             <p className="mb-3">
               When you visit the Site, we automatically collect certain information including your
               IP address, browser type, operating system, referring URLs, device type, and browsing
               behavior. This data helps us improve our services and understand how users interact
               with our platform.
             </p>
-            <h3 className="text-lg font-semibold text-[#F0F4F8] mb-2">Cookies and Tracking Technologies</h3>
+            <h3 className="text-lg font-semibold text-[#f5e8ea] mb-2">Cookies and Tracking Technologies</h3>
             <p>
               We use cookies, web beacons, and similar tracking technologies to enhance your
               browsing experience, analyze site traffic, and serve targeted advertisements. You
@@ -58,7 +61,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">3. How We Use Your Information</h2>
+            <h2 className="text-xl font-bold text-[#f5e8ea] mb-3">3. How We Use Your Information</h2>
             <p className="mb-3">We use the collected data for the following purposes:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>To operate, maintain, and improve the Site and our services</li>
@@ -72,7 +75,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">4. Information Sharing and Disclosure</h2>
+            <h2 className="text-xl font-bold text-[#f5e8ea] mb-3">4. Information Sharing and Disclosure</h2>
             <p className="mb-3">
               We do not sell your personal information. We may share your data in the following
               circumstances:
@@ -103,7 +106,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">5. Cookie Policy</h2>
+            <h2 className="text-xl font-bold text-[#f5e8ea] mb-3">5. Cookie Policy</h2>
             <p className="mb-3">
               Our Site uses the following types of cookies:
             </p>
@@ -134,7 +137,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">6. Your Rights (GDPR & CCPA)</h2>
+            <h2 className="text-xl font-bold text-[#f5e8ea] mb-3">6. Your Rights (GDPR & CCPA)</h2>
             <p className="mb-3">
               Depending on your jurisdiction, you may have the following rights regarding your
               personal data:
@@ -154,7 +157,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">7. Data Security</h2>
+            <h2 className="text-xl font-bold text-[#f5e8ea] mb-3">7. Data Security</h2>
             <p>
               We implement industry-standard security measures including SSL/TLS encryption,
               firewalls, and secure server infrastructure to protect your personal information.
@@ -165,7 +168,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">8. Third-Party Links</h2>
+            <h2 className="text-xl font-bold text-[#f5e8ea] mb-3">8. Third-Party Links</h2>
             <p>
               Our Site contains links to third-party websites and tools listed in our directory.
               We are not responsible for the privacy practices of these external sites. We
@@ -175,7 +178,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">9. Children's Privacy</h2>
+            <h2 className="text-xl font-bold text-[#f5e8ea] mb-3">9. Children's Privacy</h2>
             <p>
               Our services are not intended for individuals under the age of 16. We do not
               knowingly collect personal information from children. If we become aware that a
@@ -186,7 +189,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">10. International Data Transfers</h2>
+            <h2 className="text-xl font-bold text-[#f5e8ea] mb-3">10. International Data Transfers</h2>
             <p>
               Your information may be transferred to and processed in countries other than your
               own, including the United States. We ensure appropriate safeguards are in place
@@ -196,7 +199,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">11. Changes to This Policy</h2>
+            <h2 className="text-xl font-bold text-[#f5e8ea] mb-3">11. Changes to This Policy</h2>
             <p>
               We may update this Privacy Policy from time to time. We will notify you of
               material changes by posting the updated policy on this page with a revised "Last
@@ -205,15 +208,15 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">12. Contact Us</h2>
+            <h2 className="text-xl font-bold text-[#f5e8ea] mb-3">12. Contact Us</h2>
             <p>
               If you have questions about this Privacy Policy or our data practices, please
               contact us:
             </p>
-            <div className="mt-4 p-5 bg-[#0F1D32] border border-[#1E3A5F] rounded-xl">
-              <p className="mb-2"><strong className="text-[#F0F4F8]">Email:</strong> privacy@martech-tools.net</p>
-              <p className="mb-2"><strong className="text-[#F0F4F8]">Support:</strong> support@martech-tools.net</p>
-              <p><strong className="text-[#F0F4F8]">Address:</strong> 300 SE 2nd St, Suite 600, Austin, TX 78701</p>
+            <div className="mt-4 p-5 bg-[#0F1D32] border border-[rgba(180,60,80,0.15)] rounded-xl">
+              <p className="mb-2"><strong className="text-[#f5e8ea]">Email:</strong> privacy@martech-tools.net</p>
+              <p className="mb-2"><strong className="text-[#f5e8ea]">Support:</strong> support@martech-tools.net</p>
+              <p><strong className="text-[#f5e8ea]">Address:</strong> 300 SE 2nd St, Suite 600, Austin, TX 78701</p>
             </div>
           </section>
         </div>
