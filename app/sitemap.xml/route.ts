@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 
 const BLOG_SLUGS = [
+  "martech-stack-8-essential-tools-2026",
   "hubspot-saas-growth-signals-2026",
     "ai-marketing-stack-2026",
     "salesforce-vs-hubspot-2026",
