@@ -18,6 +18,7 @@ const BLOG_SLUGS = [
     "marketing-automation-2026-hubspot-marketo-activecampaign",
     "content-marketing-tools-2026-canva-adobe-express-visme",
     "dam-tools-2026-brandfolder-vs-bynder-vs-widen-vs-adobe-aem",
+    "marketing-automation-platforms-comparison-2026",
 ] as const;
 
 const TOOL_SLUGS = [
