@@ -19,6 +19,7 @@ const BLOG_SLUGS = [
     "content-marketing-tools-2026-canva-adobe-express-visme",
     "dam-tools-2026-brandfolder-vs-bynder-vs-widen-vs-adobe-aem",
     "marketing-automation-platforms-comparison-2026",
+    "abm-platforms-2026-6sense-demandbase-terminus-zoominfo-comparison",
 ] as const;
 
 const TOOL_SLUGS = [
