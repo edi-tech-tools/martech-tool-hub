@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BarChart3, MapPin, Linkedin, Twitter, Globe, Mail } from "lucide-react";
+import { ALL_TOOLS } from "@/data/tools";
 
 export const metadata: Metadata = {
   title: "Our Studio — Clever Co.",
@@ -99,7 +100,7 @@ export default function AboutPage() {
               </p>
               <p>
                 Today, we maintain the most data-rich independent MarTech directory available —
-                covering {">"}80 tools across 15+ categories, with pricing, feature
+              covering {ALL_TOOLS.length} tools across 15+ categories, with pricing, feature
                 comparisons, integration maps, and analyst notes on every page. Our insights
                 are read by marketing ops teams, CMOs, and technology buyers across the UK
                 and Europe.
