@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Affiliate Disclosure — Clever Co.",
+  title: "Affiliate Disclosure — Martech Tools LLC",
   description:
-    "Clever Co.'s affiliate disclosure policy. We believe in complete transparency about how our studio operates.",
+    "Martech Tools LLC's affiliate disclosure policy. We believe in complete transparency about how our studio operates.",
 };
 
 export default function DisclosurePage() {
@@ -31,7 +31,7 @@ export default function DisclosurePage() {
           <section>
             <h2 className="text-lg font-bold text-[#f5e8ea] mb-3">Transparency First</h2>
             <p>
-              Clever Co. is committed to complete transparency. This Affiliate Disclosure
+              Martech Tools LLC is committed to complete transparency. This Affiliate Disclosure
               explains how we may earn compensation through links on our website.
             </p>
           </section>
