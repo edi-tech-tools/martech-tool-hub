@@ -23,6 +23,7 @@ const BLOG_SLUGS = [
     "abm-platforms-2026-6sense-demandbase-terminus-zoominfo-comparison",
     "multi-channel-marketing-attribution-models-2026-comparison",
     "conversational-marketing-2026-chatbots-live-chat-lead-generation",
+    "cdp-vs-dmp-comparison-2026",
 ] as const;
 
 const TOOL_SLUGS = [
