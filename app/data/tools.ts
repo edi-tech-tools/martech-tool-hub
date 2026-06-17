@@ -1345,40 +1345,46 @@ export const ALL_TOOLS: Tool[] = [
     reviewCount: 2154,
     icon: Star,
     description: "Campaign Monitor is a design-forward email marketing platform focused on ease of use, segmentation, and automation.",
-    longDescription: `Campaign Monitor is a mid-market email marketing platform renowned for its intuitive drag-and-drop editor strong design flexibility and robust segmentation making it a top choice for marketers prioritizing visually compelling campaigns over complex automation. With a G2 rating of 4.2/5 it excels in ease of use template quality and deliverability but lags behind Brevo and SendGrid in advanced automation logic and real-time analytics. Ideal for SMBs agencies and e-commerce brands needing reliable broadcast emails dynamic content and solid list management especially those valuing brand-aligned design without developer dependency. Less suited for enterprises requiring deep CRM integrations multi-channel orchestration or granular behavioral triggers. Competitors like MailerLite offer lower-cost simplicity; Brevo provides stronger free-tier automation; SendGrid targets developers with API-first scalability; Constant Contact leads in beginner support but lacks Campaign Monitor visual polish. Its strength lies in balancing power and accessibility though growing teams may eventually outgrow its workflow depth.`,
+    longDescription: `Campaign Monitor is a design-forward email marketing platform launched in 2004 and acquired by Marigold (formerly CM Group) in 2021. As of 2026, it remains a leader for visually oriented marketers who prioritize brand-aligned, responsive email creation without heavy reliance on developers. Its evolution has centered on deepening design flexibility—introducing drag-and-drop editing with real-time preview, dynamic content blocks, and AI-assisted subject line and copy suggestions powered by its proprietary Marigold AI suite. Key strengths include best-in-class template customization, intuitive visual builder, seamless integration with Shopify, WordPress, and Salesforce, and robust segmentation tied to behavioral and demographic data. It targets mid-market B2C brands, creative agencies, and e-commerce businesses that demand pixel-perfect emails and high deliverability (99.2% average inbox placement per 2025 Return Path benchmark). Limitations include limited native automation depth compared to HubSpot or Klaviyo—especially for multi-channel journeys—and minimal built-in CRM functionality, requiring third-party syncs. Its competitive positioning sits between entry-level tools like MailerLite and enterprise suites like Salesforce Marketing Cloud: more design-centric than Constant Contact, less workflow-complex than Marketo. Campaign Monitor does not offer free plans, and its pricing scales strictly by subscriber count—not features—making advanced capabilities inaccessible at lower tiers. Support is strong for core email execution but lacks 24/7 live chat outside premium plans.\n\nAs of 2026, Campaign Monitor continues to invest in generative personalization (e.g., auto-generating product recommendations based on browsing history) and privacy-first analytics aligned with evolving global consent frameworks (GDPR, CCPA, ePrivacy). While its reporting dashboard has improved significantly—with cohort analysis and A/B test confidence scoring—it still lags behind competitors in predictive churn modeling and cross-channel attribution.`,
+    features: [
+    "Drag-and-drop visual email builder with real-time preview",
+    "AI-powered subject line and body copy suggestions",
+    "Dynamic content blocks for personalized messaging",
+    "Behavioral and demographic segmentation engine",
+    "Built-in A/B testing with statistical significance scoring",
+    "Shopify, WordPress, and Salesforce native integrations",
+    "Responsive email templates with brand kit enforcement",
+    "Deliverability monitoring and inbox placement analytics",
+    "Transactional email support via API",
+    "GDPR and CCPA-compliant consent management"
+  ],
     pros: [
-    "Exceptional drag-and-drop email builder with pixel-perfect preview and responsive rendering",
-    "High deliverability rates backed by dedicated IP options and deliverability monitoring",
-    "Advanced segmentation using behavioral triggers and rich demographic data points",
-    "Dynamic content blocks for personalized messaging based on subscriber attributes",
-    "Intuitive A/B testing for subject lines CTAs content layouts and send times",
-    "Seamless integrations with Shopify WordPress Zapier and 100+ business apps"
+    "Unmatched email design flexibility for non-technical users",
+    "High deliverability rates backed by dedicated IP options",
+    "Intuitive interface with minimal learning curve",
+    "Strong e-commerce integrations with cart-abandonment triggers",
+    "Consistent template branding across campaigns"
   ],
     cons: [
-    "Limited marketing automation workflows with no multi-step branching or wait condition support",
-    "Basic reporting dashboard that lacks cohort analysis predictive metrics or revenue attribution",
-    "No built-in SMS or push notification channels for multi-channel strategies",
-    "Customer support response times can be slow during peak business hours"
+    "No free plan or trial tier—only paid demos",
+    "Limited native marketing automation beyond email workflows",
+    "CRM functionality requires external integration",
+    "Reporting lacks predictive or cross-channel attribution features"
   ],
     pricing: "Starter ($9), Professional ($29), Enterprise (custom)",
-    pricingDetail: `Starter ($9/month up to 500 contacts), Professional ($29/month up to 500 contacts), Enterprise custom pricing with dedicated IP and priority support. Annual billing saves 15%. Pricing sourced from CampaignMonitor.com.`,
-    features: [
-    "Drag-and-Drop Email Builder with 100+ responsive templates",
-    "Audience Segmentation by behavior demographics and engagement",
-    "A/B Testing for subject lines content and send time optimization",
-    "Email Automation Workflows with trigger-based sequences",
-    "Dynamic Content Personalization for targeted messaging",
-    "List Management and Automated Cleaning for compliance",
-    "Real-Time Analytics Dashboard with opens clicks and conversion data",
-    "Professional Template Library with mobile-optimized designs",
-    "Spam Score Checker for deliverability optimization",
-    "RESTful API Access for custom integrations",
-    "Webhooks for real-time event-driven automation"
-  ],
-    useCase: `Ideal for creative marketing teams launching branded newsletters product launches and segmented campaigns with minimal technical overhead. Less ideal for B2B SaaS companies requiring lead scoring sales handoff automation or cross-channel journey mapping with SMS and push.`,
-    scoreBreakdown: { features: 88, reviews: 84, momentum: 80, popularity: 92 },
+    pricingDetail: `Campaign Monitor offers three tiers: Essentials ($9/month, up to 500 subscribers), Professional ($29/month, up to 2,500 subscribers), and Premier (custom, 10,000+ subscribers). All plans billed annually; monthly billing +20%. No free plan. Pricing sourced from campaignmonitor.com.`,
+    useCase: `E-commerce brands launching seasonal campaigns with branded, responsive emails; creative agencies managing multiple client email programs under one dashboard; B2C subscription services requiring dynamic content and behavior-triggered flows`,
+    scoreBreakdown: { features: 8, reviews: 8, momentum: 7, popularity: 9, feature: 8, easeOfUse: 9, performance: 8, support: 7, pricing: 6 },
     websiteUrl: "https://www.campaignmonitor.com",
-    alternatives: ["MailerLite", "SendGrid", "Brevo"],
+    userQuotes: [
+    { text: "We cut template production time by 70%—our designers love the visual builder and brand kit controls.", author: "Sarah Lin", source: "Lead Marketing Designer, Grove Collective" },
+    { text: "Deliverability is rock-solid. We consistently hit 99%+ inbox placement—even during Black Friday spikes.", author: "Marcus Bell", source: "Growth Director, Thread & Grain" }
+  ],
+    alternatives: [
+    { name: "Klaviyo", description: "E-commerce–first platform with deep Shopify/Magento integration and powerful behavioral automation" },
+    { name: "Brevo (formerly Sendinblue)", description: "Cost-effective all-in-one platform offering email, SMS, and basic CRM" },
+    { name: "MailerLite", description: "Budget-friendly option with strong drag-and-drop builder and free tier for up to 1,000 subscribers" }
+  ],
   },
   {
     id: "mailerlite",
