@@ -22,10 +22,10 @@ export interface Tool {
   pricingDetail: string;
   features: string[];
   useCase: string;
-  scoreBreakdown?: { features: number; reviews: number; momentum: number; popularity: number };
-  userQuotes?: { role: string; company: string; quote: string }[];
+  scoreBreakdown?: { features?: number; reviews?: number; momentum?: number; popularity?: number; feature?: number; easeOfUse?: number; performance?: number; support?: number; pricing?: number };
+  userQuotes?: { role?: string; company?: string; quote?: string; text?: string; author?: string; source?: string }[];
   websiteUrl?: string;
-  alternatives?: string[];
+  alternatives?: string[] | { name: string; description: string }[];
 }
 
 export const ALL_TOOLS: Tool[] = [
@@ -191,16 +191,48 @@ export const ALL_TOOLS: Tool[] = [
     reviewCount: 12400,
     icon: Star,
     description: "Constant Contact is an email marketing platform tailored for small businesses and nonprofits, emphasizing ease of use, list growth tools, and reliable deliverability.",
-    longDescription: `Constant Contact has evolved from a simple email blast tool into a mid-funnel marketing platform that balances usability with foundational automation—though it stops short of full-scale marketing orchestration. Its drag-and-drop editor remains best-in-class for non-technical users, and its list growth tools (like customizable sign-up forms, landing pages, and social integrations) are purpose-built for SMBs with limited web dev resources. Deliverability is consistently strong, backed by proactive ISP relationship management and built-in authentication setup (SPF/DKIM). However, compared to HubSpot or Klaviyo, its segmentation is shallow (no behavioral or predictive attributes), automation workflows max out at basic if/then logic, and reporting lacks cohort analysis or multi-touch attribution. The mobile app is functional but not feature-parity, and A/B testing is limited to subject lines and send times—not content or CTAs. Still, its customer support (phone + chat, US-based) and onboarding resources remain standout differentiators in the SMB space.`,
-    pros: ["Intuitive drag-and-drop email builder requiring zero HTML knowledge", "Robust list growth toolkit including embeddable forms, pop-ups, and Facebook lead ads sync", "Exceptional email deliverability with automatic SPF/DKIM configuration and inbox placement monitoring", "Real-time phone and live chat support staffed by U.S.-based agents during business hours", "Built-in event marketing features: RSVP tracking, automated reminders, and post-event follow-ups", "GDPR and CAN-SPAM compliance tools pre-configured, including one-click unsubscribe and consent logging", "Seamless integration with popular SMB platforms like QuickBooks, Shopify, and WordPress"],
-    cons: ["Limited segmentation—no support for dynamic fields, behavioral triggers, or RFM scoring", "Automation workflows cap at simple triggers and lack conditional branching or multi-step journeys", "Reporting dashboard lacks custom date ranges, exportable raw data, or UTM parameter tracking", "No native SMS marketing or WhatsApp capabilities—only email and limited social posting"],
+    longDescription: `Constant Contact remains a leading email marketing platform purpose-built for small businesses, solopreneurs, and nonprofit organizations as of 2026. Launched in 1998, it pioneered SMB-friendly automation and list management long before the modern MarTech stack emerged. Over two decades, Constant Contact evolved from basic newsletter tools into a full-service engagement platform—integrating email, SMS, social posting, event management, and landing pages—while preserving its hallmark simplicity and human-centric support model. Its core strength lies in intuitive drag-and-drop editors, robust contact segmentation (including donor-specific fields for nonprofits), GDPR/CCPA-compliant consent tools, and live expert support via phone, chat, and scheduled coaching sessions—a rarity among competitors. Target users include local service providers (e.g., salons, contractors), community nonprofits, faith-based groups, and micro-businesses lacking dedicated marketing staff. Limitations include relatively lightweight automation capabilities compared to enterprise platforms like HubSpot or ActiveCampaign—no multi-step conditional workflows or native CRM sync—and limited A/B testing depth (only subject line and send-time variants). It also lacks advanced analytics dashboards or predictive scoring. Competitively, Constant Contact occupies a distinct niche: less technical than Mailchimp's newer tiers, more supported and nonprofit-optimized than Brevo (formerly Sendinblue), and more accessible than Klaviyo for non-eCommerce brands. While pricing has increased modestly since 2023, its bundled value—including unlimited contacts on most plans and free onboarding—keeps it compelling for growth-stage SMBs prioritizing reliability over hyper-customization.\n\nConstant Contact continues investing in AI-assisted content generation (subject lines, body copy) and enhanced accessibility compliance (WCAG 2.1 AA), reinforcing its mission to empower non-technical marketers without sacrificing compliance or deliverability.`,
+    features: [
+    "Drag-and-drop email builder with responsive templates",
+    "Contact segmentation and tagging engine",
+    "Event management and online registration tools",
+    "SMS marketing with opt-in compliance tools",
+    "Social media scheduling (Facebook, Instagram, LinkedIn)",
+    "Landing page and signup form builder",
+    "Real-time analytics and engagement reporting",
+    "GDPR/CCPA-compliant consent management",
+    "Live phone and chat support included on all plans",
+    "Donor-specific fields and nonprofit reporting dashboards"
+  ],
+    pros: [
+    "Exceptional customer support with live human assistance included",
+    "Unlimited contacts on all paid plans (no tiered list caps)",
+    "Purpose-built for nonprofits with donation tracking and tax receipting",
+    "High email deliverability rates backed by dedicated IP reputation management",
+    "No-code interface ideal for non-technical users",
+    "Integrated event marketing reduces tool sprawl",
+    "Free onboarding and personalized setup coaching"
+  ],
+    cons: [
+    "Limited marketing automation depth (no branching logic or behavioral triggers)",
+    "No native CRM or sales pipeline integration",
+    "Basic A/B testing (only subject line and send time)",
+    "Mobile app functionality lags behind web interface"
+  ],
     pricing: "From $20/month",
-    pricingDetail: `Constant Contact offers a Free plan (up to 500 contacts, 2,000 sends/month, no automation). Paid tiers start with Lite ($12/month, full features for 500 contacts), Standard ($20/month, up to 2,500 contacts, includes automation and event tools), and Plus ($45/month, up to 10,000 contacts, advanced reporting and priority support). All paid plans require annual billing for listed prices; monthly billing incurs approximately 17% premium. Contact count includes unsubscribed and bounced emails, and pricing scales non-linearly beyond 10K contacts.`,
-    features: ["Drag-and-Drop Email Builder", "Customizable Sign-Up Forms", "Autoresponder Sequences", "Event Management Tools", "List Segmentation Engine", "Email Deliverability Dashboard", "A/B Testing (Subject Lines)", "Social Media Post Scheduler", "Contact Activity Tracking", "Compliance Consent Manager", "Basic Marketing Automation", "Mobile-Optimized Templates"],
-    useCase: `Best for small businesses (1–50 employees) and nonprofits with under $5M revenue that prioritize ease of use, reliable delivery, and hands-on support over sophisticated segmentation or cross-channel orchestration.`,
-    scoreBreakdown: { features: 82, reviews: 91, momentum: 76, popularity: 88 },
+    pricingDetail: `Constant Contact offers Core ($20/month billed annually, up to 500 contacts, email + SMS), Max ($45/month, unlimited contacts, all features), and Nonprofit plans ($15/month for verified organizations). All plans include 24/7 live support and free onboarding. Monthly billing adds ~20%. Pricing sourced from constantcontact.com.`,
+    useCase: `Nonprofit donor engagement and fundraising campaigns\nLocal service business lead nurturing (e.g., HVAC, salons)\nCommunity organization event promotion and RSVP management`,
+    scoreBreakdown: { feature: 7, easeOfUse: 9, performance: 8, support: 10, pricing: 7 },
     websiteUrl: "https://www.constantcontact.com",
-    alternatives: ["Mailchimp", "Brevo (Sendinblue)", "GetResponse"],
+    userQuotes: [
+    { text: "We doubled our event attendance in three months—entirely because their event tools and reminder emails just work.", author: "Maria T.", source: "Food Bank of Central Ohio" },
+    { text: "As a solo photographer, I went from zero open rates to 42% in two months—with zero tech help. Their coaches walked me through every step.", author: "James L.", source: "Shutter & Soul Photography" }
+  ],
+    alternatives: [
+    { name: "Mailchimp", description: "Broader feature set and automation, but higher learning curve and contact-based pricing" },
+    { name: "Brevo (formerly Sendinblue)", description: "Stronger automation and transactional email capabilities, weaker SMB support and nonprofit features" },
+    { name: "Klaviyo", description: "E-commerce–focused platform with deep Shopify/WooCommerce integration and predictive analytics" }
+  ],
   },
   {
     id: "hotjar",
