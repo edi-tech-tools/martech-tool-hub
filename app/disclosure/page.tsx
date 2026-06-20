@@ -65,8 +65,8 @@ export default function DisclosurePage() {
             <p>
               If you have any questions about our affiliate relationships or this
               disclosure, please contact us at{" "}
-              <a href="mailto:hello@cleverco-analytics.com" className="text-[#d4607a] hover:underline">
-                hello@cleverco-analytics.com
+              <a href="mailto:team@martech-tools.net" className="text-[#d4607a] hover:underline">
+                team@martech-tools.net
               </a>
               .
             </p>

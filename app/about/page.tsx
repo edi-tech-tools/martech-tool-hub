@@ -189,10 +189,10 @@ export default function AboutPage() {
                 Get in Touch
               </Link>
               <a
-                href="mailto:hello@cleverco-analytics.com"
+                href="mailto:team@martech-tools.net"
                 className="px-6 py-3 border border-[rgba(180,60,80,0.25)] hover:border-[rgba(180,60,80,0.4)] text-[#a08088] hover:text-[#d4b8bd] text-sm font-medium rounded-xl transition-all"
               >
-                hello@cleverco-analytics.com
+                team@martech-tools.net
               </a>
             </div>
           </div>
