@@ -25,6 +25,7 @@ const BLOG_SLUGS = [
     "conversational-marketing-2026-chatbots-live-chat-lead-generation",
     "cdp-vs-dmp-comparison-2026",
     "tealium-cdp-2026-enterprise-review",
+    "marketing-attribution-ruler-analytics-review",
 ] as const;
 
 const TOOL_SLUGS = [

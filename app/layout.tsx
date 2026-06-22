@@ -45,6 +45,7 @@ export default function RootLayout({
               </span>
               <span className="text-sm font-semibold text-[#f5e8ea] tracking-tight">
                 MarTech<span className="text-[#d4607a]">Tools</span>
+              </span>
             </Link>
             <div className="hidden md:flex items-center gap-8">
               <Link href="/" className="text-xs font-medium text-[#d4b8bd] hover:text-[#f5e8ea] tracking-wider uppercase transition-colors">Home</Link>
