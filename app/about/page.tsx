@@ -4,16 +4,16 @@ import { BarChart3, MapPin, Linkedin, Twitter, Globe, Mail } from "lucide-react"
 import { ALL_TOOLS } from "@/data/tools";
 
 export const metadata: Metadata = {
-  title: "Our Studio — Clever Co.",
+  title: "Our Studio — MarTech Tools",
   description:
-    "Clever Co. is a Business Intelligence studio based in Leeds, UK. We analyse marketing technology through a data-driven lens to help teams build smarter stacks.",
+    "MarTech Tools is a Business Intelligence studio based in Leeds, UK. We analyse marketing technology through a data-driven lens to help teams build smarter stacks.",
 };
 
 const TEAM = [
   {
     name: "Henry Nielsen",
     role: "CEO & Lead Analyst",
-    bio: "Founder of Clever Co. with 15+ years in marketing analytics and BI. Previously led data strategy at a FTSE 250 company. Henry ensures every review is rooted in rigorous data analysis, not vendor influence.",
+    bio: "Founder of MarTech Tools with 15+ years in marketing analytics and BI. Previously led data strategy at a FTSE 250 company. Henry ensures every review is rooted in rigorous data analysis, not vendor influence.",
     initials: "HN",
   },
   {
@@ -62,7 +62,7 @@ export default function AboutPage() {
               </span>
             </h1>
             <p className="text-base text-[#a08088] max-w-2xl mx-auto leading-relaxed">
-              Clever Co. is a Business Intelligence studio based in Leeds, UK. We don&apos;t just
+              MarTech Tools is a Business Intelligence studio based in Leeds, UK. We don&apos;t just
               list marketing tools — we analyse them. Every review on this site is grounded in
               data: pricing benchmarks, feature comparisons, integration analysis, and
               real-world performance metrics drawn from public sources and our own research.
@@ -78,14 +78,14 @@ export default function AboutPage() {
 
             <div className="space-y-5 text-sm text-[#a08088] leading-relaxed">
               <p>
-                Clever Co. was founded in 2023 by Henry Nielsen, a data analyst who had spent
+                MarTech Tools was founded in 2023 by Henry Nielsen, a data analyst who had spent
                 over a decade watching marketing teams make technology decisions based on vendor
                 hype rather than hard evidence. The problem wasn&apos;t a lack of tools — it was a
                 lack of objective, data-driven analysis about which tools actually deliver.
               </p>
               <p>
                 Based in Leeds — one of the UK&apos;s fastest-growing tech hubs outside London —
-                we built Clever Co. around a simple premise: apply Business Intelligence
+                we built MarTech Tools around a simple premise: apply Business Intelligence
                 methodologies to MarTech evaluation. Instead of subjective star ratings and
                 sponsored placements, we dig into the data that matters: feature parity,
                 total cost of ownership, integration depth, API quality, and verified user

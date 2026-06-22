@@ -4,9 +4,9 @@ import { BLOG_POSTS } from "@/data/blog-posts";
 import { Calendar, Clock, User, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Insights — Clever Co.",
+  title: "Insights — MarTech Tools",
   description:
-    "Data-driven MarTech insights, comparisons, and strategies from the Clever Co. studio in Leeds. BI-grounded analysis of marketing technology tools.",
+    "Data-driven MarTech insights, comparisons, and strategies from the MarTech Tools studio in Leeds. BI-grounded analysis of marketing technology tools.",
 };
 
 const CATEGORIES = Array.from(new Set(BLOG_POSTS.map((post) => post.category)));
@@ -31,7 +31,7 @@ export default function BlogPage() {
             MarTech <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d4607a] to-[#c9a84c]">Intelligence</span>
           </h1>
           <p className="text-base text-[#a08088] max-w-2xl mx-auto leading-relaxed">
-            Data-driven comparisons, benchmarks, and analysis from the Clever Co. studio.
+            Data-driven comparisons, benchmarks, and analysis from the MarTech Tools studio.
             Every insight grounded in Business Intelligence methodology.
           </p>
         </div>

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Clever Co.",
+  title: "Privacy Policy — MarTech Tools",
   description:
-    "Learn how Clever Co. collects, uses, and protects your personal data. Our privacy policy outlines our commitment to your privacy and data security.",
+    "Learn how MarTech Tools collects, uses, and protects your personal data. Our privacy policy outlines our commitment to your privacy and data security.",
 };
 
 export default function PrivacyPage() {
@@ -29,7 +29,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-lg font-bold text-[#f5e8ea] mb-3">1. Introduction</h2>
             <p>
-              Clever Co. ("we," "our," or "us") is committed to protecting your privacy.
+              MarTech Tools ("we," "our," or "us") is committed to protecting your privacy.
               This Privacy Policy explains how we collect, use, disclose, and safeguard your
               information when you visit our website martech-tools.net (the "Site"). Please read this
               policy carefully. If you do not agree with the terms, do not access the Site.

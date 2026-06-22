@@ -86,7 +86,7 @@ export default function ToolDetailPage() {
           href="/"
           className="inline-flex items-center text-[#d4607a] hover:text-[#f5e8ea] transition-colors"
         >
-          <ArrowLeft className="w-4 h-4 mr-2" /> Back to Clever Co.
+          <ArrowLeft className="w-4 h-4 mr-2" /> Back to MarTech Tools
         </Link>
       </div>
     );
@@ -122,7 +122,7 @@ export default function ToolDetailPage() {
           href="/"
           className="inline-flex items-center text-[#a08088] hover:text-[#d4607a] transition-colors mb-8 text-sm"
         >
-          <ArrowLeft className="w-4 h-4 mr-2" /> Back to Clever Co.
+          <ArrowLeft className="w-4 h-4 mr-2" /> Back to MarTech Tools
         </Link>
 
         <header className="mb-10">

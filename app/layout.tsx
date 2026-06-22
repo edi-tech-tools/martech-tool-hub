@@ -5,15 +5,15 @@ import Link from "next/link";
 export const metadata: Metadata = {
   metadataBase: new URL("https://martech-tools.net"),
   title: {
-    default: "Clever Co. — MarTech Intelligence from Leeds",
-    template: "%s — Clever Co.",
+    default: "MarTech Tools — Data-Driven Marketing Stack Reviews",
+    template: "%s — MarTech Tools",
   },
   description:
-    "Clever Co. provides Business Intelligence-driven MarTech reviews and data-led marketing technology insights from our Leeds studio.",
+    "Data-driven MarTech reviews and marketing technology insights. Marketing stack comparisons, CRM reviews, and marketing analytics.",
   keywords: [
     "MarTech", "marketing technology", "Business Intelligence",
     "marketing stack", "CRM reviews", "marketing analytics",
-    "data-driven marketing", "Clever Co", "Leeds",
+    "data-driven marketing",
   ],
   verification: {
     google: "T5bb4mZivi0CfaYYRiKZLSNIWmhvAX6_RVgDEyonTGo",
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "Clever Co. — MarTech Intelligence",
-    title: "Clever Co. — MarTech Intelligence from Leeds",
-    description: "Data-led MarTech reviews from our Business Intelligence studio in Leeds, UK.",
+    siteName: "MarTech Tools",
+    title: "MarTech Tools — Data-Driven Marketing Stack Reviews",
+    description: "Data-driven MarTech reviews and marketing technology insights.",
   },
 };
 
@@ -44,8 +44,7 @@ export default function RootLayout({
                 <span className="text-xs font-bold text-[#f5e8ea]">CC</span>
               </span>
               <span className="text-sm font-semibold text-[#f5e8ea] tracking-tight">
-                Clever<span className="text-[#d4607a]">Co</span>
-              </span>
+                MarTech<span className="text-[#d4607a]">Tools</span>
             </Link>
             <div className="hidden md:flex items-center gap-8">
               <Link href="/" className="text-xs font-medium text-[#d4b8bd] hover:text-[#f5e8ea] tracking-wider uppercase transition-colors">Home</Link>
@@ -76,10 +75,10 @@ export default function RootLayout({
                   <span className="w-7 h-7 rounded-full bg-[#a0304e] flex items-center justify-center">
                     <span className="text-xs font-bold text-[#f5e8ea]">CC</span>
                   </span>
-                  <span className="text-sm font-semibold text-[#f5e8ea]">Clever<span className="text-[#d4607a]">Co</span></span>
+              <span className="text-sm font-semibold text-[#f5e8ea]">MarTech<span className="text-[#d4607a]">Tools</span></span>
                 </div>
                 <p className="text-xs text-[#a08088] leading-relaxed max-w-xs">
-                  Data-driven MarTech intelligence from our studio in Leeds, UK.
+                  Data-driven MarTech reviews and comparisons.
                   We analyse marketing technology so you can build smarter stacks.
                 </p>
               </div>
@@ -111,7 +110,7 @@ export default function RootLayout({
             </div>
             <div className="border-t border-[rgba(180,60,80,0.1)] pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
               <p className="text-[10px] text-[#a08088]">
-                &copy; {new Date().getFullYear()} Clever Co. Studio, Leeds, UK. All rights reserved.
+                &copy; {new Date().getFullYear()} MarTech Tools. All rights reserved.
               </p>
               <p className="text-[10px] text-[#695058]">
                 MarTech intelligence for data-driven marketers.

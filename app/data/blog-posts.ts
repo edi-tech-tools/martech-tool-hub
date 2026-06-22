@@ -274,7 +274,7 @@ The three-layer architecture — warehouse as foundation, CDP as activation engi
 
 *Sources: Gartner CDP Market Guide, vendor documentation (Segment, mParticle, Tealium). Comparison based on publicly available 2026 feature sets.*`,
     author: "Henry Nielsen",
-    authorRole: "Lead Analyst, Clever Co.",
+    authorRole: "Lead Analyst, MarTech Tools",
     date: "2026-05-24",
     category: "Data Infrastructure",
     readTime: 11,
@@ -343,7 +343,7 @@ Your data infrastructure shouldn't be a project. It should be your most strategi
 
 *Sources: Marketing technology industry analyses and vendor documentation. AI marketing stack trends based on 2026 market data.*`,
     author: "Mia Garcia",
-    authorRole: "Data Architect, Clever Co.",
+    authorRole: "Data Architect, MarTech Tools",
     date: "2026-05-25",
     category: "Data Infrastructure",
     readTime: 10,
@@ -357,7 +357,7 @@ Your data infrastructure shouldn't be a project. It should be your most strategi
 
 *Sources: G2 reviews, vendor pricing pages (HubSpot, Marketo Engage, ActiveCampaign). Pricing and features as of 2026.*`,
     author: "Addison Peters",
-    authorRole: "Technical Analyst, Clever Co.",
+    authorRole: "Technical Analyst, MarTech Tools",
     date: "2026-05-26",
     category: "Marketing Automation",
     readTime: 7,
@@ -415,7 +415,7 @@ All three tools have matured significantly since 2024—but in 2026, the winner 
 
 *Sources: Vendor pricing pages and G2 reviews. Canva, Adobe Express, and Visme features based on publicly available 2026 data.*`,
     author: "Henry Nielsen",
-    authorRole: "Lead Analyst, Clever Co.",
+    authorRole: "Lead Analyst, MarTech Tools",
     date: "2026-05-27",
     category: "Content Marketing",
     readTime: 7,
@@ -506,7 +506,7 @@ The 2026 MarTech stack isn’t about chasing shiny objects—it’s about buildi
 
 *Sources: Industry analyses of martech stacks. Essential tools identified based on 2026 market share and adoption data.*`,
     author: "Addison Peters",
-    authorRole: "Technical Analyst, Clever Co.",
+    authorRole: "Technical Analyst, MarTech Tools",
     date: "2026-05-28",
     category: "MarTech Strategy",
     readTime: 10,
@@ -563,7 +563,7 @@ Choose **Brandfolder** if you are scaling fast with lean ops. Choose **Bynder** 
 
 *Ratings and data sourced from G2 verified reviews and vendor documentation (Q1-Q2 2026).*`,
     author: "Mia Garcia",
-    authorRole: "Data Architect, Clever Co.",
+    authorRole: "Data Architect, MarTech Tools",
     date: "2026-05-29",
     category: "Tool Comparisons",
     readTime: 8,
@@ -608,7 +608,7 @@ A: Absolutely. Adobe confirmed continued standalone investment through 2027 [sou
 **Q: How do deliverability rates hold up during peak seasons (e.g., Black Friday)?**
 A: Klaviyo and Brevo maintained >97% inbox placement during Nov–Dec 2025, while Salesforce MC dropped to 91.4% due to throttling on high-volume sends [source](https://250ok.com/blog/black-friday-2025-email-performance-report).`,
     author: "Mia Garcia",
-    authorRole: "Data Architect, Clever Co.",
+    authorRole: "Data Architect, MarTech Tools",
     date: "2026-06-11",
     category: "Marketing Automation",
     readTime: 10,
@@ -671,7 +671,7 @@ None deliver "set-and-forget" ABM -- but the right fit reduces manual scoring, c
 -- Martech Tools Hub Editorial Team
     `,
     author: "David Chen",
-    authorRole: "MarTech Analyst, Clever Co.",
+    authorRole: "MarTech Analyst, MarTech Tools",
     date: "2026-06-12",
     category: "ABM and Account-Based Marketing",
     readTime: 8,
@@ -845,7 +845,7 @@ A: Not directly. Attribution measures *marketing influence*, not sales execution
 
 *Sources: Gartner Marketing Measurement Report 2026, Forrester Wave for Marketing Attribution Q2 2026, G2 Marketing Analytics Reviews June 2026, vendor documentation (GA4, Mixpanel, Amplitude, Wicked Reports, Rockerbox, Triple Whale, Northbeam).*`,
     author: "Henry Nielsen",
-    authorRole: "Lead Analyst, Clever Co.",
+    authorRole: "Lead Analyst, MarTech Tools",
     date: "2026-06-13",
     category: "Marketing Analytics",
     readTime: 9,
@@ -863,7 +863,7 @@ A: Not directly. Attribution measures *marketing influence*, not sales execution
 
 Three years ago, "SEO" meant ranking on page one of Google. Today, it means *being surfaced meaningfully within an AI-generated answer*—whether that's a Google SGE carousel, a Perplexity deep-dive summary, or a ChatGPT search response that cites your brand without linking to it. In 2026, the traditional SERP isn't dead—but it's no longer the primary battlefield. What's emerged is a fragmented, intent-rich, citation-driven ecosystem where visibility is decoupled from clicks, and authority is measured in *trust signals*, not backlinks alone.
 
-At Clever Co., we've tracked over 147 enterprise MarTech stacks since 2023. What's clear is this: teams clinging to legacy SEO playbooks aren't underperforming—they're operating in a parallel universe. Let's map what's changed—and how to respond.
+At MarTech Tools, we've tracked over 147 enterprise MarTech stacks since 2023. What's clear is this: teams clinging to legacy SEO playbooks aren't underperforming—they're operating in a parallel universe. Let's map what's changed—and how to respond.
 
 ## Key Shifts Defining SEO in 2026
 
@@ -912,14 +912,14 @@ The next frontier isn't about *appearing* in AI answers—it's about *being trus
 
 MarTech teams that treat SEO as infrastructure—not decoration—will own the narrative. Those who don't will become footnotes in someone else's synthesis.
 
-At Clever Co., we're already building BI dashboards that fuse citation data, trust scores, and pipeline impact into single-source truth layers for CMOs and CTOs alike. Because in the age of AI search, insight isn't just about *what's working*—it's about *why it's trusted*.
+At MarTech Tools, we're already building BI dashboards that fuse citation data, trust scores, and pipeline impact into single-source truth layers for CMOs and CTOs alike. Because in the age of AI search, insight isn't just about *what's working*—it's about *why it's trusted*.
 
 The blue links didn't vanish. They just got quieter. It's time to speak louder—in the language machines understand, and buyers believe.
 
-— Henry Nielsen, CEO, Clever Co.  
+— Henry Nielsen, CEO, MarTech Tools  
 Leeds • London • Remote`,
     author: "Henry Nielsen",
-    authorRole: "CEO, Clever Co.",
+    authorRole: "CEO, MarTech Tools",
     date: "2026-06-15",
     category: "SEO",
     readTime: 8,
@@ -1203,7 +1203,7 @@ Then go qualify your first lead after midnight.
 
 ## Why This Question Is More Critical Than Ever
 
-I have spent the last eight years at Clever Co. helping UK and EU brands navigate data infrastructure --- from GDPR launch in 2018 to the UK new Data Protection and Digital Information (No. 2) Bill (DPDIB) coming into full force this April. In 2026, asking CDP or DMP is not just about tech stack hygiene --- it is a strategic inflection point tied directly to compliance risk, customer trust, and measurable ROI.
+I have spent the last eight years at MarTech Tools helping UK and EU brands navigate data infrastructure --- from GDPR launch in 2018 to the UK new Data Protection and Digital Information (No. 2) Bill (DPDIB) coming into full force this April. In 2026, asking CDP or DMP is not just about tech stack hygiene --- it is a strategic inflection point tied directly to compliance risk, customer trust, and measurable ROI.
 
 Let me be clear upfront: **the old binary choice is collapsing --- but not because the distinction is obsolete. It is because the stakes have shifted**. A DMP built for third-party cookie targeting in 2014 simply cannot satisfy the identity resolution, consent accountability, and cross-channel orchestration demands of today regulated landscape. And yet, many teams still default to legacy DMPs --- or worse, bolt on CDP-like modules to outdated architectures --- without auditing what is actually possible under DPDIB, the EU AI Act (which classifies certain audience segmentation models as high-risk), or California evolving CPRA enforcement.
 
@@ -1211,7 +1211,7 @@ So let us cut through the vendor noise. No jargon. No fluff. Just actionable cla
 
 ## Core Differences: Architecture, Identity, Retention, Activation
 
-At Clever Co., we map every client data stack against four non-negotiable dimensions. Here is how CDPs and DMPs diverge --- technically and operationally:
+At MarTech Tools, we map every client data stack against four non-negotiable dimensions. Here is how CDPs and DMPs diverge --- technically and operationally:
 
 - **Architecture**: CDPs are customer-centric, deterministic-first systems. They ingest structured first-party data (CRM, e-commerce, support tickets, authenticated app events) via APIs, batch files, and real-time streams --- then unify records using persistent, hashed identifiers (e.g., SHA-256 email hashes, device IDs tied to known users). DMPs, by contrast, were cookie-centric and probabilistic by design. They relied on HTTP cookies, IP address clustering, and fuzzy matching to build anonymous audience segments --- with no persistent user profile store. Even modern DMP 2.0 platforms like Lotame or LiveRamp still anchor identity in transient identifiers unless explicitly augmented with identity resolution layers.
 
@@ -1231,7 +1231,7 @@ Three regulatory forces have redefined the battlefield:
 
 3. **US State Laws**: With 17 states now enforcing CPRA-style laws (including Texas SB 251 and Florida SB 1128), consent portability is table stakes. If a user opts out via your website CMP, that signal must propagate instantly to every downstream activation channel --- including ad platforms. CDPs with real-time consent sync (e.g., Salesforce CDP Consent Sync API) achieve sub-second propagation. DMPs? Most require manual list suppression or rely on IAB outdated US Privacy String --- which lacks granularity for multi-purpose consent.
 
-The bottom line: **using a DMP for anything beyond pure, anonymised, non-personal ad targeting is now a material compliance liability**. At Clever Co., we have seen three clients fined by the ICO in Q1 2026 --- all for using Lotame DMP segments to power personalised email campaigns without proper lawful basis mapping.
+The bottom line: **using a DMP for anything beyond pure, anonymised, non-personal ad targeting is now a material compliance liability**. At MarTech Tools, we have seen three clients fined by the ICO in Q1 2026 --- all for using Lotame DMP segments to power personalised email campaigns without proper lawful basis mapping.
 
 ## How CDPs Have Absorbed DMP Capabilities
 
@@ -1247,7 +1247,7 @@ This convergence does not mean DMPs are dead --- but their role has narrowed sha
 
 ## When to Choose CDP vs DMP: A Decision Framework
 
-Forget feature checklists. Use this five-question framework --- validated across 42 Clever Co. implementations in 2025:
+Forget feature checklists. Use this five-question framework --- validated across 42 MarTech Tools implementations in 2025:
 
 1. **Do you own and control first-party identity data?** If yes (CRM, loyalty programme, authenticated apps), start with a CDP. If no --- and you rely entirely on anonymous web traffic --- a DMP might suffice only for upper-funnel, non-personalised media buys.
 
@@ -1279,7 +1279,7 @@ Note: All prices reflect UK-listed enterprise contracts for 10M monthly tracked 
 
 By 2027, the term CDP will fade --- replaced by **Intelligent Relationship Platforms (IRPs)**. Why? Because the next frontier is not unifying data --- it is orchestrating relationships with predictive, ethical intelligence.
 
-At Clever Co., we are already piloting IRPs with three clients. These are not just CDPs with AI stickers. They combine:
+At MarTech Tools, we are already piloting IRPs with three clients. These are not just CDPs with AI stickers. They combine:
 
 - **Predictive relationship scoring**: Not just churn risk, but advocate potential, cross-sell readiness, and support escalation likelihood --- trained on unified behavioural, transactional, and sentiment data.
 
@@ -1297,9 +1297,9 @@ Choosing between CDP and DMP in 2026 is not about features. It is about philosop
 
 In a world where trust is the ultimate currency --- and regulators hold you accountable for every byte of data you process --- there is only one sustainable choice.
 
-At Clever Co., we help brands build future-proof data foundations --- not just deploy tools. Because the best martech is not the one that checks boxes. It is the one that makes your customers feel seen, respected, and valued --- every single time.
+At MarTech Tools, we help brands build future-proof data foundations --- not just deploy tools. Because the best martech is not the one that checks boxes. It is the one that makes your customers feel seen, respected, and valued --- every single time.
 
-Claude Scherer is Product Manager at Clever Co., a Leeds-based martech consultancy founded in 2016, specialising in compliant, customer-first data infrastructure for UK and EU brands.`,
+Claude Scherer is Product Manager at MarTech Tools, a Leeds-based martech consultancy founded in 2016, specialising in compliant, customer-first data infrastructure for UK and EU brands.`,
     author: "Claude Scherer",
     authorRole: "Product Manager",
     date: "2026-06-17",
@@ -1382,7 +1382,7 @@ For nearly a decade, the dominant narrative in marketing technology was consolid
 
 But in 2026, the data tells a different story. According to Gartner's 2026 MarTech Survey (Q1 2026), organizations using composable -- or modular -- marketing stacks report 34% higher marketing ROI, 28% faster campaign deployment cycles, and 27% lower total cost of ownership compared to organizations running monolithic suites.
 
-At Clever Co., we have tracked MarTech stack architectures across 147 organizations over the past three years. The pattern is unmistakable: best-of-breed, loosely coupled, API-first stacks are outperforming integrated suites in every dimension that matters.
+At MarTech Tools, we have tracked MarTech stack architectures across 147 organizations over the past three years. The pattern is unmistakable: best-of-breed, loosely coupled, API-first stacks are outperforming integrated suites in every dimension that matters.
 
 ## What Composable MarTech Actually Means
 
@@ -1472,13 +1472,13 @@ A: Significantly. AI models require clean, unified, real-time customer data. Com
 
 By 2027, the question will not be whether to adopt composable architecture -- it will be whether your current monolithic vendor offers a credible migration path. HubSpot has launched Smart CRM as a data platform play. Salesforce has opened Data Cloud with native Snowflake and Databricks integrations. Adobe has partnered with Microsoft on Azure data lake integrations.
 
-At Clever Co., we have seen organizations that embraced composable architectures in 2024-2025 now operating with AI-native stacks that their monolithic peers cannot replicate without a complete rebuild.
+At MarTech Tools, we have seen organizations that embraced composable architectures in 2024-2025 now operating with AI-native stacks that their monolithic peers cannot replicate without a complete rebuild.
 
 Start with your warehouse. Choose best-of-breed for each function. Connect them with reverse ETL. Build the governance infrastructure to keep your data clean, compliant, and AI-ready. That is the winning formula for MarTech in 2026 and beyond.
 
 *Sources: Gartner 2026 MarTech Survey (Q1 2026), Hightouch 2026 TCO Analysis, dbt Labs 2026 State of Analytics Engineering Report, Gartner 2026 MarTech Stack Decision Guide, vendor documentation. All data as of June 2026.*`,
     author: "Addison Peters",
-    authorRole: "Technical Analyst, Clever Co.",
+    authorRole: "Technical Analyst, MarTech Tools",
     date: "2026-06-19",
     category: "MarTech Strategy",
     readTime: 12,
@@ -1550,7 +1550,7 @@ In 2026, the winner isn't the most feature-rich platform—it's the one your tea
 - McKinsey Marketing Tech Maturity Assessment, Global Enterprise Survey, November 2025
 - Martech Tools Stack Survey: Pricing and Adoption Drivers, March 2026`,
     author: "Matthew Bernard",
-    authorRole: "Marketing Technology Analyst, Clever Co.",
+    authorRole: "Marketing Technology Analyst, MarTech Tools",
     date: "2026-06-20",
     category: "MarTech Strategy",
     readTime: 8,
@@ -1693,7 +1693,7 @@ But the core truth remains unchanged: privacy isn\u2019t a constraint on marketi
 - Forrester, 'Consent-State Drift in Integrated MarTech Stacks', Wave Report, Q1 2026  
 - BigID 2026 Trust Index: Global Data Governance Benchmark, May 2026`,
     author: "Mei-Lin Zhao",
-    authorRole: "Privacy & Compliance Technology Strategist, Clever Co.",
+    authorRole: "Privacy & Compliance Technology Strategist, MarTech Tools",
     date: "2026-06-21",
     category: "MarTech Strategy",
     readTime: 9,
@@ -1816,7 +1816,7 @@ From post-go-live interviews, three patterns emerged:
 
 Tealium in 2026 is not a magic button. It is infrastructure - powerful, precise, and demanding of discipline. For enterprises serious about owning their data destiny, it remains one of the few platforms that delivers on the CDP promise without compromise.`,
     author: "Henry Nielsen",
-    authorRole: "Enterprise Martech Strategist, Clever Co.",
+    authorRole: "Enterprise Martech Strategist, MarTech Tools",
     date: "2026-06-22",
     category: "CDP and Data",
     readTime: 12,

@@ -8,7 +8,7 @@ interface JsonLdProps {
 }
 
 export default function JsonLd({
-  siteName = 'Clever Co.',
+  siteName = 'MarTech Tools',
   siteUrl = 'https://martech-tools.net',
   description = 'Comprehensive MarTech directory and tool hub for modern enterprises.',
 }: JsonLdProps) {
