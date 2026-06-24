@@ -1707,7 +1707,7 @@ export const ALL_TOOLS: Tool[] = [
         quote: "As a bootstrapped SaaS startup, Freshsales gave us enterprise-grade pipeline insights without the learning curve or six-figure price tag."
       }],
   },
-  {
+    {
     id: "adroll",
     name: "AdRoll",
     category: "PPC and Advertising",
@@ -1715,69 +1715,96 @@ export const ALL_TOOLS: Tool[] = [
     reviewCount: 1870,
     icon: Star,
     description: "AdRoll is a performance marketing platform specializing in cross-channel retargeting, prospecting, and campaign analytics.",
-    longDescription: `AdRoll stands as a mature, full-funnel digital advertising platform purpose-built for B2B and mid-market brands seeking scalable, data-driven performance marketing without enterprise complexity. Positioned at the intersection of programmatic advertising, retargeting, and cross-channel orchestration, AdRoll empowers marketers to move beyond siloed campaigns and instead unify audience strategy across paid social, search, email, display, and native channels—all from a single interface. Its core value proposition lies in intelligent audience activation: leveraging first-party data (CRM, website behavior, email lists) alongside privacy-compliant third-party signals to dynamically segment, model, and re-engage high-intent prospects across the buyer journey—from anonymous top-of-funnel awareness to post-purchase retention. Unlike purely ad-serving tools or fragmented martech stacks, AdRoll embeds machine learning into campaign optimization—automatically adjusting bids, creatives, and placements in real time based on conversion propensity, device type, geography, and engagement velocity. It’s especially compelling for companies with limited in-house ad ops resources, offering guided workflows, prebuilt audience templates, and transparent attribution modeling (including multi-touch and UTM-powered path analysis). With GDPR/CCPA compliance baked in, server-side tracking options, and seamless integrations with Salesforce, HubSpot, Shopify, and Google Analytics 4, AdRoll serves as both a growth accelerator and operational simplifier for revenue teams balancing agility with accountability.
-
-Key features include cross-channel retargeting (web, email, social), AI-powered audience builder with lookalike modeling, dynamic creative optimization (DCO), real-time bidding across 10+ ad exchanges, native integration with LinkedIn Ads and Meta, predictive analytics dashboard, CRM sync with lead scoring overlays, automated campaign A/B testing, and unified ROI reporting with incrementality measurement.
-
-Pros: intuitive campaign setup for non-technical marketers; strong ROI visibility via closed-loop attribution; responsive customer success onboarding; flexible creative templating; robust API for custom integrations; excellent support for e-commerce and SaaS verticals; proactive fraud detection and viewability safeguards.
-
-Cons: limited advanced segmentation logic for enterprise-scale data lakes; no built-in CMS or landing page builder; reporting latency occasionally exceeds 24 hours for granular funnel metrics; native email automation lacks journey-building depth versus dedicated ESPs.
-
-Pricing is tiered: Starter ($500/month minimum ad spend + $150 platform fee), Growth ($1,500+ monthly ad spend + $350 fee), and Enterprise (custom). All tiers include unlimited campaigns, audiences, and integrations.
-
-Use cases: A SaaS company uses AdRoll to retarget free-trial abandoners with personalized demo-video ads across LinkedIn and YouTube while simultaneously suppressing converted leads—lifting demo-to-close rate by 27%. An e-commerce brand deploys dynamic product ads synced to real-time inventory, driving 3.2x ROAS on remarketed carts. A B2B professional services firm layers intent data onto website visitors, launching account-based display campaigns targeting key accounts’ employees across premium publisher sites.
-
-Score breakdown: Features 8.7/10, Ease-of-use 9.1/10, Value-for-money 8.3/10, Support 8.9/10.
-
-“AdRoll cut our cost-per-lead by 41% in Q3—largely because the audience builder auto-identified high-LTV segments we’d missed manually. The support team even co-built our attribution model.” — G2 reviewer, Marketing Director, 500-employee SaaS firm.
-
-Alternatives: Smartly.io (stronger for Meta/LinkedIn-heavy teams), Criteo (deeper retail focus, less B2B ABM), and HubSpot Ads (tighter CRM alignment but narrower channel reach).`,
-    pros: ["Strong retargeting engine", "Cross-channel campaign orchestration", "Easy onboarding for SMBs"],
-    cons: ["Less control for advanced programmatic buyers", "Limited creative tools"],
-    pricing: "Custom (starts at ~$1,000/month)",
-    pricingDetail: `Pricing is custom based on ad spend and services. Typically requires minimum monthly ad budget (~$1k–$5k). Transparent fee structure with no hidden markups.`,
-    features: ["Audience segmentation", "Dynamic creative optimization", "Cross-device tracking", "ROAS reporting", "Email retargeting"],
-    useCase: `E-commerce and SaaS companies aiming to scale acquisition and retention through automated, multi-channel remarketing.`,
-    scoreBreakdown: { features: 87, reviews: 82, momentum: 79, popularity: 92 },
+    longDescription: `AdRoll is a cloud-based performance marketing platform designed to help mid-market and enterprise brands acquire, retain, and re-engage customers across paid social, search, email, and display channels. Built around a unified data foundation, it enables marketers to orchestrate personalized campaigns using behavioral signals, CRM data, and real-time bidding optimization. The platform excels at cross-channel retargeting--bringing back website visitors with tailored ads--and extends into prospecting through lookalike audience modeling and programmatic buying. AdRoll differentiates itself with strong e-commerce integrations, intuitive campaign automation tools, and transparent ROI measurement, making it especially valuable for growth-focused digital teams that prioritize scalability without sacrificing control over creative, targeting, or budget allocation.`,
+    pros: [
+        "Robust cross-channel retargeting engine that dynamically serves ads across Facebook, Instagram, Google Display, and native ad networks based on user behavior.",
+        "Seamless integration with Shopify, Magento, WooCommerce, and Salesforce enables automatic audience syncing and real-time conversion tracking.",
+        "Intuitive drag-and-drop campaign builder reduces setup time for non-technical marketers while supporting advanced segmentation and A/B testing.",
+        "Transparent pricing model with no hidden fees and clear cost-per-action reporting helps marketing teams forecast and justify spend.",
+        "Built-in predictive analytics identify high-intent users and automatically shift budget toward top-performing audiences and creatives.",
+        "Dedicated account management and onboarding support included for mid-tier and enterprise plans, accelerating time-to-value."
+    ],
+    cons: [
+        "Limited native support for video-first platforms like TikTok and YouTube Shorts compared to newer entrants.",
+        "Advanced attribution modeling requires manual configuration and lacks out-of-the-box multi-touch options found in enterprise CDPs.",
+        "Reporting interface, while functional, lacks the customization depth and dashboard flexibility of Tableau or Power BI integrations.",
+        "No built-in email content creation or landing page builder--requires integration with third-party tools for full funnel execution."
+    ],
+    pricing: "Custom pricing based on monthly ad spend and feature tier; starts around $500/month for SMBs.",
+    pricingDetail: `AdRoll operates on a hybrid pricing model: clients pay a platform fee (starting at ~$500/month for the Growth plan) plus a percentage of managed ad spend (typically 10-15% for self-serve, lower for managed service). Enterprise plans include dedicated support, custom integrations, and SLA-backed performance guarantees. There are no per-user or per-campaign fees, but minimum monthly ad spend requirements apply starting at $5,000 for managed tiers. Custom contracts may include annual commitments and volume discounts.`,
+    features: [
+        "Cross-channel retargeting (social, search, display, email)",
+        "Lookalike audience expansion",
+        "Real-time bid optimization",
+        "CRM and e-commerce platform sync (Shopify, Magento, Salesforce)",
+        "Dynamic product ads with automated catalog feeds",
+        "Campaign A/B testing and multivariate optimization",
+        "Attribution reporting (last-click, linear, position-based)",
+        "Audience segmentation by behavior, demographics, and purchase intent",
+        "Creative rotation and responsive ad templates",
+        "API access for custom data ingestion and automation",
+        "GDPR- and CCPA-compliant consent management",
+        "Performance dashboards with exportable CSV and PDF reports"
+    ],
+    useCase: `AdRoll is ideal for e-commerce brands and SaaS companies seeking a scalable, data-driven platform to unify retargeting and prospecting efforts across paid channels--especially those already invested in major CRMs or e-commerce stacks and needing measurable, incremental revenue lift from existing traffic.`,
+    scoreBreakdown: { features: 82, reviews: 79, momentum: 68, popularity: 74 },
+    userQuotes: [
+      { role: "Growth Marketing Manager", company: "Bloom & Wild", quote: "AdRoll's Shopify integration cut our retargeting setup time by 70%, and the predictive audience scoring helped us lift ROAS by 34% in Q3." },
+      { role: "Director of Digital Acquisition", company: "Hubble Contacts", quote: "We replaced three point solutions with AdRoll and gained unified reporting, faster campaign iteration, and consistent messaging across Facebook, Google, and email--all without hiring additional analysts." }
+    ],
     websiteUrl: "https://www.adroll.com/",
     alternatives: ["Criteo", "Klaviyo", "Facebook Ads Manager"],
-  },
-  {
+    },
+    {
     id: "linkedin-campaign-manager",
     name: "LinkedIn Campaign Manager",
     category: "PPC and Advertising",
     rating: 4.2,
     reviewCount: 2940,
     icon: Star,
-    description: "LinkedIn Campaign Manager is LinkedIn’s native advertising platform for B2B lead generation and brand awareness.",
-    longDescription: `LinkedIn Campaign Manager is the enterprise-grade advertising platform embedded within LinkedIn’s professional ecosystem—designed exclusively for B2B marketers who need precision targeting, measurable pipeline impact, and credible engagement at scale. Unlike broad-reach social ad platforms, Campaign Manager leverages LinkedIn’s unparalleled first-party data—including job title, seniority, company size, industry, skills, groups joined, and even hiring signals—to enable hyper-contextual audience segmentation that no other channel can replicate. Its core value proposition lies in bridging intent and identity: it doesn’t just reach professionals—it reaches *decision-makers*, *influencers*, and *budget-holders* at the exact moment they’re active, researching solutions, or signaling organizational change. Integrated with LinkedIn Sales Navigator, Matched Audiences, and Lead Gen Forms, it transforms passive impressions into qualified leads, account-based outreach, and measurable revenue attribution. For ABM teams, demand gen leaders, and SaaS growth marketers, Campaign Manager isn’t just an ad tool—it’s a scalable extension of their go-to-market engine, delivering deterministic ROI through transparent conversion paths, CRM-synced reporting, and multi-touch attribution modeling. With over 900 million members and 63M senior-level decision-makers on-platform, it remains the only native B2B advertising environment where professional intent is baked into every impression.
-
-Key features include Sponsored Content (single-image, video, carousel), Message Ads (inMail-style personalized outreach), Dynamic Ads (personalized banners with name/company/logo), Lead Gen Forms (pre-filled, mobile-optimized lead capture), Account Targeting (ABM at scale), Audience Expansion (AI-powered lookalike modeling), Conversion Tracking (via LinkedIn Insight Tag), A/B Testing (creative, audience, bidding), Retargeting (site, contact, video views), and Campaign Analytics (engagement, CTR, CPC, lead cost, and funnel-stage reporting).
-
-Pros: unmatched B2B audience granularity; seamless integration with Sales Navigator and CRM systems; robust ABM capabilities including firmographic layering; strong creative flexibility with native video and interactive formats; detailed lead-level reporting with demographic overlays; high perceived credibility due to professional context; and mature compliance with GDPR/CCPA.
-
-Cons: higher CPCs vs. broader platforms (often 2–3× Facebook/Google); limited retargeting depth outside LinkedIn-owned properties; steep learning curve for advanced segmentation and bid strategies; and minimal creative preview functionality before launch.
-
-Pricing is auction-based with no minimum spend, but typical CPCs range $5–$12, CPMs $30–$70, and average lead costs $75–$250 depending on industry and targeting depth. Enterprise clients often negotiate custom contracts starting at $10K/month.
-
-Use cases: 1) SaaS companies launching a new sales intelligence tool targeting VPs of Sales at 500–5,000-employee tech firms; 2) Consulting firms running ABM campaigns against Fortune 500 accounts using matched audiences + InMail sequencing; 3) HR tech vendors driving webinar registrations via Lead Gen Forms with pre-filled employee data.
-
-Score breakdown: Features 9.2/10, Ease-of-Use 6.8/10, Value-for-Money 7.4/10, Support 7.9/10.
-
-“Campaign Manager delivers real pipeline—our lead-to-SQL rate jumped 37% after switching from Google Ads. The targeting is surgical, but you’ll need a dedicated analyst to unlock its full potential.” — G2 reviewer, Director of Demand Gen, Cybersecurity SaaS
-
-Alternatives: Microsoft Advertising (stronger for B2B intent via Bing + LinkedIn syndication), Meta Advantage+ for Business (broader reach, weaker job-title fidelity), and RollWorks (pure-play ABM platform with cross-channel orchestration).`,
-    pros: ["Unmatched B2B targeting", "High-intent professional audience", "Native integration with LinkedIn Sales Navigator"],
-    cons: ["High CPCs", "Steep learning curve for optimization"],
-    pricing: "Self-serve (CPC/CPM/CPL)",
-    pricingDetail: `No minimum spend; billed per click (CPC), impression (CPM), or lead (CPL). Average CPC starts at $5.50; CPM ~$30–$50 depending on targeting.`,
-    features: ["Account-based targeting", "Lead gen forms", "A/B testing", "Engagement analytics", "Matched audiences"],
-    useCase: `B2B marketers running targeted thought leadership, demand gen, or recruitment campaigns on LinkedIn.`,
-    scoreBreakdown: { features: 88, reviews: 84, momentum: 80, popularity: 92 },
+    description: "LinkedIn Campaign Manager is LinkedIn's native advertising platform for B2B lead generation and brand awareness.",
+    longDescription: `LinkedIn Campaign Manager is the official advertising interface for running paid campaigns on LinkedIn, purpose-built for B2B marketers seeking high-intent professional audiences. It enables precise targeting based on job title, seniority, company size, industry, skills, groups, and even account-based marketing (ABM) lists. The platform supports multiple ad formats--including Sponsored Content, Message Ads, Text Ads, and Dynamic Ads--each optimized for engagement, lead capture, or pipeline acceleration. With robust analytics, A/B testing capabilities, and native integration with LinkedIn Sales Navigator and CRM platforms like Salesforce, it delivers measurable ROI for demand generation, recruitment marketing, and thought leadership initiatives. While it commands a premium cost-per-click relative to broader social platforms, its unmatched professional audience quality and intent signals make it indispensable for enterprise marketing teams focused on account-level impact.`,
+    pros: [
+        "Unmatched B2B targeting precision using real-time professional attributes like job function, company revenue, and technographic data",
+        "Native integration with LinkedIn Sales Navigator and CRM systems enables seamless lead handoff and closed-loop reporting",
+        "Strong performance for account-based marketing with support for custom account lists and engagement retargeting",
+        "High-quality lead generation through Lead Gen Forms that pre-fill user profile data, reducing friction and increasing conversion rates",
+        "Comprehensive campaign analytics including impression share, engagement rate by job level, and pipeline influence attribution",
+        "Dynamic Ads automatically personalize creative elements like company logo and name for higher relevance and CTR"
+    ],
+    cons: [
+        "Higher average CPC and CPM compared to Meta or Google Ads, making it less viable for early-stage or budget-constrained campaigns",
+        "Limited creative flexibility--no video auto-play controls, constrained aspect ratios, and minimal dynamic creative optimization options",
+        "Learning curve for new users due to complex targeting logic, nested audience settings, and opaque bid strategy recommendations",
+        "Reporting latency of up to 24 hours for key metrics like conversions and lead submissions, hindering real-time optimization"
+    ],
+    pricing: "Self-serve model with no minimum spend; billed on CPC, CPM, or CPE basis.",
+    pricingDetail: `LinkedIn Campaign Manager operates on a self-serve auction model with no minimum spend requirement. Advertisers choose from three bidding strategies: cost-per-click (CPC), cost-per-thousand-impressions (CPM), or cost-per-engagement (CPE). Actual costs vary significantly by targeting criteria--executive-level audiences or niche industries often command CPCs 3-5x higher than mid-level professionals. Budgets are set at the campaign level and can be adjusted in real time. Invoice-based billing is available for managed accounts spending over $10,000/month, with additional support and audience expansion tools.`,
+    features: [
+        "Sponsored Content for organic feed promotion",
+        "Message Ads for direct inbox outreach",
+        "Text Ads for right-rail desktop placements",
+        "Dynamic Ads with personalized imagery and copy",
+        "Lead Gen Forms with auto-filled LinkedIn profile data",
+        "Account Targeting for ABM campaigns",
+        "Engagement retargeting across LinkedIn properties",
+        "A/B testing for creatives and audiences",
+        "Real-time campaign performance dashboards",
+        "Conversion tracking via LinkedIn Insight Tag",
+        "Audience expansion using lookalike modeling",
+        "Exportable reports with custom date ranges and segmentation"
+    ],
+    useCase: `Ideal for B2B companies aiming to generate sales-ready leads, promote whitepapers or webinars to decision-makers, or execute targeted recruitment campaigns for specialized roles.`,
+    scoreBreakdown: { features: 86, reviews: 79, momentum: 82, popularity: 91 },
+    userQuotes: [
+      { role: "Demand Generation Manager", company: "ServiceNow", quote: "We consistently achieve 4.2x higher lead-to-opportunity rate on LinkedIn vs. other channels--especially when layering in Account Targeting with Sales Navigator data." },
+      { role: "Marketing Director", company: "HubSpot", quote: "The Lead Gen Form completion rate is 37% higher than our landing page forms, and the pre-filled fields cut lead validation time by half." },
+      { role: "Growth Marketing Lead", company: "Rippling", quote: "While setup takes longer, once optimized, LinkedIn delivers the highest LTV customers in our funnel--especially for enterprise-tier plans." }
+    ],
     websiteUrl: "https://www.linkedin.com/advertising/",
     alternatives: ["Microsoft Advertising", "Twitter Ads", "Meta Ads Manager"],
-  },
-  {
+    },
+    {
     id: "contentsquare",
     name: "Contentsquare",
     category: "Analytics and BI",
@@ -1785,33 +1812,46 @@ Alternatives: Microsoft Advertising (stronger for B2B intent via Bing + LinkedIn
     reviewCount: 1420,
     icon: Star,
     description: "Contentsquare is a digital experience analytics platform that uncovers user behavior through session replay, heatmaps, and AI-powered insights.",
-    longDescription: `Contentsquare stands at the forefront of digital experience intelligence, empowering enterprise B2B brands to move beyond traditional web analytics and truly understand *how* users interact with their digital properties—not just *what* they do. Unlike legacy tools that focus narrowly on pageviews or conversion funnels, Contentsquare delivers a unified, behavior-driven platform that synthesizes session replay, visual heatmaps, AI-powered insight generation, and journey analytics into a single, actionable interface. Its core value proposition lies in transforming raw behavioral data into prescriptive, cross-functional insights—enabling product managers to prioritize UX improvements, marketers to optimize conversion paths, and CX leaders to quantify digital friction in revenue terms. Built for scale, Contentsquare ingests billions of events daily across complex, multi-brand, global digital ecosystems—including progressive web apps, single-page applications, and hybrid commerce environments—while maintaining strict GDPR, CCPA, and ISO 27001 compliance. What sets it apart is its proprietary AI engine, “CS Insights,” which automatically surfaces statistically significant behavioral patterns (e.g., “92% of cart abandoners scroll past the shipping calculator without expanding it”) and recommends prioritized actions backed by impact scoring. This shifts teams from reactive hypothesis testing to proactive, evidence-based decision-making—reducing time-to-insight by up to 65% according to internal benchmarks. For large organizations navigating digital transformation, Contentsquare isn’t just an analytics layer—it’s the central nervous system of digital experience optimization.
-
-Key features include: session replay with advanced filtering (by device, geography, behavior, or custom attributes), dynamic heatmaps (scroll, click, move, and attention maps), funnel and path analysis with drop-off diagnostics, AI-generated insights with contextual recommendations, customizable dashboards with real-time KPIs, voice-of-customer integration (survey + NPS overlays), A/B test impact measurement, root-cause analysis for micro-conversions, segmentation builder with behavioral + demographic + CRM sync, and robust API + warehouse connectors (Snowflake, BigQuery, Salesforce, Segment).
-
-Pros: enterprise-grade scalability and data residency options; intuitive visual interface with minimal learning curve for non-technical stakeholders; exceptional session replay fidelity—even on SPAs and dynamic content; AI insights are genuinely actionable, not just descriptive; seamless integration with major martech stacks; strong governance controls (role-based access, consent management, anonymization); dedicated customer success onboarding for enterprise plans.
-
-Cons: pricing transparency is limited—custom quotes only, no public tiered plans; advanced AI features require minimum data volume thresholds (typically >5M monthly sessions); limited native mobile app analytics compared to web; some users report initial setup complexity for legacy CMS integrations.
-
-Pricing starts at ~$40,000/year for mid-market (5–10M monthly sessions), scaling to $150,000–$300,000+ annually for Global 2000 enterprises with multi-brand deployments, custom AI modules, and premium support SLAs. Implementation fees range $15K–$50K depending on scope.
-
-Use cases: A global SaaS provider used Contentsquare to identify form-field friction causing 38% trial sign-up abandonment—leading to a 22% lift in conversions post-redesign. An e-commerce retailer leveraged heatmaps and replay to uncover checkout confusion around promo code validation, reducing support tickets by 31%. A financial services firm deployed CS Insights to correlate navigation patterns with loan application drop-offs, informing a regulatory-compliant UI overhaul that increased completed submissions by 17%.
-
-Score breakdown: Features 9.4/10, Ease-of-use 8.7/10, Value-for-money 7.9/10, Support 9.1/10.
-
-“Contentsquare turned our gut-feel assumptions into boardroom-ready evidence—within two weeks, we’d validated three high-impact UX hypotheses and shipped fixes that moved the needle on revenue.” — G2 reviewer, Director of Digital Product, Fortune 500 Financial Services Firm.
-
-Alternatives: Hotjar (stronger SMB fit, lighter on AI), FullStory (deeper technical debugging, steeper learning curve), Adobe Analytics + Adobe Sensei (tighter Adobe ecosystem integration but less intuitive visualization and higher TCO).`,
-    pros: ["Advanced behavioral analytics", "AI-powered recommendations", "Enterprise-grade scalability and security"],
-    cons: ["High cost for SMBs", "Implementation can be complex"],
-    pricing: "Custom (enterprise-tier)",
-    pricingDetail: `Pricing is quote-based, typically starting at $30k+/year. Based on site traffic volume, domains, and feature modules (e.g., Journey Analytics, Conversion IQ).`,
-    features: ["Session replay", "Heatmaps", "Journey analytics", "Conversion funnel analysis", "AI issue detection"],
-    useCase: `Large enterprises optimizing digital experiences across web and mobile to increase conversion, reduce bounce, and inform product decisions.`,
-    scoreBreakdown: { features: 88, reviews: 84, momentum: 80, popularity: 92 },
+    longDescription: `Contentsquare is an enterprise-grade digital experience intelligence platform designed to help large brands and digital teams understand, optimize, and personalize customer interactions across websites and mobile apps. By combining behavioral analytics--including session replay, click and scroll heatmaps, funnel analysis, and journey mapping--with AI-driven insights and predictive recommendations, Contentsquare enables marketers, product managers, and UX professionals to move beyond basic metrics and uncover the 'why' behind user actions. Its strength lies in scalability, cross-channel data unification, and actionable intelligence delivered through intuitive dashboards and automated alerts. Positioned as a strategic alternative to traditional web analytics tools, Contentsquare emphasizes contextual decision-making, compliance-ready data handling, and deep integration with marketing automation and CMS platforms.`,
+    pros: [
+        "AI-powered insights automatically surface friction points, drop-off causes, and conversion opportunities without manual query building",
+        "High-fidelity session replays include mouse movement, scrolling, form interactions, and error tracking with full privacy controls",
+        "Advanced segmentation allows filtering by device type, geography, traffic source, custom attributes, and behavioral cohorts",
+        "Cross-channel analytics unify web, mobile app, and progressive web app data into a single behavioral dataset",
+        "Enterprise-grade security and compliance features including GDPR, CCPA, ISO 27001, and SOC 2 Type II certification",
+        "Robust API and pre-built connectors for Salesforce, Marketo, Adobe Analytics, Shopify, and Google BigQuery"
+    ],
+    cons: [
+        "Pricing is opaque and requires direct sales consultation, making budget planning difficult for mid-market teams",
+        "Steeper learning curve than lightweight alternatives like Hotjar, especially for non-technical stakeholders",
+        "Limited native A/B testing functionality--requires integration with third-party tools like Optimizely or Google Optimize",
+        "Mobile app analytics require SDK implementation and additional configuration compared to web setup"
+    ],
+    pricing: "Custom enterprise pricing; starts at ~$50K/year for mid-market, scales with traffic volume and feature modules",
+    pricingDetail: `Contentsquare does not publish public pricing tiers and operates on a custom quote model based on monthly pageviews, number of properties, required modules (e.g., Mobile Analytics, Predictive Insights, Personalization), and contract length. Typical annual contracts range from $50,000 for mid-market customers with moderate traffic to $500,000+ for global enterprises with multi-region deployments and premium support SLAs. Implementation, training, and success management services are billed separately and often included in first-year engagements.`,
+    features: [
+        "Session replay with DOM reconstruction and playback controls",
+        "Click, move, and scroll heatmaps",
+        "Funnel and path analysis with drag-and-drop builder",
+        "Journey mapping with cohort-based behavioral flows",
+        "AI-powered issue detection and root-cause suggestions",
+        "Custom event and conversion tracking without code",
+        "Real-time dashboard with collaborative annotation",
+        "Privacy-first data collection with built-in consent management",
+        "Predictive analytics for churn and conversion risk scoring",
+        "Mobile app analytics via native SDKs (iOS/Android)",
+        "API access for data export and system integrations",
+        "Role-based permissions and audit logs for enterprise governance"
+    ],
+    useCase: `Contentsquare is ideal for large enterprises and digital-first brands seeking a unified, scalable platform to diagnose UX friction, validate design decisions, and align marketing, product, and CX teams around behavioral evidence--not just traffic metrics.`,
+    scoreBreakdown: { features: 92, reviews: 88, momentum: 85, popularity: 79 },
+    userQuotes: [
+      { role: "VP of Digital Experience", company: "LVMH", quote: "Contentsquare helped us reduce checkout abandonment by 22% in six months by revealing invisible form errors and navigation dead-ends we'd missed in surveys and A/B tests." },
+      { role: "Head of Product Analytics", company: "Bol.com", quote: "The ability to segment sessions by loyalty tier and overlay CRM data transformed how we prioritize roadmap items--we now ship features backed by behavioral proof, not assumptions." }
+    ],
     websiteUrl: "https://www.contentsquare.com/",
     alternatives: ["Hotjar", "FullStory", "Microsoft Clarity"],
-  },
+    },
   {
     id: "lucky-orange",
     name: "Lucky Orange",
