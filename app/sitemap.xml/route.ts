@@ -22,6 +22,8 @@ const BLOG_SLUGS = [
   "tealium-cdp-2026-enterprise-review",
   "marketing-attribution-ruler-analytics-review",
   "social-media-management-tools-smb-2026",
+  "build-integrated-marketing-tech-stack-2026-lessons",
+  "ai-powered-cdp-vs-traditional-cdp-2026",
 ] as const;
 
 const TOOL_SLUGS = [
