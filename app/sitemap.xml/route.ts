@@ -29,6 +29,7 @@ const BLOG_SLUGS = [
   "seo-ai-search-martech-2026",
   "social-media-management-tools-smb-2026",
   "tealium-cdp-2026-enterprise-review",
+  "video-marketing-platforms-2026-wistia-vimeo-brightcove-vidyard-comparison",
 ] as const;
 
 const TOOL_SLUGS = [
