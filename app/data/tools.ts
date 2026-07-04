@@ -197,7 +197,9 @@ export const ALL_TOOLS: Tool[] = [
     reviewCount: 12400,
     icon: Star,
     description: "Constant Contact is an email marketing platform tailored for small businesses and nonprofits, emphasizing ease of use, list growth tools, and reliable deliverability.",
-    longDescription: `Constant Contact remains a leading email marketing platform purpose-built for small businesses, solopreneurs, and nonprofit organizations as of 2026. Launched in 1998, it pioneered SMB-friendly automation and list management long before the modern MarTech stack emerged. Over two decades, Constant Contact evolved from basic newsletter tools into a full-service engagement platform--integrating email, SMS, social posting, event management, and landing pages--while preserving its hallmark simplicity and human-centric support model. Its core strength lies in intuitive drag-and-drop editors, robust contact segmentation (including donor-specific fields for nonprofits), GDPR/CCPA-compliant consent tools, and live expert support via phone, chat, and scheduled coaching sessions--a rarity among competitors. Target users include local service providers (e.g., salons, contractors), community nonprofits, faith-based groups, and micro-businesses lacking dedicated marketing staff. Limitations include relatively lightweight automation capabilities compared to enterprise platforms like HubSpot or ActiveCampaign--no multi-step conditional workflows or native CRM sync--and limited A/B testing depth (only subject line and send-time variants). It also lacks advanced analytics dashboards or predictive scoring. Competitively, Constant Contact occupies a distinct niche: less technical than Mailchimp's newer tiers, more supported and nonprofit-optimized than Brevo (formerly Sendinblue), and more accessible than Klaviyo for non-eCommerce brands. While pricing has increased modestly since 2023, its bundled value--including unlimited contacts on most plans and free onboarding--keeps it compelling for growth-stage SMBs prioritizing reliability over hyper-customization.\n\nConstant Contact continues investing in AI-assisted content generation (subject lines, body copy) and enhanced accessibility compliance (WCAG 2.1 AA), reinforcing its mission to empower non-technical marketers without sacrificing compliance or deliverability.`,
+    longDescription: `Constant Contact remains a leading email marketing platform purpose-built for small businesses, solopreneurs, and nonprofit organizations as of 2026. Launched in 1998, it pioneered SMB-friendly automation and list management long before the modern MarTech stack emerged. Over two decades, Constant Contact evolved from basic newsletter tools into a full-service engagement platform--integrating email, SMS, social posting, event management, and landing pages--while preserving its hallmark simplicity and human-centric support model. Its core strength lies in intuitive drag-and-drop editors, robust contact segmentation (including donor-specific fields for nonprofits), GDPR/CCPA-compliant consent tools, and live expert support via phone, chat, and scheduled coaching sessions--a rarity among competitors. Target users include local service providers (e.g., salons, contractors), community nonprofits, faith-based groups, and micro-businesses lacking dedicated marketing staff. Limitations include relatively lightweight automation capabilities compared to enterprise platforms like HubSpot or ActiveCampaign--no multi-step conditional workflows or native CRM sync--and limited A/B testing depth (only subject line and send-time variants). It also lacks advanced analytics dashboards or predictive scoring. Competitively, Constant Contact occupies a distinct niche: less technical than Mailchimp's newer tiers, more supported and nonprofit-optimized than Brevo (formerly Sendinblue), and more accessible than Klaviyo for non-eCommerce brands. While pricing has increased modestly since 2023, its bundled value--including unlimited contacts on most plans and free onboarding--keeps it compelling for growth-stage SMBs prioritizing reliability over hyper-customization.
+
+Constant Contact continues investing in AI-assisted content generation (subject lines, body copy) and enhanced accessibility compliance (WCAG 2.1 AA), reinforcing its mission to empower non-technical marketers without sacrificing compliance or deliverability.`,
     features: [
         "Drag-and-drop email editor with pre-built modules (countdown timers, social proof bars, image carousels) and inline CSS optimization.",
         "List segmentation engine supporting up to 20 concurrent filters (e.g., 'opened last 3 emails AND purchased in last 60 days AND tagged as VIP').",
@@ -231,7 +233,9 @@ export const ALL_TOOLS: Tool[] = [
       ],
     pricing: "From $20/month",
     pricingDetail: `Constant Contact offers four tiers: Lite ($20/month for up to 500 contacts), Standard ($45/month for up to 2,500 contacts with automation), Plus ($95/month for up to 10,000 contacts with advanced reporting and landing pages), and Custom (enterprise pricing with SLA and dedicated support). All plans include unlimited emails, basic A/B testing, and standard support. Annual billing offers 12% discount, but add-ons like SMS or premium support incur extra fees.`,
-    useCase: `Nonprofit donor engagement and fundraising campaigns\nLocal service business lead nurturing (e.g., HVAC, salons)\nCommunity organization event promotion and RSVP management`,
+    useCase: `Nonprofit donor engagement and fundraising campaigns
+Local service business lead nurturing (e.g., HVAC, salons)
+Community organization event promotion and RSVP management`,
     scoreBreakdown: { features: 78, reviews: 82, momentum: 64, popularity: 71 },
     websiteUrl: "https://www.constantcontact.com",
     userQuotes: [
@@ -1037,55 +1041,39 @@ export const ALL_TOOLS: Tool[] = [
     reviewCount: 1892,
     icon: Star,
     description: "Tealium is a leading customer data platform (CDP) that unifies, manages, and activates first-party customer data across systems.",
-    longDescription: `Tealium's CDP ingests data from websites, apps, CRMs, POS, and offline sources, then builds unified, real-time customer profiles enriched with identity resolution and segmentation. Its AudienceStream module powers dynamic audience activation to ad platforms, email tools, and personalization engines--while Tag Management (Tealium iQ) and Data Infrastructure (Tealium EventStream) provide end-to-end control over data collection and governance. Tealium is widely adopted by Fortune 500 brands for scalability, privacy compliance (GDPR/CCPA), and cross-channel orchestration.`,
+    longDescription: `
+Tealium is an enterprise-grade Customer Data Platform (CDP) and tag management system designed for large, globally distributed organizations needing real-time, privacy-compliant customer data unification at scale. It ingests structured and semi-structured data from websites (via Tealium iQ), mobile apps (iOS/Android SDKs), CRMs (Salesforce, Microsoft Dynamics), ERP systems (SAP, Oracle), POS terminals (Square, NCR), call center platforms (Genesys, Five9), IoT devices, offline transaction files (CSV/FTP), and cloud warehouses (Snowflake, BigQuery, Redshift). Its AudienceStream CDP module applies deterministic identity resolution--using persistent first-party IDs, email hashing, phone number normalization, and authenticated login signals--combined with probabilistic matching (device graph stitching across browsers, apps, and connected TVs) to build unified, GDPR/CCPA-compliant profiles updated in sub-second latency. These profiles power dynamic audience activation to over 1,200 destinations--including Google Ads, Meta, The Trade Desk, Klaviyo, Braze, Optimizely, and Salesforce Marketing Cloud--via server-side API integrations that bypass ad blockers and browser restrictions. Tealium's DataHub enables governed data sharing with analytics teams (e.g., exporting enriched segments to Looker or Tableau via S3 or JDBC), while its Consent Management module enforces granular opt-in/out preferences across all downstream tools. Real-world implementations include a multinational retailer syncing real-time in-store pickup events with online browsing behavior to trigger SMS abandonment flows; a global bank unifying wealth management, credit card, and digital banking sessions to calculate lifetime value scores for wealth advisor routing; and a pharma company correlating HCP engagement across congress apps, webinars, and CRM interactions while maintaining HIPAA-aligned audit trails.
+    `,
     pros: [
-      "Industry-leading deterministic and probabilistic identity resolution with cross-device graph stitching and persistent unified customer profiles updated in real time",
-      "Extensive ecosystem of 1,200+ pre-built, certified connectors including native support for Salesforce Marketing Cloud, Adobe Experience Platform, AWS Redshift, Snowflake, and Google BigQuery",
-      "Robust enterprise-grade governance with granular RBAC, full audit logging, SOC 2 Type II and ISO 27001 certifications, and built-in consent and preference inheritance across channels",
-      "High-throughput, low-latency event streaming architecture capable of processing over 1M events per second with sub-100ms profile update latency and guaranteed at-least-once delivery",
-      "Modular SaaS architecture allowing independent scaling of iQ (tag management), AudienceStream (CDP), EventStream (data pipeline), and DataAccess (warehouse sync) based on use-case needs",
-      "Privacy-by-design framework with automated PII masking, regional data residency options (US, EU, APAC), DPIA templates, and out-of-the-box integrations with OneTrust and TrustArc for consent orchestration",
-      "Advanced audience activation with server-side destination forwarding, dynamic attribute injection, and bi-directional sync to ad platforms (Meta, Google Ads, LinkedIn) and email service providers (Braze, Klaviyo, Salesforce Marketing Cloud)"
+        "Industry-leading deterministic identity resolution with persistent visitor IDs, cross-device graph stitching (including CTV and kiosk endpoints), and support for zero-party data ingestion via embedded forms and preference centers",
+        "Extensive native integrations: 1,200+ pre-built connectors (including Salesforce Service Cloud, Adobe Experience Platform, Segment, AWS EventBridge, and Snowflake), plus custom REST/GraphQL endpoint builder with OAuth 2.0 and JWT support",
+        "True real-time profile updates (<500ms latency) and audience activation—critical for time-sensitive use cases like cart-abandonment retargeting or fraud-risk scoring in financial services",
+        "Enterprise-grade governance: role-based access control (RBAC), SOC 2 Type II & ISO 27001 certified infrastructure, PII masking, automated data lineage tracking, and built-in consent sync across all activated channels",
+        "Unified deployment model: single platform handles tag management (iQ), CDP (AudienceStream), data warehouse sync (DataHub), and consent orchestration—reducing vendor sprawl and integration overhead",
+        "Strong vertical expertise: pre-built accelerators for retail (loyalty + POS sync), financial services (KYC + account aggregation), healthcare (HIPAA-compliant HCP mapping), and B2B (ABM audience syndication to LinkedIn)"
     ],
     cons: [
-      "Steeper learning curve for non-technical marketers due to declarative configuration model and reliance on Tealium-certified consultants for complex implementations",
-      "Higher total cost of ownership compared to mid-market CDPs, especially when bundling iQ, AudienceStream, EventStream, and premium connectors",
-      "Limited native AI/ML capabilities such as built-in next-best-action or predictive scoring engines, requiring integration with third-party ML platforms or custom models",
-      "Implementation timelines typically range from 12 to 24 weeks for full-stack deployments including identity strategy, consent mapping, and cross-channel activation workflows",
-      "No self-service dashboard for business users; analytics and segmentation require Tealium IQ or external BI tooling (Tableau, Power BI) via DataAccess"
+        "Steeper learning curve for non-technical marketers due to declarative configuration model (no drag-and-drop UI for segment logic) and reliance on Tealium-certified consultants for complex identity graphs or custom event forwarding",
+        "Higher total cost of ownership than mid-market CDPs: implementation typically requires 3–6 months and $150K–$400K in professional services, especially for legacy ERP/POS integrations",
+        "Limited self-serve analytics: no built-in cohort analysis, funnel visualization, or predictive modeling—requires exporting to BI tools or pairing with third-party analytics vendors",
+        "Mobile attribution depth lags behind Singular and AppsFlyer; relies on SDK-level event forwarding rather than deep-linking or SKAdNetwork-native measurement"
     ],
-    pricing: "Contact for enterprise quote",
-    pricingDetail: `Subscription-based; starts at approximately $250K per year for core AudienceStream plus iQ (up to 50M profiles, 100M events per month, 10 connectors); scales linearly with profile volume ($0.002 to $0.005 per profile per month), event throughput ($0.0001 to $0.0003 per event), and connector count ($5K to $25K per connector per year); EventStream and DataAccess modules add $75K to $150K per year each; all plans require 3-year minimum commitment and include 24/7 enterprise support, quarterly health reviews, and access to Tealium University training.`,
     features: [
-      "Real-Time Customer Profile Unification with deterministic identity stitching across web, mobile, offline CRM, and IoT touchpoints using persistent visitor IDs and probabilistic matching",
-      "Consent and Preference Management with GDPR/CCPA-compliant preference centers, dynamic consent inheritance across downstream systems, and auto-expiring opt-ins",
-      "Audience Segmentation and Activation with SQL-like rule builder, real-time segment evaluation, and push-to-destination capabilities for 150+ marketing, analytics, and advertising platforms",
-      "Tag Management (Tealium iQ) with containerized deployment, version-controlled environments (dev/stage/prod), and zero-touch tag deployment via API or CI/CD pipelines",
-      "Event Streaming and Data Lake Integration supporting Kafka-native ingestion, schema-on-read flexibility, and bidirectional sync with cloud data warehouses (Snowflake, BigQuery, Redshift)",
-      "Server-Side Tagging with edge-computed data enrichment, header-bidding optimization, and reduced client-side latency for privacy-sensitive environments",
-      "Data Quality Monitoring with automated anomaly detection, field-level completeness scoring, and drift alerts for key identifiers (email, phone, device ID)",
-      "Unified Customer Journey Orchestration enabling multi-step, cross-channel campaigns with conditional branching, holdout groups, and A/B test frameworks",
-      "API-First Architecture with RESTful and GraphQL endpoints for profile lookups, segment membership checks, and real-time decisioning integrations",
-      "Compliance Automation Suite including auto-generated data maps, consent log exports, DSAR fulfillment workflows, and regulatory change notifications",
-      "Custom JavaScript Extensions (CJE) framework for advanced logic injection without vendor lock-in or code rewrites",
-      "Tealium DataHub for low-code, drag-and-drop data transformation pipelines with join, filter, aggregate, and enrich capabilities before profile merge"
+        "Real-Time Customer Profile Unification with deterministic identity stitching across web, mobile, offline CRM, and IoT touchpoints using persistent visitor IDs and probabilistic matching",
+        "AudienceStream: server-side audience segmentation engine supporting dynamic rule-based segments (e.g., 'high-LTV customers who browsed premium SKUs in last 72h but didn’t purchase') with sub-second activation",
+        "Tealium iQ: enterprise tag management system with version-controlled container publishing, A/B testing for tag logic, and built-in anti-flicker snippet for SPA compatibility",
+        "DataHub: governed data distribution layer enabling secure, scheduled or event-triggered exports to cloud data warehouses (Snowflake, BigQuery), BI tools (Looker, Power BI), and ML platforms (Databricks)",
+        "Consent Manager: modular consent solution with IAB TCF 2.0 compliance, geo-aware banner templates (GDPR, CCPA, LGPD), and real-time propagation of preference changes to all downstream vendors",
+        "IdentityGraph: visual identity resolution dashboard showing device clusters, match confidence scores, and root ID resolution paths for auditing and debugging",
+        "EventStream: real-time event ingestion pipeline supporting JSON Schema validation, transformation rules (regex, lookup tables, JavaScript functions), and dead-letter queue handling",
+        "Tealium Extensions: low-code marketplace for pre-built connectors (e.g., Shopify Order Sync, HubSpot Contact Enrichment, Zendesk Ticket Linking) and custom logic modules"
     ],
-    useCase: `Tealium is purpose-built for Global 2000 enterprises operating across 10+ countries with legacy martech sprawl, fragmented customer data sources (ERP, POS, call center, mobile apps), and stringent compliance requirements (GDPR, CCPA, LGPD). It serves organizations undergoing digital transformation that demand scalable, auditable, and privacy-safe customer data infrastructure--particularly those investing in real-time personalization engines, unified commerce experiences, and first-party data monetization strategies. Ideal customers have dedicated data engineering, privacy, and MarTech operations teams capable of managing modular deployment, ongoing governance, and cross-functional activation workflows.`,
     scoreBreakdown: { features: 99, reviews: 94, momentum: 91, popularity: 95 },
+    useCase: `Tealium is purpose-built for Global 2000 enterprises operating across 10+ countries with legacy martech sprawl, fragmented customer data sources (ERP, POS, call center, mobile apps), and stringent compliance requirements (GDPR, CCPA, HIPAA, PCI-DSS). Ideal for multinational retailers needing unified loyalty + in-store pickup data to power personalized SMS campaigns; global banks requiring real-time KYC-linked profile enrichment across digital banking, wealth management, and branch CRM systems; pharmaceutical companies orchestrating compliant HCP engagement across virtual congresses, e-detailing apps, and Veeva CRM; and B2B SaaS providers activating ABM audiences across LinkedIn, ZoomInfo, and Salesforce Sales Cloud using firmographic + technographic signals. Also used by media conglomerates managing cross-platform subscriber identities (linear TV, OTT, podcast apps) and advertisers needing server-side cookieless targeting in preparation for Chrome deprecation.`,
+    pricingDetail: `Tealium operates on an annual subscription model with tiered pricing based on monthly event volume, profile count, and activated destinations. Entry-tier 'Starter' begins at $50,000/year (5M events/month, up to 10M profiles, 5 core connectors including Salesforce and Google Ads). 'Professional' tier starts at $175,000/year (50M events/month, 50M profiles, 15 connectors, plus iQ + AudienceStream + Consent Manager). 'Enterprise' tier starts at $350,000/year (200M+ events/month, unlimited profiles, 30+ connectors, dedicated success manager, SLA-backed <99.95% uptime, and optional DataHub + IdentityGraph add-ons). Custom contracts for Global 2000 clients often exceed $750,000/year and include professional services, advanced security assessments, and multi-region data residency options (AWS GovCloud, EU Frankfurt, APAC Sydney).`,
+    userQuotes: [],
     websiteUrl: "https://tealium.com",
-    userQuotes: [
-      {
-        role: "Chief Marketing Technology Officer",
-        company: "Fortune 100 Retailer",
-        quote: "Tealium gave us a single source of truth for 800M+ customer profiles while cutting our consent management overhead by 65%--and we passed our third consecutive SOC 2 audit with zero findings related to data handling."
-      },
-      {
-        role: "VP of Data and Analytics",
-        company: "Global Financial Services Firm",
-        quote: "After migrating from a homegrown CDP, we achieved 98% identity match rates across web, mobile, and branch interactions--and activated high-intent segments to paid media in under 90 seconds, lifting ROAS by 22% in Q1."
-      }
-    ],
-    alternatives: ["Segment (Twilio)", "mParticle", "BlueConic"],
+    alternatives: [],
   },
   {
     id: "mixpanel",
@@ -1543,7 +1531,9 @@ export const ALL_TOOLS: Tool[] = [
     reviewCount: 2154,
     icon: Star,
     description: "Campaign Monitor is a design-forward email marketing platform focused on ease of use, segmentation, and automation.",
-    longDescription: `Campaign Monitor is a design-forward email marketing platform launched in 2004 and acquired by Marigold (formerly CM Group) in 2021. As of 2026, it remains a leader for visually oriented marketers who prioritize brand-aligned, responsive email creation without heavy reliance on developers. Its evolution has centered on deepening design flexibility--introducing drag-and-drop editing with real-time preview, dynamic content blocks, and AI-assisted subject line and copy suggestions powered by its proprietary Marigold AI suite. Key strengths include best-in-class template customization, intuitive visual builder, seamless integration with Shopify, WordPress, and Salesforce, and robust segmentation tied to behavioral and demographic data. It targets mid-market B2C brands, creative agencies, and e-commerce businesses that demand pixel-perfect emails and high deliverability (99.2% average inbox placement per 2025 Return Path benchmark). Limitations include limited native automation depth compared to HubSpot or Klaviyo--especially for multi-channel journeys--and minimal built-in CRM functionality, requiring third-party syncs. Its competitive positioning sits between entry-level tools like MailerLite and enterprise suites like Salesforce Marketing Cloud: more design-centric than Constant Contact, less workflow-complex than Marketo. Campaign Monitor does not offer free plans, and its pricing scales strictly by subscriber count--not features--making advanced capabilities inaccessible at lower tiers. Support is strong for core email execution but lacks 24/7 live chat outside premium plans.\n\nAs of 2026, Campaign Monitor continues to invest in generative personalization (e.g., auto-generating product recommendations based on browsing history) and privacy-first analytics aligned with evolving global consent frameworks (GDPR, CCPA, ePrivacy). While its reporting dashboard has improved significantly--with cohort analysis and A/B test confidence scoring--it still lags behind competitors in predictive churn modeling and cross-channel attribution.`,
+    longDescription: `Campaign Monitor is a design-forward email marketing platform launched in 2004 and acquired by Marigold (formerly CM Group) in 2021. As of 2026, it remains a leader for visually oriented marketers who prioritize brand-aligned, responsive email creation without heavy reliance on developers. Its evolution has centered on deepening design flexibility--introducing drag-and-drop editing with real-time preview, dynamic content blocks, and AI-assisted subject line and copy suggestions powered by its proprietary Marigold AI suite. Key strengths include best-in-class template customization, intuitive visual builder, seamless integration with Shopify, WordPress, and Salesforce, and robust segmentation tied to behavioral and demographic data. It targets mid-market B2C brands, creative agencies, and e-commerce businesses that demand pixel-perfect emails and high deliverability (99.2% average inbox placement per 2025 Return Path benchmark). Limitations include limited native automation depth compared to HubSpot or Klaviyo--especially for multi-channel journeys--and minimal built-in CRM functionality, requiring third-party syncs. Its competitive positioning sits between entry-level tools like MailerLite and enterprise suites like Salesforce Marketing Cloud: more design-centric than Constant Contact, less workflow-complex than Marketo. Campaign Monitor does not offer free plans, and its pricing scales strictly by subscriber count--not features--making advanced capabilities inaccessible at lower tiers. Support is strong for core email execution but lacks 24/7 live chat outside premium plans.
+
+As of 2026, Campaign Monitor continues to invest in generative personalization (e.g., auto-generating product recommendations based on browsing history) and privacy-first analytics aligned with evolving global consent frameworks (GDPR, CCPA, ePrivacy). While its reporting dashboard has improved significantly--with cohort analysis and A/B test confidence scoring--it still lags behind competitors in predictive churn modeling and cross-channel attribution.`,
     features: [
     "Drag-and-drop visual email builder with real-time preview",
     "AI-powered subject line and body copy suggestions",
@@ -1592,7 +1582,9 @@ export const ALL_TOOLS: Tool[] = [
     reviewCount: 4872,
     icon: Star,
     description: "MailerLite is a user-friendly, value-focused email marketing platform ideal for SMBs and startups.",
-    longDescription: `MailerLite is a value-optimized email marketing platform purpose-built for small and medium-sized businesses (SMBs), solopreneurs, and digital creators seeking high-performance tools without enterprise complexity or pricing. Since its 2010 founding in Lithuania, MailerLite has evolved from a basic newsletter sender into a robust, privacy-first marketing suite -- notably strengthening its automation engine, landing page builder, and AI-assisted content tools by 2025. Its standout strengths include intuitive drag-and-drop editors, built-in GDPR-compliant consent management, visual workflow automation (including behavioral triggers and conditional logic), and native integrations with Shopify, WordPress, WooCommerce, and Zapier. MailerLite targets non-technical users who prioritize ease of use, transparent pricing, and deliverability reliability over granular segmentation or advanced CRM syncing. While it excels in core email functionality, limitations persist: no native SMS marketing, limited A/B testing depth (only subject line and send time), no dedicated mobile app, and restricted custom code support in templates compared to enterprise platforms. Competitively, MailerLite occupies a distinct niche between entry-level tools like Brevo and premium suites like Klaviyo -- offering more sophistication than Moosend but less scalability than HubSpot Marketing Hub. Its 2026 roadmap emphasizes AI-powered copy suggestions, enhanced transactional email capabilities, and deeper e-commerce personalization -- all while maintaining its commitment to flat-rate billing and zero hidden fees.\n\nMailerLite's infrastructure consistently delivers >99% inbox placement across major ISPs, backed by real-time analytics, spam score previews, and proactive list hygiene tools. With over 1 million active users globally and ISO 27001 certification, it balances accessibility with enterprise-grade security -- making it a top-tier choice for growth-focused SMBs unwilling to trade simplicity for power.`,
+    longDescription: `MailerLite is a value-optimized email marketing platform purpose-built for small and medium-sized businesses (SMBs), solopreneurs, and digital creators seeking high-performance tools without enterprise complexity or pricing. Since its 2010 founding in Lithuania, MailerLite has evolved from a basic newsletter sender into a robust, privacy-first marketing suite -- notably strengthening its automation engine, landing page builder, and AI-assisted content tools by 2025. Its standout strengths include intuitive drag-and-drop editors, built-in GDPR-compliant consent management, visual workflow automation (including behavioral triggers and conditional logic), and native integrations with Shopify, WordPress, WooCommerce, and Zapier. MailerLite targets non-technical users who prioritize ease of use, transparent pricing, and deliverability reliability over granular segmentation or advanced CRM syncing. While it excels in core email functionality, limitations persist: no native SMS marketing, limited A/B testing depth (only subject line and send time), no dedicated mobile app, and restricted custom code support in templates compared to enterprise platforms. Competitively, MailerLite occupies a distinct niche between entry-level tools like Brevo and premium suites like Klaviyo -- offering more sophistication than Moosend but less scalability than HubSpot Marketing Hub. Its 2026 roadmap emphasizes AI-powered copy suggestions, enhanced transactional email capabilities, and deeper e-commerce personalization -- all while maintaining its commitment to flat-rate billing and zero hidden fees.
+
+MailerLite's infrastructure consistently delivers >99% inbox placement across major ISPs, backed by real-time analytics, spam score previews, and proactive list hygiene tools. With over 1 million active users globally and ISO 27001 certification, it balances accessibility with enterprise-grade security -- making it a top-tier choice for growth-focused SMBs unwilling to trade simplicity for power.`,
     features: [
     "Drag-and-drop email and landing page builder",
     "Visual automation workflows with conditional logic",
@@ -1790,46 +1782,45 @@ export const ALL_TOOLS: Tool[] = [
     reviewCount: 1870,
     icon: Star,
     description: "AdRoll is a performance marketing platform specializing in cross-channel retargeting, prospecting, and campaign analytics.",
-    longDescription: `AdRoll is a cloud-based performance marketing platform designed to help mid-market and enterprise brands acquire, retain, and re-engage customers across paid social, search, email, and display channels. Built around a unified data foundation, it enables marketers to orchestrate personalized campaigns using behavioral signals, CRM data, and real-time bidding optimization. The platform excels at cross-channel retargeting--bringing back website visitors with tailored ads--and extends into prospecting through lookalike audience modeling and programmatic buying. AdRoll differentiates itself with strong e-commerce integrations, intuitive campaign automation tools, and transparent ROI measurement, making it especially valuable for growth-focused digital teams that prioritize scalability without sacrificing control over creative, targeting, or budget allocation.`,
+    longDescription: `
+AdRoll is a cloud-based performance marketing platform designed to help mid-market and enterprise brands acquire, retain, and re-engage customers across paid social, search, email, display, and connected TV channels. Built around a unified data foundation--including first-party cookieless identity resolution via its proprietary AdRoll Identity Graph--it enables marketers to orchestrate personalized campaigns using behavioral, demographic, and CRM-derived signals. The platform supports full-funnel strategies: from prospecting with lookalike modeling on Facebook, Instagram, LinkedIn, and Google Ads, to dynamic cart-abandonment retargeting across Meta and Google networks, to post-purchase lifecycle email nurturing synced with Klaviyo or Mailchimp. Technical capabilities include server-side event tracking (via API or pixel), real-time bid optimization powered by proprietary ML models trained on over $10B in cumulative ad spend, and GDPR/CCPA-compliant consent management. AdRoll integrates natively with Shopify, Magento, BigCommerce, Salesforce Marketing Cloud, HubSpot, Segment, Snowflake, and Google Analytics 4--enabling bi-directional audience sync and closed-loop attribution. Its Campaign Studio offers drag-and-drop workflow builder for multi-step journeys, while the Insights Hub delivers cross-channel ROAS reporting with incrementality testing and UTM-powered channel contribution analysis. Used by brands like Allbirds, Casper, and Gong, AdRoll excels in high-velocity e-commerce and B2B SaaS environments where speed-to-scale and deterministic attribution are critical.
+    `,
     pros: [
-        "Robust cross-channel retargeting engine that dynamically serves ads across Facebook, Instagram, Google Display, and native ad networks based on user behavior.",
-        "Seamless integration with Shopify, Magento, WooCommerce, and Salesforce enables automatic audience syncing and real-time conversion tracking.",
-        "Intuitive drag-and-drop campaign builder reduces setup time for non-technical marketers while supporting advanced segmentation and A/B testing.",
-        "Transparent pricing model with no hidden fees and clear cost-per-action reporting helps marketing teams forecast and justify spend.",
-        "Built-in predictive analytics identify high-intent users and automatically shift budget toward top-performing audiences and creatives.",
-        "Dedicated account management and onboarding support included for mid-tier and enterprise plans, accelerating time-to-value."
+        "Robust cross-channel retargeting engine that dynamically serves ads across Facebook, Instagram, Google Display, LinkedIn, Pinterest, and native ad networks based on real-time user behavior and intent signals.",
+        "Advanced identity resolution via AdRoll Identity Graph—supports cookieless targeting across iOS, Android, and CTV using hashed emails, phone numbers, and device IDs.",
+        "Native two-way sync with Shopify Plus, Salesforce Sales Cloud, and HubSpot CRM—enabling automatic audience segmentation, lead scoring, and revenue-matched campaign optimization.",
+        "Built-in incrementality testing and media mix modeling (MMM) tools that quantify lift from paid channels versus organic, with statistical confidence intervals.",
+        "Dedicated account management and campaign strategy services included in Pro and Enterprise tiers—unlike many self-serve platforms.",
+        "Server-side event tracking and offline conversion import via REST API or SFTP—critical for retailers with complex POS or ERP systems like Oracle NetSuite or SAP."
     ],
     cons: [
-        "Limited native support for video-first platforms like TikTok and YouTube Shorts compared to newer entrants.",
-        "Advanced attribution modeling requires manual configuration and lacks out-of-the-box multi-touch options found in enterprise CDPs.",
-        "Reporting interface, while functional, lacks the customization depth and dashboard flexibility of Tableau or Power BI integrations.",
-        "No built-in email content creation or landing page builder--requires integration with third-party tools for full funnel execution."
+        "Limited native support for video-first platforms like TikTok and YouTube Shorts compared to newer entrants; TikTok integration requires third-party partners like TripleWhale or manual CSV uploads.",
+        "Advanced attribution modeling (e.g., Shapley value, time-decay) requires manual configuration and lacks automated model selection—competitors like Northbeam offer one-click AI attribution.",
+        "No built-in CMS or landing page builder—marketers must rely on external tools like Unbounce or Instapage for A/B testing and conversion rate optimization.",
+        "Enterprise contracts require minimum annual commitments ($50K+), and custom SLAs (e.g., <15-min API uptime guarantee) are only available at $100K+ tiers."
     ],
-    pricing: "Custom pricing based on monthly ad spend and feature tier; starts around $500/month for SMBs.",
-    pricingDetail: `AdRoll operates on a hybrid pricing model: clients pay a platform fee (starting at ~$500/month for the Growth plan) plus a percentage of managed ad spend (typically 10-15% for self-serve, lower for managed service). Enterprise plans include dedicated support, custom integrations, and SLA-backed performance guarantees. There are no per-user or per-campaign fees, but minimum monthly ad spend requirements apply starting at $5,000 for managed tiers. Custom contracts may include annual commitments and volume discounts.`,
     features: [
-        "Cross-channel retargeting (social, search, display, email)",
-        "Lookalike audience expansion",
-        "Real-time bid optimization",
-        "CRM and e-commerce platform sync (Shopify, Magento, Salesforce)",
-        "Dynamic product ads with automated catalog feeds",
-        "Campaign A/B testing and multivariate optimization",
-        "Attribution reporting (last-click, linear, position-based)",
-        "Audience segmentation by behavior, demographics, and purchase intent",
-        "Creative rotation and responsive ad templates",
-        "API access for custom data ingestion and automation",
-        "GDPR- and CCPA-compliant consent management",
-        "Performance dashboards with exportable CSV and PDF reports"
+        "Cross-channel retargeting (social, search, display, email, CTV) with real-time behavioral triggers",
+        "Lookalike audience expansion powered by AdRoll Identity Graph and machine learning",
+        "Real-time bid optimization with predictive CPM/CPC bidding across 30+ ad exchanges",
+        "CRM and e-commerce platform sync (Shopify, Magento, BigCommerce, Salesforce, HubSpot)",
+        "Server-side event tracking and offline conversion ingestion via API or SFTP",
+        "Incrementality testing suite with randomized geo-lift and holdout group reporting",
+        "Campaign Studio visual workflow builder for multi-touch, multi-channel customer journeys",
+        "GDPR/CCPA-compliant consent management with IAB TCF 2.0 and vendor list integration",
+        "Unified dashboard with cross-channel ROAS, CPA, and LTV:CAC metrics tied to revenue",
+        "Custom audience modeling using RFM, CLV, and churn-risk scoring via SQL-based audience builder"
     ],
-    useCase: `AdRoll is ideal for e-commerce brands and SaaS companies seeking a scalable, data-driven platform to unify retargeting and prospecting efforts across paid channels--especially those already invested in major CRMs or e-commerce stacks and needing measurable, incremental revenue lift from existing traffic.`,
     scoreBreakdown: { features: 82, reviews: 79, momentum: 68, popularity: 74 },
+    useCase: `AdRoll is ideal for fast-growing e-commerce brands (e.g., DTC apparel, home goods, beauty) needing scalable, privacy-compliant retargeting across Meta, Google, and email--especially those already using Shopify Plus or Klaviyo. It's also widely adopted by B2B SaaS companies (e.g., sales engagement, martech, HR tech) seeking to unify ABM-style prospecting with MQL-to-SQL nurturing across LinkedIn, Google Search, and email. Real-world scenarios include: (1) a $100M revenue SaaS company syncing Salesforce leads to run LinkedIn Sponsored Content + Google Search campaigns with lead-gen forms, then triggering nurture emails via HubSpot; (2) a Shopify brand running automated cart-abandonment flows across Instagram Stories, Google Display, and SMS (via Twilio integration); and (3) a retail conglomerate using AdRoll's CTV retargeting to drive in-store visits after online browsing, measured via anonymized foot traffic data from Placer.ai.`,
+    pricingDetail: `AdRoll offers a free tier (limited to 10K monthly impressions and basic retargeting). Paid plans start at $500/month (Growth) for up to $25K monthly ad spend, including core retargeting, email sync, and basic reporting. Pro tier starts at $1,500/month (or $18K/year) and adds lookalikes, incrementality testing, and priority support. Enterprise plans begin at $50K/year with dedicated account team, custom integrations, SLA guarantees, and unlimited impression volume--custom pricing applies for clients managing $500K+ in annual ad spend. Platform fees are separate from ad spend; managed service markup ranges from 10% (self-serve) to 5% (enterprise-managed).`,
     userQuotes: [
       { role: "Growth Marketing Manager", company: "Bloom & Wild", quote: "AdRoll's Shopify integration cut our retargeting setup time by 70%, and the predictive audience scoring helped us lift ROAS by 34% in Q3." },
       { role: "Director of Digital Acquisition", company: "Hubble Contacts", quote: "We replaced three point solutions with AdRoll and gained unified reporting, faster campaign iteration, and consistent messaging across Facebook, Google, and email--all without hiring additional analysts." }
     ],
     websiteUrl: "https://www.adroll.com/",
     alternatives: ["Criteo", "Klaviyo", "Facebook Ads Manager"],
-    },
+  },
     {
     id: "linkedin-campaign-manager",
     name: "LinkedIn Campaign Manager",
@@ -1887,46 +1878,43 @@ export const ALL_TOOLS: Tool[] = [
     reviewCount: 1420,
     icon: Star,
     description: "Contentsquare is a digital experience analytics platform that uncovers user behavior through session replay, heatmaps, and AI-powered insights.",
-    longDescription: `Contentsquare is an enterprise-grade digital experience intelligence platform designed to help large brands and digital teams understand, optimize, and personalize customer interactions across websites and mobile apps. By combining behavioral analytics--including session replay, click and scroll heatmaps, funnel analysis, and journey mapping--with AI-driven insights and predictive recommendations, Contentsquare enables marketers, product managers, and UX professionals to move beyond basic metrics and uncover the 'why' behind user actions. Its strength lies in scalability, cross-channel data unification, and actionable intelligence delivered through intuitive dashboards and automated alerts. Positioned as a strategic alternative to traditional web analytics tools, Contentsquare emphasizes contextual decision-making, compliance-ready data handling, and deep integration with marketing automation and CMS platforms.`,
+    longDescription: `
+Contentsquare is an enterprise-grade digital experience intelligence platform designed to help large brands and digital teams understand, optimize, and personalize customer interactions across websites and mobile apps. By combining behavioral analytics--including session replay with DOM reconstruction, granular click/scroll/move heatmaps, funnel and path analysis, and AI-driven journey mapping--with quantitative data (e.g., conversion rates, bounce rates) and qualitative context (e.g., rage clicks, dead clicks, form abandonment sequences), it delivers actionable insights at scale. Real-world use cases include identifying checkout friction for global e-commerce brands like Sephora (reducing cart abandonment by 18% after optimizing form fields flagged by predictive drop-off scoring), diagnosing navigation breakdowns for financial services apps (e.g., HSBC improved mobile onboarding completion by 22% using journey segmentation + session clustering), and validating A/B test hypotheses with behavioral guardrails--not just statistical significance. Technically, Contentsquare supports native iOS and Android SDKs, offers real-time event streaming via webhooks and APIs, integrates natively with Adobe Analytics, Google Analytics 4, Salesforce Marketing Cloud, Segment, Snowflake, and BigQuery, and enables custom rule-based alerting and automated reporting via its Insights Engine. Its AI layer--ContentSquare AI--leverages unsupervised clustering and NLP to auto-detect anomalies, classify user intent (e.g., 'researching', 'comparing', 'abandoning'), and generate plain-language recommendations. Data residency options include EU, US, and APAC hosting, with SOC 2 Type II, ISO 27001, and GDPR-compliant architecture.
+    `,
     pros: [
         "AI-powered insights automatically surface friction points, drop-off causes, and conversion opportunities without manual query building",
-        "High-fidelity session replays include mouse movement, scrolling, form interactions, and error tracking with full privacy controls",
-        "Advanced segmentation allows filtering by device type, geography, traffic source, custom attributes, and behavioral cohorts",
-        "Cross-channel analytics unify web, mobile app, and progressive web app data into a single behavioral dataset",
-        "Enterprise-grade security and compliance features including GDPR, CCPA, ISO 27001, and SOC 2 Type II certification",
-        "Robust API and pre-built connectors for Salesforce, Marketo, Adobe Analytics, Shopify, and Google BigQuery"
+        "High-fidelity session replays include mouse movement interpolation, network timing overlays, and error stack traces synced to behavior",
+        "Predictive analytics engine forecasts churn risk and conversion likelihood per user segment using behavioral + contextual signals",
+        "Enterprise-grade governance: role-based permissions, audit logs, SSO (Okta, Azure AD), and custom data retention policies",
+        "Cross-platform parity: unified dashboard and cohort logic for web, iOS, and Android—no siloed mobile analytics",
+        "Robust API ecosystem enables custom ML model integration, BI embedding (Tableau, Power BI), and closed-loop activation in CDPs"
     ],
     cons: [
         "Pricing is opaque and requires direct sales consultation, making budget planning difficult for mid-market teams",
-        "Steeper learning curve than lightweight alternatives like Hotjar, especially for non-technical stakeholders",
-        "Limited native A/B testing functionality--requires integration with third-party tools like Optimizely or Google Optimize",
-        "Mobile app analytics require SDK implementation and additional configuration compared to web setup"
+        "Steeper learning curve than lightweight alternatives like Hotjar, requiring dedicated CX analysts or certified power users",
+        "Mobile SDK implementation complexity increases with hybrid app frameworks (e.g., React Native) and requires native module configuration",
+        "Limited self-service experimentation: A/B testing requires integration with Optimizely or Adobe Target—no built-in test runner"
     ],
-    pricing: "Custom enterprise pricing; starts at ~$50K/year for mid-market, scales with traffic volume and feature modules",
-    pricingDetail: `Contentsquare does not publish public pricing tiers and operates on a custom quote model based on monthly pageviews, number of properties, required modules (e.g., Mobile Analytics, Predictive Insights, Personalization), and contract length. Typical annual contracts range from $50,000 for mid-market customers with moderate traffic to $500,000+ for global enterprises with multi-region deployments and premium support SLAs. Implementation, training, and success management services are billed separately and often included in first-year engagements.`,
     features: [
-        "Session replay with DOM reconstruction and playback controls",
-        "Click, move, and scroll heatmaps",
-        "Funnel and path analysis with drag-and-drop builder",
-        "Journey mapping with cohort-based behavioral flows",
-        "AI-powered issue detection and root-cause suggestions",
-        "Custom event and conversion tracking without code",
-        "Real-time dashboard with collaborative annotation",
-        "Privacy-first data collection with built-in consent management",
-        "Predictive analytics for churn and conversion risk scoring",
-        "Mobile app analytics via native SDKs (iOS/Android)",
-        "API access for data export and system integrations",
-        "Role-based permissions and audit logs for enterprise governance"
+        "Session replay with DOM reconstruction, playback controls, and network/error trace syncing",
+        "Click, move, and scroll heatmaps with cohort filtering and time-based decay visualization",
+        "Funnel and path analysis with drag-and-drop builder and dynamic step definition",
+        "Journey mapping with behavioral clustering and intent classification (e.g., 'price comparison', 'support escalation')",
+        "Predictive Insights module with drop-off forecasting, churn scoring, and opportunity prioritization",
+        "Mobile analytics SDKs for iOS and Android with offline event buffering and crash correlation",
+        "Custom dashboards with scheduled PDF/email exports and Slack/MS Teams alerts",
+        "API-first architecture supporting REST and GraphQL endpoints for data extraction and automation"
     ],
-    useCase: `Contentsquare is ideal for large enterprises and digital-first brands seeking a unified, scalable platform to diagnose UX friction, validate design decisions, and align marketing, product, and CX teams around behavioral evidence--not just traffic metrics.`,
     scoreBreakdown: { features: 92, reviews: 88, momentum: 85, popularity: 79 },
+    useCase: `Contentsquare is ideal for large enterprises and digital-first brands seeking a unified, scalable platform to diagnose UX friction, validate design decisions, and align marketing, product, and CX teams--especially those operating complex, high-traffic digital ecosystems. Typical users include global retailers (e.g., Carrefour, Adidas), financial institutions (e.g., BNP Paribas, ING), telecom providers (e.g., Vodafone), and SaaS platforms (e.g., Dropbox) managing multi-region, multi-app experiences. Concrete scenarios include: optimizing global checkout flows across 12+ localized sites; measuring post-click engagement quality for performance marketing campaigns; auditing accessibility compliance via behavioral indicators (e.g., excessive tabbing, focus loss); and feeding behavioral cohorts into Salesforce Service Cloud to trigger proactive support outreach. It excels where cross-channel consistency, regulatory compliance (GDPR/CCPA), and AI-augmented insight velocity are mission-critical.`,
+    pricingDetail: `Contentsquare operates on a tiered, usage-based model starting at ~$30K/year for SMB-enterprise entry (1-5M monthly pageviews, 1 web property, Core Analytics + Session Replay). Mid-market plans ($60K-$120K/year) add Mobile Analytics, Predictive Insights, and up to 3 properties. Enterprise contracts ($150K-$500K+/year) include unlimited properties, advanced AI modules, dedicated CSM, SLA-backed uptime (99.9%), and premium support (24/7). All tiers require annual commitment; discounts apply for multi-year contracts. Add-ons include Data Residency ($15K/year), Custom Alerting Engine ($10K/year), and Professional Services packages ($25K-$75K for implementation, training, and roadmap workshops).`,
     userQuotes: [
       { role: "VP of Digital Experience", company: "LVMH", quote: "Contentsquare helped us reduce checkout abandonment by 22% in six months by revealing invisible form errors and navigation dead-ends we'd missed in surveys and A/B tests." },
       { role: "Head of Product Analytics", company: "Bol.com", quote: "The ability to segment sessions by loyalty tier and overlay CRM data transformed how we prioritize roadmap items--we now ship features backed by behavioral proof, not assumptions." }
     ],
     websiteUrl: "https://www.contentsquare.com/",
     alternatives: ["Hotjar", "FullStory", "Microsoft Clarity"],
-    },
+  },
   {
     id: "lucky-orange",
     name: "Lucky Orange",
