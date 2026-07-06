@@ -34,6 +34,8 @@ const BLOG_SLUGS = [
   "cdp-implementation-practical-guide-2026",
   "ppc-management-2026-google-ads-optimization",
   "influencer-marketing-platforms-2026-comparison",
+  "ab-testing-platforms-2026-vwo-optimizely-abtasty-convert-adobe-target-comparison",
+  "social-media-analytics-tools-2026-comparison",
 ] as const;
 
 const TOOL_SLUGS = [
