@@ -37,6 +37,9 @@ const BLOG_SLUGS = [
   "ab-testing-platforms-2026-vwo-optimizely-abtasty-convert-adobe-target-comparison",
   "social-media-analytics-tools-2026-comparison",
   "ecm-2026-buyers-guide-contentful-wordpress-vip-strapi-aem",
+  "marketing-attribution-2026-practical-guide",
+  "marketing-automation-2026-hubspot-vs-marketo-vs-pardot-vs-activecampaign",
+  "ai-personalization-engines-2026-comparison"
 ] as const;
 
 const TOOL_SLUGS = [
