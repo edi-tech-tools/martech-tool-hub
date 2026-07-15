@@ -42,7 +42,8 @@ const BLOG_SLUGS = [
   "ai-personalization-engines-2026-comparison",
   "cdp-vs-data-warehouse-vs-data-lake-in-2026-how-we-chose-the-right-data-architecture-for-real-time-b2",
   "behavioral-analytics-tools-2026-hotjar-lucky-orange-crazy-egg-contentsquare-comparison",
-  "email-marketing-2026-ai-personalization-mailchimp-constant-contact-brevo-klaviyo"
+  "email-marketing-2026-ai-personalization-mailchimp-constant-contact-brevo-klaviyo",
+  "crm-2026-practical-guide-b2b-marketing-teams"
 ] as const;
 
 const TOOL_SLUGS = [
