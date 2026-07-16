@@ -2,6 +2,7 @@ import { MetadataRoute } from "next";
 
 const BLOG_SLUGS = [
   "abm-platforms-2026-6sense-demandbase-terminus-zoominfo-comparison",
+  "abm-vs-demand-generation-unified-b2b-strategy-2026",
   "ai-agents-martech-revolution-2026",
   "ai-marketing-stack-2026",
   "ai-personalization-engine-buying-guide-2026",
@@ -43,7 +44,8 @@ const BLOG_SLUGS = [
   "cdp-vs-data-warehouse-vs-data-lake-in-2026-how-we-chose-the-right-data-architecture-for-real-time-b2",
   "behavioral-analytics-tools-2026-hotjar-lucky-orange-crazy-egg-contentsquare-comparison",
   "email-marketing-2026-ai-personalization-mailchimp-constant-contact-brevo-klaviyo",
-  "crm-2026-practical-guide-b2b-marketing-teams"
+  "crm-2026-practical-guide-b2b-marketing-teams",
+  "content-personalization-tools-2026-dynamic-experiences"
 ] as const;
 
 const TOOL_SLUGS = [
