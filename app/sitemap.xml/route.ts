@@ -45,7 +45,8 @@ const BLOG_SLUGS = [
   "behavioral-analytics-tools-2026-hotjar-lucky-orange-crazy-egg-contentsquare-comparison",
   "email-marketing-2026-ai-personalization-mailchimp-constant-contact-brevo-klaviyo",
   "crm-2026-practical-guide-b2b-marketing-teams",
-  "content-personalization-tools-2026-dynamic-experiences"
+  "content-personalization-tools-2026-dynamic-experiences",
+  "b2b-marketing-automation-in-2026-the-stack-the-strategy-and-the-new-playbook"
 ] as const;
 
 const TOOL_SLUGS = [
