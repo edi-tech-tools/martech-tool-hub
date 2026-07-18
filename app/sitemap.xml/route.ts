@@ -46,7 +46,8 @@ const BLOG_SLUGS = [
   "email-marketing-2026-ai-personalization-mailchimp-constant-contact-brevo-klaviyo",
   "crm-2026-practical-guide-b2b-marketing-teams",
   "content-personalization-tools-2026-dynamic-experiences",
-  "b2b-marketing-automation-in-2026-the-stack-the-strategy-and-the-new-playbook"
+  "b2b-marketing-automation-in-2026-the-stack-the-strategy-and-the-new-playbook",
+  "martech-stack-optimization-2026-playbook"
 ] as const;
 
 const TOOL_SLUGS = [
