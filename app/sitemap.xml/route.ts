@@ -47,7 +47,8 @@ const BLOG_SLUGS = [
   "crm-2026-practical-guide-b2b-marketing-teams",
   "content-personalization-tools-2026-dynamic-experiences",
   "b2b-marketing-automation-in-2026-the-stack-the-strategy-and-the-new-playbook",
-  "martech-stack-optimization-2026-playbook"
+  "martech-stack-optimization-2026-playbook",
+  "no-code-martech-2026-building-custom-stacks"
 ] as const;
 
 const TOOL_SLUGS = [
