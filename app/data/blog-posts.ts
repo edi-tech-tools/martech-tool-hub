@@ -4635,7 +4635,7 @@ Built for Jamstack and Next.js ecosystems, Ninetailed shines in developer-first 
 
 Don't start with the tool -- start with the *experience gap*. Audit your top 3 conversion drop-off points. Which segments abandon most? What content do high-LTV customers engage with *before* converting? Map those insights to capabilities: If you need real-time behavioral routing across 10+ microsites, prioritize edge-native tools (Ninetailed, Uniform). If governance and marketing autonomy matter most, lean into HubSpot or Dynamic Yield + Contentstack.
 
-Implementation tip: Begin with *one high-impact, low-risk use case* -- e.g., personalizing CTAs on your top-performing blog category -- and measure lift in engagement rate *and* downstream pipeline impact. Avoid "personalization sprawl": more variants ≠ better outcomes. Teams seeing >20% lift consistently limit personalization to ≤3 variants per template and tie every rule to a documented business outcome.
+Implementation tip: Begin with *one high-impact, low-risk use case* -- e.g., personalizing CTAs on your top-performing blog category -- and measure lift in engagement rate *and* downstream pipeline impact. Avoid "personalization sprawl": more variants != better outcomes. Teams seeing >20% lift consistently limit personalization to ≤3 variants per template and tie every rule to a documented business outcome.
 
 ## Platform Comparison Snapshot
 
