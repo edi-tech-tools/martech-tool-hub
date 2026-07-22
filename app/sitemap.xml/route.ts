@@ -19,6 +19,7 @@ const BLOG_SLUGS = [
   "email-marketing-2026-constant-contact-vs-campaign-monitor-vs-mailerlite",
   "hubspot-vs-salesforce-marketing-cloud-2026",
   "marketing-analytics-bi-tools-comparison-2026",
+  "marketing-analytics-tools-guide-2026-ga4-mixpanel-amplitude",
   "marketing-attribution-ruler-analytics-review",
   "marketing-automation-2026-hubspot-marketo-activecampaign",
   "marketing-automation-platforms-comparison-2026",

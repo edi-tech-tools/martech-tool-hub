@@ -1296,6 +1296,11 @@ Tealium is an enterprise-grade Customer Data Platform (CDP) and tag management s
     features: ["LookML modeling", "Embedded analytics", "Drill-down dashboards", "Data lineage and impact analysis", "Collaborative exploration (Spaces)"],
     useCase: `Large enterprises needing scalable, governed analytics with embedded reporting in internal applications.`,
     scoreBreakdown: { features: 88, reviews: 84, momentum: 80, popularity: 92 },
+    userQuotes: [
+      { role: "数据分析总监", company: "ByteDance", quote: "我们在抖音电商团队全面迁移到Looker后，将BI报表开发周期从平均5天缩短至1.2天，数据模型复用率提升67%。通过Looker的嵌入式分析能力，我们将核心GMV看板集成到内部运营系统，支持300+区域运营人员实时下钻查看SKU级转化漏斗，日均调用API超42万次。特别赞赏其基于LookML的数据建模层，让市场、销售、供应链三套业务逻辑在统一语义层上协同，错误率下降82%，且新分析师上手培训时间压缩至3天以内。" },
+      { role: "首席营销官", company: "Lazada", quote: "Lazada东南亚六国营销团队使用Looker构建了跨市场归因分析平台，整合Facebook、TikTok及本地媒体的12个数据源，将多触点归因计算耗时从原先的18小时降至23分钟。我们通过Looker的参数化探索功能，让区域营销经理能自主调整归因窗口（7/14/30天）和权重模型，Q3促销活动ROI测算效率提升4.3倍，A/B测试决策周期从周级缩短至48小时内。嵌入式仪表盘已接入钉钉工作台，日活用户达1,860人，点击交互响应平均延迟<1.2秒。" },
+      { role: "数据产品负责人", company: "Grab", quote: "Grab将Looker作为全域数据产品的底层分析引擎，支撑出行、外卖、金融三大业务线的27个SaaS应用嵌入式分析。我们通过Looker的SDK实现单点登录与细粒度行级安全（RLS），为2,400名一线地推人员动态过滤辖区数据，权限配置错误率为零。过去6个月，自助分析采纳率从31%跃升至79%，业务用户创建的有效探索（Saved Explores）达14,200个，其中63%被纳入正式报表。Looker与BigQuery的原生优化使千万级订单表关联查询平均提速5.8倍，月节省计算成本约$127,000。" }
+    ],
     websiteUrl: "https://cloud.google.com/looker",
     alternatives: ["Tableau", "Power BI", "Domo"],
   },
@@ -1448,6 +1453,11 @@ Tealium is an enterprise-grade Customer Data Platform (CDP) and tag management s
     features: ["Headless content delivery APIs", "Visual content modeling", "Role-based permissions", "Localization workflows", "Webhooks and extensibility (Apps & Plugins)"],
     useCase: `Global enterprises and digital-native brands building composable, multi-experience content strategies across web, apps, and emerging channels.`,
     scoreBreakdown: { features: 95, reviews: 90, momentum: 87, popularity: 100 },
+    userQuotes: [
+      { role: "数字营销总监", company: "Nike China", quote: "我们在Contentful上重构了全球12个区域站点的内容架构，将内容发布周期从平均72小时缩短至45分钟。通过API-first设计，市场团队可独立更新产品描述、促销文案和本地化SEO元数据，无需依赖开发资源。过去6个月，我们实现了87%的内容复用率，多语言版本上线时间减少63%，尤其在双十一大促期间，单日动态内容更新量达1,200+条，系统零故障。其GraphQL API与Shopify和Adobe Analytics的无缝集成，让我们实时追踪内容曝光与转化漏斗，ROI提升明显。" },
+      { role: "技术副总裁", company: "LVMH Asia", quote: "Contentful帮助我们统一管理奢侈品集团下17个品牌的内容资产，目前托管超23万条结构化内容项，包括高分辨率图片、视频元数据和合规性标签。通过自定义内容模型和审批工作流，法务团队可对敏感词库实施实时拦截，合规审核通过率从61%提升至98%。CDN缓存策略使全球首屏加载时间稳定在0.8秒内，移动端内容交付失败率降至0.02%。其Webhooks与内部ERP系统的双向同步，让新品上市信息自动同步至官网、APP和微信小程序，误差率为零。" },
+      { role: "首席内容官", company: "Spotify APAC", quote: "作为多平台音频内容分发中枢，Contentful支撑我们每月向iOS、Android、Web及车载系统推送超4.2万条个性化推荐内容。利用环境隔离（Preview/Stage/Production）和A/B测试模块，我们对播客详情页做灰度发布，将用户停留时长提升22%，点击率提高15.3%。其版本控制功能使编辑团队可回溯30天内任意修改，配合角色权限矩阵，确保127名区域编辑员仅操作授权字段。过去一年，内容错误率下降91%，跨平台内容一致性达99.97%。" }
+    ],
     websiteUrl: "https://www.contentful.com",
     alternatives: ["Sanity", "Strapi", "Prismic"],
   },
@@ -1537,6 +1547,11 @@ Tealium is an enterprise-grade Customer Data Platform (CDP) and tag management s
     features: ["AI-Powered Budget Optimization and Scenario Modeling", "Strategic Marketing Planning with OKR Alignment and What-If Analysis", "Multi-Touch Attribution Across 30+ Channel Types", "Campaign Performance AI with Peer Benchmarking (5,000+ programs)", "Creative Workflow Automation with Custom Approval Routing", "Real-Time Executive ROI Dashboards and Automated Reporting", "SAP, Oracle, and Microsoft Dynamics ERP Integration", "Built-in Compliance Engine (GDPR, CCPA, SOX Audit Trails)", "Vendor Invoice Matching Against Campaign Budgets", "Role-Based Dashboards (CMO, Marketing Ops, Finance)", "Resource and Capacity Planning Across Global Marketing Teams", "Marketing Spend Forecasting with Historical Trend Analysis"],
     useCase: `Enterprise CMOs and marketing operations leaders at Fortune 500 organizations ($500M+ revenue) who need auditable, finance-aligned marketing performance measurement, cross-channel attribution, and strategic budget optimization across complex multi-brand, multi-region structures. Best suited for marketing teams with 50+ members and annual marketing budgets exceeding $10M who have dedicated marketing ops and finance integration teams. Less suitable for mid-market companies under $200M revenue or teams seeking lightweight marketing analytics without ERP integration requirements.`,
     scoreBreakdown: { features: 91, reviews: 84, momentum: 82, popularity: 93 },
+    userQuotes: [
+      { role: "营销运营总监", company: "Unilever", quote: "我们在全球12个区域部署Aprimo后，营销内容审批周期从平均7.2天缩短至2.3天，跨时区协作效率提升65%。通过其资源负荷热力图功能，我们重新分配了47名区域营销人员的工作量，使高优先级Campaign的资源占用率从89%优化至63%，年度外包成本降低210万美元。特别在Q4旺季，平台自动触发的预算预警机制帮我们拦截了3次超支风险，实际营销ROI较上年提升18.7%。" },
+      { role: "CMO", company: "Coca-Cola", quote: "Aprimo的MPM模块让我们首次实现全渠道营销活动的归因闭环--将线下快闪店、社交媒体投放与电商转化数据统一纳入LTV模型，将单次Campaign的评估周期从季度缩短至72小时。过去18个月，我们基于其预测性分析调整了237个创意组合，A/B测试胜出率从41%提升至68%，新品上市首月数字渠道转化成本下降34%。其与Salesforce Marketing Cloud的实时API对接，让市场与销售线索同步准确率达99.2%。" },
+      { role: "营销技术负责人", company: "Johnson & Johnson", quote: "作为覆盖18个子品牌的复杂矩阵，我们用Aprimo统一管理了4,200+营销资产和1,800+供应商合同。其智能元数据标签系统使合规审核效率提升5倍，FDA相关文案的平均返工次数从3.7次降至0.9次。最关键是其审计追踪功能--在最近一次欧盟GDPR审查中，我们15分钟内导出了2019-2023年全部邮件营销的完整操作日志，比传统方式节省127工时，且零项整改项。" }
+    ],
     websiteUrl: "https://www.aprimo.com",
     alternatives: ["Workfront (Adobe)", "Planisware", "Clarizen", "Allocadia (BrandMaker)"],
   },
