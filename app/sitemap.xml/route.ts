@@ -51,7 +51,9 @@ const BLOG_SLUGS = [
   "martech-stack-optimization-2026-playbook",
   "no-code-martech-2026-building-custom-stacks",
   "martech-tool-stack-audit-2026-optimizing-roi",
-  "data-clean-rooms-2026-privacy-first-guide"
+  "data-clean-rooms-2026-privacy-first-guide",
+  "nocode-2026-enterprise-infrastructure",
+  "email-deliverability-2026-best-practices"
 ] as const;
 
 const TOOL_SLUGS = [
