@@ -251,9 +251,7 @@ export const ALL_TOOLS: Tool[] = [
     reviewCount: 12400,
     icon: Star,
     description: "Constant Contact is an email marketing platform tailored for small businesses and nonprofits, emphasizing ease of use, list growth tools, and reliable deliverability.",
-    longDescription: `Constant Contact remains a leading email marketing platform purpose-built for small businesses, solopreneurs, and nonprofit organizations as of 2026. Launched in 1998, it pioneered SMB-friendly automation and list management long before the modern MarTech stack emerged. Over two decades, Constant Contact evolved from basic newsletter tools into a full-service engagement platform--integrating email, SMS, social posting, event management, and landing pages--while preserving its hallmark simplicity and human-centric support model. Its core strength lies in intuitive drag-and-drop editors, robust contact segmentation (including donor-specific fields for nonprofits), GDPR/CCPA-compliant consent tools, and live expert support via phone, chat, and scheduled coaching sessions--a rarity among competitors. Target users include local service providers (e.g., salons, contractors), community nonprofits, faith-based groups, and micro-businesses lacking dedicated marketing staff. Limitations include relatively lightweight automation capabilities compared to enterprise platforms like HubSpot or ActiveCampaign--no multi-step conditional workflows or native CRM sync--and limited A/B testing depth (only subject line and send-time variants). It also lacks advanced analytics dashboards or predictive scoring. Competitively, Constant Contact occupies a distinct niche: less technical than Mailchimp's newer tiers, more supported and nonprofit-optimized than Brevo (formerly Sendinblue), and more accessible than Klaviyo for non-eCommerce brands. While pricing has increased modestly since 2023, its bundled value--including unlimited contacts on most plans and free onboarding--keeps it compelling for growth-stage SMBs prioritizing reliability over hyper-customization.
-
-Constant Contact continues investing in AI-assisted content generation (subject lines, body copy) and enhanced accessibility compliance (WCAG 2.1 AA), reinforcing its mission to empower non-technical marketers without sacrificing compliance or deliverability.`,
+    longDescription: `Constant Contact remains a top-tier email marketing solution for small businesses and nonprofits in 2026, distinguished by its intuitive interface, robust compliance safeguards, and purpose-built tools for mission-driven organizations. The platform has significantly evolved with AI-assisted content generation--introduced in early 2026--including smart subject line optimization, dynamic body copy suggestions based on audience intent, and A/B test prediction modeling that recommends winning variants before campaigns send. Enhanced segmentation now leverages behavioral triggers (e.g., page visits, link clicks, donation history) combined with third-party CRM syncs (Salesforce, HubSpot, Zoho) to power hyper-relevant automation flows. Deliverability tools have been upgraded with real-time inbox placement monitoring, domain warm-up guidance, and DMARC/SPF/DKIM auto-configuration--critical for maintaining high sender reputation amid tightening ISP policies. For nonprofits, Constant Contact offers exclusive features like donation tracking integrations, grant announcement templates, volunteer engagement workflows, and IRS-compliant list management (including automatic suppression of deceased donors). Compared to Mailchimp, Constant Contact delivers stronger native support for nonprofit use cases and superior customer service (24/7 live chat and phone), though it lacks Mailchimp's advanced e-commerce personalization. Against Brevo (formerly Sendinblue), Constant Contact provides more polished drag-and-drop design tools and simpler GDPR/CCPA compliance workflows--but Brevo edges ahead in transactional email scalability and built-in SMS pricing transparency. Constant Contact continues to prioritize reliability over feature sprawl, making it ideal for teams without dedicated marketing technologists who need predictable performance, regulatory confidence, and rapid time-to-value.`,
     features: [
         "Drag-and-drop email builder",
         "Real-time list segmentation",
@@ -269,28 +267,27 @@ Constant Contact continues investing in AI-assisted content generation (subject 
         "Event-triggered campaigns"
       ],
     pros: [
-        "Intuitive drag-and-drop editor with 120+ mobile-responsive templates, enabling non-technical marketers to build compliant, branded campaigns in under 12 minutes (2024 user benchmark)",
-        "Real-time list segmentation using 28+ native filters—including engagement recency, click behavior, signup source, and custom field values—with automatic list hygiene",
-        "Behavior-triggered autoresponders with conditional logic (e.g., 'If opened Email A but not clicked CTA, send follow-up D in 48h') and 97% delivery uptime",
-        "Deliverability Health Score (DHS) dashboard provides actionable insights: sender reputation score, domain authentication status, spam complaint rate, and ISP-specific blocklist monitoring",
-        "Integrated webinar sync with Zoom, GoToWebinar, and Microsoft Teams—automatically captures registrants, tracks attendance duration, and triggers post-webinar nurture flows",
-        "Shared inbox functionality allows 5+ team members to collaboratively manage replies, assign follow-ups, and maintain consistent brand voice with templated response snippets",
-        "Exportable analytics reports include open/click heatmaps, geographic engagement maps, device-type breakdowns, and list growth sources—all downloadable as CSV, PDF, or PPTX",
-        "GDPR/CCPA-compliant preference center with granular opt-in toggles, double opt-in enforcement, and automated suppression of bounced or unsubscribed contacts within 15 minutes"
+        "AI-powered content assistant generates on-brand subject lines, preview text, and body copy in seconds--trained specifically on nonprofit and SMB messaging patterns",
+        "Built-in list growth toolkit includes customizable sign-up forms, pop-ups, referral programs, and social media lead ads integration",
+        "Nonprofit-specific features: donation tracking syncs, automated stewardship sequences, IRS-compliant suppression lists, and grant deadline reminders",
+        "Best-in-class deliverability suite with inbox placement analytics, sender reputation dashboard, and automated authentication setup",
+        "Real-time 24/7 phone and chat support--staffed by U.S.-based specialists trained in nonprofit compliance and small business workflows",
+        "Drag-and-drop editor with 100+ mobile-responsive templates, no-code conditional logic, and one-click accessibility checker (WCAG 2.1 compliant)",
+        "Seamless two-way sync with major CRMs and event platforms (e.g., Eventbrite, Bloomerang, Salesforce NPSP) without requiring developer resources"
       ],
     cons: [
-        "Limited A/B testing capabilities—only subject line and 'from name' variations supported; no content, send-time, or audience-split testing",
-        "No native CRM integration beyond basic Salesforce and HubSpot syncs—advanced field mapping, opportunity-stage triggers, or custom object syncing require Zapier or paid API tier",
-        "Landing pages lack dynamic personalization (e.g., no first-name or company-name tokens) and cannot be embedded with custom JavaScript or third-party tracking pixels",
-        "Analytics refresh lag: engagement metrics update every 2–4 hours—not real time—which delays rapid campaign optimization decisions",
-        "List import maxes at 50,000 contacts per batch; importing 250K+ contacts requires splitting files and manual deduplication, increasing error risk"
+        "Limited advanced automation capabilities compared to enterprise platforms--no multi-step branching logic or predictive lead scoring",
+        "Pricing tiers increase sharply at 5,000+ contacts; no pay-as-you-go option for infrequent senders",
+        "No native landing page builder (requires integration with third-party tools like Leadpages or Unbounce)",
+        "Reporting interface lacks cohort analysis and custom metric creation--dashboards are preconfigured and non-modifiable",
+        "SMS add-on is available only on Professional and higher plans and billed separately with per-message fees"
       ],
     pricing: "From $20/month",
-    pricingDetail: `Constant Contact offers four tiers: Lite ($20/month for up to 500 contacts), Standard ($45/month for up to 2,500 contacts), Plus ($95/month for up to 10,000 contacts), and Max ($195/month for up to 50,000 contacts). All plans include unlimited emails, landing pages, forms, and analytics. The Max plan adds priority phone support, custom branding, and advanced segmentation. Annual billing saves 15%. Add-ons include API access ($99/month), CRM connector upgrades ($49/month), and SMS marketing ($35/month for 1,000 messages). Nonprofit and education discounts available upon verification.`,
+    pricingDetail: `Starts at $20/month for up to 500 contacts (Core plan); Professional plan ($45/month) adds AI content tools, advanced segmentation, and priority support; Nonprofit discounts available (up to 30% off with verification); all plans include unlimited emails, A/B testing, and basic automation; SMS and premium integrations incur additional costs.`,
     useCase: `Nonprofit donor engagement and fundraising campaigns
 Local service business lead nurturing (e.g., HVAC, salons)
 Community organization event promotion and RSVP management`,
-    scoreBreakdown: { features: 78, reviews: 82, momentum: 64, popularity: 71 },
+    scoreBreakdown: { features: 78, reviews: 85, momentum: 72, popularity: 79 },
     websiteUrl: "https://www.constantcontact.com",
     userQuotes: [
       { role: "Email Marketing Specialist", company: "GreenThumb Nurseries", quote: "Our team launched 23 seasonal campaigns in Q2 using the drag-and-drop editor—average build time dropped from 45 to 11 minutes, and our DHS score improved from 78 to 94, lifting open rates by 22%." },
@@ -776,24 +773,24 @@ Community organization event promotion and RSVP management`,
     reviewCount: 12650,
     icon: Star,
     description: "Brevo (formerly Sendinblue) is a unified engagement platform delivering email, SMS, WhatsApp, chat, and marketing automation with built-in CRM -- all on one intuitive, GDPR-compliant infrastructure optimized for mid-market growth teams in 2026.",
-    longDescription: `Brevo (formerly Sendinblue) has solidified its position as a high-value, mid-market marketing automation platform through significant Q2 2026 enhancements--most notably the rollout of Brevo Predictive Engagement Suite, which integrates real-time behavioral scoring, AI-powered send-time optimization, and cross-channel journey orchestration across email, SMS, WhatsApp, and in-app messaging. Unlike Mailchimp--which continues to prioritize SMB simplicity at the expense of deep segmentation and compliance agility--Brevo now offers granular GDPR/CCPA-ready consent management with dynamic preference centers that auto-sync across all touchpoints. Compared to Constant Contact's legacy infrastructure, Brevo's cloud-native architecture delivers 42% faster campaign rendering and 3.1x higher deliverability consistency (per internal SMTP telemetry aggregated from 17K active clients). The Q2 2026 update also introduced Brevo Studio--a low-code workflow builder with native API-first connectors for Shopify Plus, Salesforce Sales Cloud, and HubSpot CRM--enabling non-technical marketers to deploy multi-step nurture sequences without developer dependency. Notably, Brevo's transparent, usage-based pricing model remains a key differentiator: no surprise overages, no tier-locking on contact lists, and free transactional email credits included in every plan. While Mailchimp's 2026 acquisition by Intuit has accelerated its financial integrations, it has simultaneously slowed innovation in B2B lead scoring and ABM orchestration--areas where Brevo's new 'Intent Signal Layer' (launched April 2026) provides real-time firmographic + engagement scoring via enriched Clearbit and ZoomInfo data pipelines. Customer feedback confirms Brevo's rising momentum: G2's Q2 2026 MarTech Stack Report shows Brevo climbing to #3 in Marketing Automation (up from #7 in Q2 2025), driven by 68% YoY growth in enterprise contracts ($50K+ ACV) and a 92% retention rate among users who adopted the new 'Journey Sync' feature. Still, Brevo's UI retains some complexity for absolute beginners--a trade-off acknowledged in user interviews where respondents noted 'the learning curve pays off after week three'.`,
+    longDescription: `Brevo (formerly Sendinblue) is a modern, unified engagement platform that goes beyond traditional email marketing to deliver multi-channel campaigns across email, SMS, WhatsApp, live chat, and marketing automation--all from a single interface. Unlike Mailchimp, which prioritizes ease-of-use for SMBs but limits advanced segmentation and API flexibility, Brevo offers deeper automation logic, real-time event-based triggers, and native WhatsApp Business API integration--enabling verified, two-way conversational messaging without third-party gateways. Compared to Constant Contact, Brevo provides significantly more robust CRM functionality built-in (including contact scoring, deal pipelines, and activity tracking), eliminating the need for costly add-ons or external syncs. Against SendGrid--which excels at high-volume transactional email but lacks native marketing campaign tools--Brevo uniquely bridges both worlds: it supports scalable, reliable transactional sending (with dedicated IP options and detailed delivery analytics) while also offering drag-and-drop campaign builders and A/B testing for promotional messages. Brevo's transparent, usage-based pricing (no hidden tiers or list-size penalties) stands in contrast to competitors' opaque subscription models. Its Predictive Engagement Suite leverages AI to recommend optimal send times, predict churn risk, and auto-segment audiences based on behavioral signals--features rarely found outside enterprise suites. Brevo Studio--a low-code visual workflow builder--lets marketers orchestrate cross-channel journeys (e.g., abandoned cart to email to SMS to WhatsApp follow-up) without developer dependency. With GDPR-compliant infrastructure, built-in consent management, and granular permission reporting, Brevo serves as both a growth engine and compliance enabler for scaling B2C and B2B teams.`,
     pros: [
-        "Delivers 99.8% email deliverability across 120+ countries.",
-        "Offers real-time A/B testing with AI-driven variant recommendations.",
-        "Provides native WhatsApp Business API integration certified by Meta.",
-        "Scales contact lists to 2M+ with zero performance degradation.",
-        "Automates cross-channel journeys using visual drag-and-drop builder.",
-        "Includes free tier with 300 emails/day and full feature access.",
-        "Generates GDPR-compliant consent logs with automated audit trails."
+        "Transparent, pay-as-you-go pricing with no list-size penalties or surprise overage fees",
+        "Native WhatsApp Business API integration enabling verified, interactive, two-way messaging",
+        "Fully functional built-in CRM with contact scoring, deal pipelines, and activity logging--no separate subscription required",
+        "Unified transactional + marketing email infrastructure with dedicated IPs, real-time analytics, and webhook support",
+        "Predictive Engagement Suite using AI to optimize send timing, forecast churn, and dynamically segment audiences",
+        "Brevo Studio: intuitive, low-code visual journey builder supporting email, SMS, WhatsApp, and chat triggers",
+        "GDPR- and CCPA-ready out of the box, including granular consent tracking, double opt-in enforcement, and automated data subject request handling"
       ],
     cons: [
-        "Limited advanced segmentation for behavioral cohorts beyond 90 days.",
-        "No native multi-tenant support for enterprise MSPs.",
-        "Steep learning curve for complex funnel analytics dashboards.",
-        "No offline event ingestion via server-side SDKs (web-only)."
+        "Limited native integrations with legacy ERP systems like SAP or Oracle compared to enterprise-focused platforms",
+        "Advanced automation workflows require understanding of event-based logic--steeper learning curve than Mailchimp's simplified UI",
+        "No built-in landing page builder; users must rely on third-party tools or custom HTML",
+        "Reporting dashboards lack customizable date-range exports and cohort-based retention analysis found in premium BI tools"
       ],
     pricing: "From $25/user/mo",
-    pricingDetail: `Starter ($25/mo): up to 10,000 emails/month, 2,000 contacts, basic automation, email + SMS. Professional ($75/mo): up to 30,000 emails/month, 10,000 contacts, predictive scoring, WhatsApp, custom domains, priority support. Enterprise ($299/mo): unlimited emails & contacts, dedicated IP, SSO, SLA guarantee, API access, custom reporting, and Brevo Studio Pro modules. All plans include free 10,000 transactional emails/month and pay-as-you-go overage at $0.003/email.`,
+    pricingDetail: `Free plan includes 300 emails/day and basic features; paid plans start at $25/month for 10,000 emails/month, scaling usage-based with SMS and WhatsApp priced per message--no tiered feature locks, all plans include CRM, automation, and transactional email.`,
     features: [
         "Email Marketing",
         "SMS Campaigns",
@@ -809,7 +806,7 @@ Community organization event promotion and RSVP management`,
         "AI Subject Line Optimizer"
       ],
     useCase: "Ideal for B2B SaaS companies with 50\u2013500 employees scaling outbound engagement across email, SMS, and WhatsApp while needing embedded CRM and compliance-ready workflows \u2014 especially those prioritizing cost efficiency without sacrificing channel breadth or deliverability.",
-    scoreBreakdown: { features: 92, reviews: 89, momentum: 94, popularity: 87 },
+    scoreBreakdown: { features: 90, reviews: 85, momentum: 94, popularity: 82 },
     websiteUrl: "https://www.brevo.com",
     userQuotes: [
       { role: "Growth Marketing Manager", company: "FintechScale (Series B)", quote: "Brevo cut our cross-channel campaign setup time by 68% and boosted WhatsApp CTR by 41% -- all while maintaining full EU/UK data residency." },
@@ -1087,26 +1084,27 @@ Ideal users are mid-sized digital agencies managing 15-50 client accounts and in
     reviewCount: 4219,
     icon: Star,
     description: "Unbounce is a landing page builder and conversion optimization platform built for marketers--not developers.",
-        longDescription: `Unbounce is a leading landing page builder and conversion optimization platform purpose-built for digital marketers who need speed, flexibility, and data-driven decision-making without relying on developers. Since its founding in 2009, Unbounce has carved out a strong niche as a marketer-first tool--emphasizing intuitive drag-and-drop editing, robust A/B testing, and deep integrations with major marketing stacks like HubSpot, Salesforce, Mailchimp, and Google Ads. Unlike generic website builders, Unbounce focuses exclusively on high-converting, campaign-specific landing pages, popups, sticky bars, and coming soon pages--all optimized for performance and SEO. Its AI-powered features include Smart Builder suggestions that recommend layout improvements based on conversion best practices, AI-generated headline and CTA copy suggestions powered by generative models trained on high-performing landing page data, and predictive A/B test duration recommendations to accelerate learning cycles. Compared to Instapage, Unbounce offers tighter native ad platform syncs (especially Google Ads and Meta) and stronger no-code personalization rules; versus Leadpages, it delivers significantly more advanced experimentation capabilities and enterprise-grade analytics; and relative to Landingi, Unbounce provides superior multi-page funnel orchestration and compliance-ready GDPR/CCPA tools. Ideal users include growth marketers, PPC specialists, demand generation teams, and mid-market SaaS companies running frequent paid campaigns. On G2, Unbounce consistently ranks #1 in the Landing Page Builders category with a 4.3/5 rating (based on 1,850+ verified reviews), praised for reliability and ROI clarity--but scores slightly lower on mobile editor polish and third-party app ecosystem breadth compared to broader CMS platforms.`,
+        longDescription: `Unbounce is a leading no-code landing page builder and conversion rate optimization (CRO) platform purpose-built for marketers who need speed, agility, and data-driven decision-making--without developer dependency. Unlike Instapage (which emphasizes enterprise-grade A/B testing and collaboration workflows) or Leadpages (focused on simplicity and lead gen for SMBs), Unbounce delivers deeper real-time analytics, granular traffic segmentation, and robust integrations with marketing stacks. Compared to Landingi's strong GDPR-first approach and multilingual support, Unbounce excels in AI-powered personalization and ad-to-page continuity. For 2026, Unbounce has launched its AI Smart Builder--a generative design assistant that creates high-converting landing pages from text prompts or existing URLs in under 60 seconds--plus Smart Traffic, an AI-driven routing engine that dynamically directs visitors to the best-performing variant based on real-time behavioral signals. Its personalization rules engine now supports up to 12 conditional logic layers (e.g., geo + device + referral source + past behavior), enabling hyper-targeted experiences at scale. Deep native integrations with Google Ads and Meta Ads allow one-click sync of ad copy, headlines, CTAs, and dynamic parameters--ensuring message consistency and reducing manual drift. Built-in heatmaps, session recordings, and predictive A/B testing (powered by Bayesian statistics) help prioritize tests with highest ROI potential. Unbounce also offers server-side A/B testing for SEO-safe experiments and GDPR-compliant consent management out-of-the-box. With its intuitive drag-and-drop editor, reusable templates, and collaborative review workflows--including version history and stakeholder commenting--it bridges the gap between marketing velocity and technical rigor.`,
         pros: [
-      "Intuitive drag-and-drop builder with real-time preview",
-      "Powerful built-in A/B and multivariate testing",
-      "Seamless ad platform integrations (Google Ads, Meta, Microsoft Advertising)",
-      "AI-assisted copy suggestions and layout recommendations",
-      "Robust personalization engine with dynamic content rules",
-      "Comprehensive analytics dashboard with conversion attribution",
-      "GDPR and CCPA-compliant consent management tools",
+      "AI Smart Builder generates fully responsive, conversion-optimized landing pages from text prompts or competitor URLs in under a minute, cutting production time by up to 70%.",
+      "Smart Traffic uses real-time visitor signals (device, location, referral, behavior) to auto-route users to their highest-converting variant--boosting overall conversion rates without manual segmentation.",
+      "Deep native integrations with Google Ads and Meta Ads enable automatic headline, CTA, and parameter syncing--eliminating message mismatch and improving Quality Score.",
+      "Personalization rules support multi-layer conditional logic (up to 12 criteria), allowing precise audience targeting without custom code or third-party tools.",
+      "Server-side A/B testing ensures SEO-friendly experiments with zero flicker, full crawlability, and accurate attribution--unlike client-side alternatives.",
+      "Built-in heatmap and session replay tools provide actionable behavioral insights directly within the platform--no separate analytics subscription required.",
+      "Collaborative workflow features include role-based permissions, comment threads tied to specific elements, and version rollback--streamlining cross-functional approvals.",
     ],
 
         cons: [
-      "Mobile editing experience lags behind desktop functionality",
-      "Limited native blogging or full-site building capabilities",
-      "Advanced features like custom JavaScript require Pro plan or higher",
-      "Third-party app marketplace is smaller than competitors",
+      "Advanced personalization and Smart Traffic require the Enterprise plan ($499+/mo), making sophisticated targeting cost-prohibitive for small teams.",
+      "Limited native CRM integrations--Salesforce and HubSpot are supported, but niche CRMs often require Zapier or custom API workarounds.",
+      "No built-in email marketing or SMS automation; users must rely on third-party connectors, adding complexity to lead-nurturing workflows.",
+      "Mobile editing experience remains less intuitive than desktop--some layout adjustments and conditional logic settings require desktop access.",
+      "AI Smart Builder outputs clean HTML but lacks fine-grained control over CSS specificity or advanced JavaScript injection--limiting customization for technical marketers.",
     ],
 
     pricing: "From $74/month",
-    pricingDetail: `Unbounce offers four tiers: Launch ($74/month) includes up to 500 monthly visitors, 3 landing pages, and basic A/B testing; Optimize ($129/month) adds unlimited pages, advanced A/B testing, and dynamic text replacement; Sophisticated ($249/month) unlocks multi-step forms, server-side A/B testing, and custom domain SSL; Enterprise (custom pricing) delivers SSO, dedicated support, audit logs, and API access. All plans include AI copy suggestions, popups, sticky bars, and native integrations.`,
+    pricingDetail: `Starter: $99/mo (3 landing pages, basic A/B testing); Pro: $199/mo (15 pages, heatmaps, smart popups); Premium: $299/mo (unlimited pages, server-side A/B, personalization rules); Enterprise: Custom ($499+/mo, includes Smart Traffic, AI Smart Builder, dedicated support, SLA)`,
     features: [
       "Drag-and-Drop Landing Page Builder",
       "A/B Testing Engine",
@@ -1123,7 +1121,7 @@ Ideal users are mid-sized digital agencies managing 15-50 client accounts and in
     ],
     useCase: `Unbounce is ideal for performance-focused digital marketers--especially those managing paid acquisition campaigns--who need to rapidly build, test, and optimize high-converting landing experiences without developer dependency. Marketing teams at B2B SaaS companies, e-commerce brands, and agencies use Unbounce to align landing pages precisely with ad messaging, run statistically valid experiments across headlines, CTAs, and layouts, and personalize content based on traffic source, device, or audience segment. Its strength lies in bridging the gap between campaign agility and conversion rigor: marketers can launch a new Google Ads campaign with a tailored landing page in under 30 minutes, simultaneously deploy five variants for A/B testing, and analyze which elements drive incremental lead quality--not just volume. Because Unbounce natively connects conversion data back to ad platforms, it empowers teams to make bid and budget decisions grounded in actual downstream outcomes, making it indispensable for organizations where marketing ROI is measured in pipeline velocity and cost per qualified lead.`,
 
-    scoreBreakdown: { features: 85, reviews: 80, momentum: 75, popularity: 90 },
+    scoreBreakdown: { features: 90, reviews: 80, momentum: 90, popularity: 85 },
     websiteUrl: "https://unbounce.com",
     userQuotes: [
       {
