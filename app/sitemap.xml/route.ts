@@ -53,7 +53,11 @@ const BLOG_SLUGS = [
   "martech-tool-stack-audit-2026-optimizing-roi",
   "data-clean-rooms-2026-privacy-first-guide",
   "nocode-2026-enterprise-infrastructure",
-  "email-deliverability-2026-best-practices"
+  "email-deliverability-2026-best-practices",
+  "b2b-marketing-attribution-2026-multi-touch-unified-measurement",
+  "ga4-bigquery-cross-channel-attribution",
+  "unified-marketing-analytics-foundation-2026",
+  "linkedin-ads-b2b-optimization-2026",
 ] as const;
 
 const TOOL_SLUGS = [

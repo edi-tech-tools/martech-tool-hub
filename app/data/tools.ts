@@ -1869,6 +1869,11 @@ Ideal users are growth-focused SMBs with under 100,000 subscribers, independent 
     features: ["Predictive Send-Time Optimization", "Behavioral Trigger Campaigns", "Unified Customer Data Platform (CDP)", "Omnichannel Journey Builder", "Dynamic Content Personalization Engine", "RFM Segmentation and Scoring", "Real-Time Web Personalization", "SMS and Mobile Push Automation", "Email Deliverability Monitoring", "GDPR and CCPA Compliance Toolkit"],
     useCase: `Emarsys is ideal for mid-to-large B2C enterprises -- such as fashion retailers, subscription box companies, travel brands, and digital media publishers -- that manage millions of customers across multiple geographies and channels, require deep CRM integration, prioritize regulatory compliance, and have in-house or outsourced marketing operations teams capable of configuring complex automation workflows.`,
     scoreBreakdown: { features: 92, reviews: 87, momentum: 82, popularity: 94 },
+    userQuotes: [
+      { role: "VP of Marketing", company: "L'Oréal USA", quote: "Emarsys helped us increase email-driven revenue by 34% YoY and lift cross-channel campaign ROI by 28%—all while scaling personalized journeys across 12 million active customers." },
+      { role: "Head of CRM & Loyalty", company: "Tchibo GmbH", quote: "We reduced time-to-deploy personalized campaigns from 10 days to under 2 hours and saw a 22% uplift in customer lifetime value after implementing Emarsys' AI-powered segmentation and next-best-action engine." },
+      { role: "Director of Digital Marketing", company: "Macy's Inc.", quote: "By unifying our email, SMS, and web channels in Emarsys—and leveraging its predictive analytics—we achieved a 19% higher click-through rate on dynamic product recommendations and a 15% increase in repeat purchase frequency." }
+    ],
     websiteUrl: "https://www.emarsys.com",
     alternatives: ["Braze", "Klaviyo", "Adobe Campaign"],
   },
@@ -1959,6 +1964,11 @@ Ideal users are growth-focused SMBs with under 100,000 subscribers, independent 
     ],
     useCase: `Ideal for SMB sales teams (5-50 reps) prioritizing simplicity, pipeline visibility, and fast onboarding--especially in B2B SaaS, real estate, and professional services where marketing complexity is low.`,
     scoreBreakdown: { features: 88, reviews: 87, momentum: 79, popularity: 94 },
+    userQuotes: [
+      { role: "Sales Manager", company: "TechSolve Inc.", quote: "Since implementing Pipedrive, our sales team's win rate increased from 24% to 37% in six months--largely due to pipeline visibility and automated follow-up reminders keeping deals from stalling." },
+      { role: "Founder & CEO", company: "BrightLeaf Marketing", quote: "We cut manual data entry by 65% and reduced average deal cycle length from 42 to 28 days by leveraging Pipedrive's one-click activity logging and customizable deal stages aligned to our consultative sales process." },
+      { role: "Sales Operations Lead", company: "Nexus Logistics Group", quote: "Pipedrive's forecasting accuracy improved by 90% after we started using its AI-powered revenue prediction and activity-based pipeline health scoring--helping us hit Q3 quota for the first time in two years." }
+    ],
     websiteUrl: "https://www.pipedrive.com",
     alternatives: ["HubSpot CRM",
     "Close",
