@@ -58,6 +58,7 @@ const BLOG_SLUGS = [
   "ga4-bigquery-cross-channel-attribution",
   "unified-marketing-analytics-foundation-2026",
   "linkedin-ads-b2b-optimization-2026",
+  "consumer-data-privacy-laws-2026-marketers-guide",
 ] as const;
 
 const TOOL_SLUGS = [
