@@ -59,6 +59,7 @@ const BLOG_SLUGS = [
   "unified-marketing-analytics-foundation-2026",
   "linkedin-ads-b2b-optimization-2026",
   "consumer-data-privacy-laws-2026-marketers-guide",
+  "martech-vendor-evaluation-framework-2026",
 ] as const;
 
 const TOOL_SLUGS = [
