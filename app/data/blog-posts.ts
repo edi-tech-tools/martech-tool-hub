@@ -6128,4 +6128,116 @@ As we move into 2026, the role of SMS and WhatsApp in marketing will continue to
     readTime: 9,
     tags: ["SMS Marketing", "WhatsApp Business", "Conversational Marketing", "Marketing Automation", "RCS", "CTIA Compliance", "TCPA", "10DLC", "2026"]
   },
+{
+    slug: "martech-cicd-pipeline-field-diary",
+    title: "How We Gave Our MarTech Stack a CI/CD Pipeline: A Developer's Field Diary",
+    excerpt: "A practical diary from our full-stack developer on building a CI/CD pipeline for the MarTech stack at Clever Co in Leeds. We version-controlled email and landing page assets, added an automated validation gate that blocked broken links and malformed UTMs, cut manual-error incidents, and slashed release choreography -- with an honest look at where the approach falls short and who it is not for.",
+    content: `# The Week We Gave Our MarTech Stack a CI/CD Pipeline
+
+I am the full-stack developer on the MarTech operations team at Clever Co, a Leeds-based B2B agency. For years our campaigns ran on a fragile rhythm: a marketer edits a HubSpot email template, exports a CSV, pastes it into a shared drive, and someone else copies it into production. One wrong tag, one out-of-date UTM parameter, and a thousand email sends go out with a broken link. Last month we finally got sick of it. This is the story of how we bolted a real CI/CD pipeline onto our marketing tech stack -- what worked, what broke, and what I would do differently next time.
+
+## What We Started With
+
+Before the change, our stack looked like this:
+
+- HubSpot for email and lifecycle automation
+- A headless CMS (Contentful) for landing pages and blog content
+- Google Analytics 4 wired through a BigQuery export
+- A small Node.js service that syncs CRM data into our ad audiences
+- A spreadsheet (seriously) that tracked which version of each campaign asset was live
+
+We were shipping campaign changes the same way people shipped software in 2005. Every deployment was a manual, reversible-accident waiting to happen. In the twelve months before the project, I counted 14 production incidents that list "human error" as the root cause -- 14. That is where the business case started.
+
+## The Pitch: Marketing as Code
+
+I pitched it to Henry, our managing director, not as a "devops initiative" but as a risk-reduction project. The numbers that landed were simple:
+
+- Average cost per major email send: about 3,400 pounds in staff time and paid media
+- Human-error incidents in the last year: 14
+- Estimated time to fix a bad deploy: 2 to 4 hours of triage
+- Proposed time to detect and roll back a bad deploy: under 10 minutes
+
+That framing worked. We were not buying shinier marketing software; we were buying a rollback button for a process that had no undo.
+
+## Phase One: Version Control Everything
+
+The first rule we adopted was that nothing reaches production unless it exists in a Git repository first. For our static landing pages in Contentful, that meant treating content as markdown in a repo and using Contentful's management API to push changes on merge. For HubSpot email templates, it was harder -- HubSpot does not give you a first-class Git interface. Our workaround was to store the HTML and JSON of each template in the repo, render it locally with a mock data file, and push the rendered output to HubSpot only after automated checks passed.
+
+That local rendering step turned out to be the single most valuable thing we built. Suddenly we were testing emails against realistic data before a human ever saw them in the HubSpot editor.
+
+## Phase Two: A Linting Gate Nobody Could Skip
+
+The most controversial change was a validation pipeline we called the "campaign gate." Every pull request labeled 'campaign/' had to pass four checks before a merge was allowed:
+
+1. **UTM check**: every link in an email or landing page had to carry a valid UTM structure with no spaces, no encoding errors, and consistent campaign naming.
+2. **Template check**: liquid or handlebars variables referenced in the template had to exist in the mock data file. Missing variables failed the build.
+3. **Link check**: all internal and external URLs were parsed and tested against a denylist of known-broken or outdated destinations.
+4. **Spam check**: a lightweight scan for phrases and character patterns that commonly trigger spam filters (all-caps subject lines, excessive exclamation marks, poor text-to-image ratio).
+
+At first the marketers hated it. Our campaign manager, Claude, was polite but pointed: "You are turning my campaign into a code review." Within two weeks that sentiment flipped, because the gate caught real mistakes. I keep a log of everything the gate stopped. In its first month it blocked 31 broken links, 12 emails with missing template variables, and 9 malformed UTM strings. Nine is the scary one -- those would have silently corrupted our attribution for weeks.
+
+## Phase Three: The Deployment Pipeline
+
+Once content passed the gate, an automated pipeline took over. We used GitHub Actions because we were already on GitHub and it cost us nothing extra at our scale. The pipeline looked like this:
+
+'''mermaid
+flowchart LR
+  A[Push to main] --> B[Lint and validate]
+  B --> C[Build preview in staging]
+  C --> D[Automated smoke test]
+  D --> E[Create deployment artifact]
+  E --> F[Push to HubSpot + Contentful]
+  F --> G[Verify on live endpoint]
+'''
+
+I will type up the exact workflow file in a follow-up, but the important part was the final "verify on live endpoint" step. After pushing, a script hit the live URLs we just changed and failed the deploy if the content did not match the artifact checksum. That gave us a rollback trigger we could trust.
+
+## What a Comparison Table Actually Taught Us
+
+We evaluated three pipelines before committing, and the table we built then feels worth sharing because the winner surprised us.
+
+| Tool | Setup Effort | Native MarTech Integrations | Cost at Our Scale | Best For |
+|------|-------------|----------------------------|-------------------|----------|
+| GitHub Actions | Low | HubSpot API, Contentful API via community actions | Free (we had 6,000 build minutes) | Small teams already on GitHub; developer-led shops |
+| GitLab CI/CD | Medium | Good, but needs more custom config | Free tier then $29/user/month | Teams that prefer a single DevOps platform |
+| Custom Node.js scheduler | High | Total control, but we had to write every integration | Server cost only, but lots of our time | Teams with very unusual or legacy systems |
+
+We chose GitHub Actions because the marginal cost was zero and the triggers (push, pull request, schedule) mapped cleanly to how our marketers already worked. GitLab would have been a fine second choice if we had ballooned into a bigger organization, but for a five-person marketing ops team GitHub Actions won on speed of adoption.
+
+## Where It Falls Short
+
+I promised I would be honest about this, and here is where the rubber meets the road. A CI/CD pipeline does not fix a messy process; it only exposes it faster.
+
+- **It does not replace good governance.** We still needed a human to decide who can merge what. The pipeline caught syntax; it did not catch strategy. A campaign that is technically valid can still be strategically wrong, and no linter solves that.
+- **HubSpot is a moving target.** HubSpot's API changed twice during our project, and each change required us to update our custom sync script. Vendor lock-in is real, and it leaks into pipeline maintenance.
+- **The 10-minute rollback only works if someone is watching.** Our "verify on live endpoint" step flags a problem, but a human still has to notice the alert. Off-hours rollbacks remained a weak spot until we added an on-call rotation -- which, frankly, marketers did not love.
+- **Setup was not a weekend project.** We estimated two days and spent eleven. Integrating with Contentful was easy. Making HubSpot behave like a deploy target was not.
+
+## The Numbers After Eight Weeks
+
+I am a "show me the data" person, so here are the numbers we actually tracked over eight weeks post-launch:
+
+- Production incidents caused by manual error: dropped from 6 in the prior eight-week window to 1
+- Average time to detect a broken deploy: down to about 9 minutes from roughly 3 hours
+- Emails sent with broken links or malformed UTMs: 0, versus an average of 4 per campaign before
+- Marketer time spent on release choreography: cut by roughly 60 percent
+
+## Best For / Not For
+
+Adopt this approach if your marketing operations team already has one developer-minded person, a Git repository, and a genuine pain point from manual release processes. It pays off fastest when you ship high-volume, high-blast-radius assets like email and landing pages on a regular cadence.
+
+Skip it -- for now -- if you have a tiny campaign volume (a few sends a month), no one comfortable writing light YAML and shell scripts, or systems that only change once a quarter. For those teams the setup cost will outweigh the benefit, and a disciplined manual checklist might genuinely be fine.
+
+If you take one idea away from this diary, make it this: your marketing stack is software, whether you think of it that way or not. Treat it like software, and the embarrassing failures start to feel preventable instead of inevitable.
+
+*This post reflects our direct experience at Clever Co. Tool facts and pricing reflect public vendor documentation available in early 2026 [source: github.com/features/actions; gitlab.com/pricing; contentful.com].*
+`,
+    author: "Addison Peters",
+    authorRole: "Full-Stack Developer",
+    date: "2026-08-04",
+    category: "MarTech Operations",
+    readTime: 9,
+    tags: ["CI/CD", "MarTech Ops", "Marketing Automation", "ContentOps", "GitHub Actions", "FinOps", "Campaign Management", "2026", "Tagging", "DevOps"]
+  },
+
 ];
