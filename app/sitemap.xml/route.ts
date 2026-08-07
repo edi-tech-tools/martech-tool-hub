@@ -62,6 +62,7 @@ const BLOG_SLUGS = [
   "martech-vendor-evaluation-framework-2026",
   "sms-whatsapp-marketing-automation-2026-playbook",
   "marketing-data-quality-2026-audit-dirty-data-stack",
+  "session-replay-behavioral-analytics-2026-guide",
 ] as const;
 
 const TOOL_SLUGS = [
