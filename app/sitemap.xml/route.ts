@@ -63,6 +63,10 @@ const BLOG_SLUGS = [
   "sms-whatsapp-marketing-automation-2026-playbook",
   "marketing-data-quality-2026-audit-dirty-data-stack",
   "session-replay-behavioral-analytics-2026-guide",
+  "marketing-campaign-orchestration-2026-guide",
+  "martech-cicd-pipeline-field-diary",
+  "seo-content-tools-2026-moz-ahrefs-semrush-comparison",
+  "ai-native-cro-experimentation-2026-guide",
 ] as const;
 
 const TOOL_SLUGS = [
