@@ -67,6 +67,7 @@ const BLOG_SLUGS = [
   "martech-cicd-pipeline-field-diary",
   "seo-content-tools-2026-moz-ahrefs-semrush-comparison",
   "ai-native-cro-experimentation-2026-guide",
+  "ai-predictive-lead-scoring-2026-guide",
 ] as const;
 
 const TOOL_SLUGS = [
