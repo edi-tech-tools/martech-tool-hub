@@ -68,6 +68,7 @@ const BLOG_SLUGS = [
   "seo-content-tools-2026-moz-ahrefs-semrush-comparison",
   "ai-native-cro-experimentation-2026-guide",
   "ai-predictive-lead-scoring-2026-guide",
+  "retention-marketing-automation-2026-playbook",
 ] as const;
 
 const TOOL_SLUGS = [
