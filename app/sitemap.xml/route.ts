@@ -71,6 +71,7 @@ const BLOG_SLUGS = [
   "retention-marketing-automation-2026-playbook",
   "creative-to-conversion-pipeline-canva-creatoriq-pipedrive",
   "content-roi-influencer-attribution-2026",
+  "post-click-optimization-growth-stack-2026",
 ] as const;
 
 const TOOL_SLUGS = [
