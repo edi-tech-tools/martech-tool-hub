@@ -4227,24 +4227,24 @@ Instead of separate ABM and demand gen pipelines, track a single pipeline view:
 - **Cost Per Engaged Account**: Total spend divided by number of accounts with meaningful engagement (not just clicks)
 - **Sales Acceptance Rate**: Percentage of marketing-sourced accounts that sales accepts as qualified
 
-## Case Study: How AcmeTech Unified Their Approach
+## Case Study: How a B2B SaaS Company Unified Their Approach
 
-AcmeTech, a $200M B2B SaaS company in the cybersecurity space, was running separate ABM and demand gen teams in 2024. The ABM team targeted 200 named accounts with personalized campaigns. The demand gen team generated 5,000 MQLs per quarter through content marketing and paid ads.
+A mid-market B2B SaaS company in the cybersecurity space was running separate ABM and demand gen teams in 2024. The ABM team targeted a few hundred named accounts with personalized campaigns, while the demand gen team generated thousands of MQLs per quarter through content marketing and paid ads.
 
 The problem: Sales complained that demand gen leads were low quality, and the ABM team was too slow to hit pipeline targets.
 
-In 2025, AcmeTech unified under a single marketing operations framework:
+The following year, the company unified under a single marketing operations framework:
 
 1. **Data Layer**: Implemented 6sense for account identification and ZoomInfo for enrichment. All prospect data flows into a single HubSpot instance.
-2. **Tiered Targeting**: Classified accounts into three tiers -- Tier 1 (50 accounts, full ABM treatment), Tier 2 (500 accounts, semi-personalized), Tier 3 (5,000 accounts, automated demand gen).
+2. **Tiered Targeting**: Classified accounts into three tiers -- Tier 1 (a small set of accounts, full ABM treatment), Tier 2 (a mid-size set, semi-personalized), Tier 3 (the long tail, automated demand gen).
 3. **Unified Campaigns**: Every demand gen campaign was targeted by account tier. Tier 1 ads used account-specific creative. Tier 3 ads used industry-specific creative.
 4. **AI-Personalized Nurture**: HubSpot's AI content recommendation engine served different content based on account tier and buying stage.
 
-**Results after 12 months:**
-- Pipeline increased by 47% (not just MQLs -- actual opportunities)
-- Cost per opportunity decreased by 32%
-- Account penetration rate for Tier 1 accounts went from 22% to 68%
-- Sales acceptance rate improved from 34% to 71%
+**Results after 12 months (illustrative):**
+- Pipeline (actual opportunities, not just MQLs) grew meaningfully
+- Cost per opportunity declined
+- Account penetration rate for Tier 1 accounts improved substantially
+- Sales acceptance rate rose across all tiers
 
 ## Common Pitfalls to Avoid
 
@@ -6711,7 +6711,7 @@ The true power of this triad emerges when feedback flows backward as well as for
 ## Final Takeaway: Cohesion Is a Stack Choice, Not a Hope
 
 Too many teams treat creative, influencer, and CRM tools as separate cost centers—evaluating each on isolated KPIs: Canva on time-to-design, CreatorIQ on engagement rate, Pipedrive on deal velocity. But revenue doesn’t care about tool boundaries. It responds to coherence: consistent visuals that build trust, authentic influence that sparks action, and sales processes that honor the customer’s journey from first impression to signed contract. Canva, CreatorIQ, and Pipedrive don’t require custom dev work to interoperate—they’re built for interoperability, with documented APIs, pre-built connectors, and shared data standards (UTM, ISO dates, CRM-friendly JSON payloads). Start small: sync one Canva Brand Kit to CreatorIQ, map one influencer campaign’s UTMs to Pipedrive, and measure your first closed-won deal with full creative-to-conversion lineage. Then scale. Because in the age of attention scarcity, the most competitive advantage isn’t more content—it’s more connected content.`,
-    author: "Hermes Agent",
+    author: "MarTech Tools Editorial Team",
     authorRole: "Martech Analyst",
     date: "2026-08-12",
     category: "Marketing",
